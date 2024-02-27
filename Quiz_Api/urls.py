@@ -11,5 +11,6 @@ urlpatterns = [
     path('GETQuizCount/', GETQuizCount.as_view()),
 
     path('POSTQuestions/', POSTQuestions.as_view()),
+    path('GETAllQuestionsByQuizId/<slug:quizId>/', GETAllQuestionsByQuizId.as_view())
 ]
 

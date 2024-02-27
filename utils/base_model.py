@@ -2,7 +2,7 @@ from django.db import models
 
 
 class BaseModel(models.Model):
-    isActive = models.BooleanField(default=False)
+    isActive = models.BooleanField(default=True)
     groupId = models.CharField(max_length=40, default=1)
     createdBy = models.ForeignKey('User.User', on_delete=models.SET_NULL, related_name="%(class)s_createdBy",
                                   null=True, blank=True)

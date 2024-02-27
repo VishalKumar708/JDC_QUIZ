@@ -31,16 +31,14 @@ class QuizQuestions(BaseModel):
     question = models.TextField()
     type = models.CharField(max_length=150, choices=TYPE_CHOICES)
     level = models.CharField(max_length=100)
-    status = models.BooleanField(default=True)
-    isVerified = models.BooleanField(default=False)
+    # isVerified = models.BooleanField(default=True)
 
 
 class QuizAnswers(BaseModel):
     quizQuestion_id = models.ForeignKey('Quiz_Api.QuizQuestions', on_delete=models.CASCADE, related_name='answers')
     option = models.TextField()
     correctOption = models.BooleanField(default=False)
-    status = models.BooleanField(default=True)
-    isVerified = models.BooleanField(default=False)
+    # isVerified = models.BooleanField(default=True)
 
 # Create your models here.
 
