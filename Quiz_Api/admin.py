@@ -18,14 +18,14 @@ admin.site.register(Quiz, QuizAdmin)
 
 
 class QuizQuestionsAdmin(admin.ModelAdmin):
-    list_display = ["id", "quiz_id", "question", "type", "level"]
+    list_display = ["id", "quiz_id", "question", "type", "level", "isActive"]
 
 
 admin.site.register(QuizQuestions, QuizQuestionsAdmin)
 
 
 class QuizAnswersAdmin(admin.ModelAdmin):
-    list_display = ["id", "quizQuestion_id", "option", "correctOption"]
+    list_display = ["id", "quizQuestion_id", "option", "correctOption", "isActive"]
 
 
 admin.site.register(QuizAnswers, QuizAnswersAdmin)
