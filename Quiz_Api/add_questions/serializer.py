@@ -44,7 +44,7 @@ class CreateQuestionSerializer(serializers.Serializer):
         if options_data and len(options_data) < 2:
             errors['options_data'] = ["Please add at least 2 options."]
 
-        if correct_answers:
+        if correct_answers is not None:
             # length of correct answers not more then length of options
             if len(correct_answers) > len(options_data):
                 errors['correct_answer'] = [f"'correct_answer' doesn't more then 'options'."]
@@ -148,4 +148,55 @@ class GETAllQuizQuestionsSerializer(serializers.ModelSerializer):
         answers_queryset = obj.answers.all()
         serializer = GETAnswerSerializer(answers_queryset, many=True)
         return serializer.data
+
+
+class UPDATEQuestionSerializer(serializers.ModelSerializer):
+    quiz_id = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=False,
+                                                 error_messages={
+                                                     'does_not_exist': "Invalid quiz_id",
+                                                     'incorrect_type': "Incorrect type. Expected a valid quiz_id."
+                                                 }
+                                                 )
+    question = serializers.CharField(required=False)
+    level = serializers.CharField(required=False)
+    isActive = serializers.BooleanField(required=False)
+
+    class Meta:
+        model = QuizQuestions
+        fields = ["quiz_id", "question", "level", "isActive"]
+
+    def to_internal_value(self, data):
+        quiz_id = data.get('quiz_id')
+        question_data = data.get('question')
+        errors = {}
+
+        if quiz_id is not None and question_data and 'text' in question_data:
+            filtered_data = QuizQuestions.objects.filter(quiz_id=quiz_id,
+                                                         question__icontains=question_data['text'].strip()).count()
+            if filtered_data > 0:
+                errors['question'] = {'text': ["This question is already added."]}
+
+        # default validation
+        validated_data = None
+        try:
+            # store all data in "validated_data" variable and return it
+            validated_data = super().to_internal_value(data)
+        except serializers.ValidationError as e:
+            new_errors = e.detail.copy()  # Make a copy of the custom errors
+            for key, value in new_errors.items():
+                if key not in errors:
+                    errors[key] = value  # Add new keys to the errors dictionary
+
+        # raise validation errors
+        if errors:
+            raise serializers.ValidationError(errors)
+
+        return validated_data
+
+
+class UPDATEAnswerSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = QuizAnswers
+        fields = ["quizQuestion_id", "option", "correctOption", "isActive"]
 

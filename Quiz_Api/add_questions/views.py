@@ -5,11 +5,12 @@ from .serializer import CreateQuestionSerializer
 from drf_yasg.utils import swagger_auto_schema
 from .schemas import *
 from ..models import QuizQuestions, QuizAnswers
-from .serializer import GETAllQuizQuestionsSerializer
+from .serializer import GETAllQuizQuestionsSerializer,UPDATEQuestionSerializer, UPDATEAnswerSerializer
 from django.db.models import Prefetch
 from .filters import QuizQuestionsFilter
 from utils.utils import convert_str_to_bool
 from utils.pagination import Pagination
+
 
 class POSTQuestions(APIView):
     message = "Record Added Successfully."
@@ -47,10 +48,8 @@ class POSTQuestions(APIView):
 
 
 class GETAllQuestionsByQuizId(APIView):
-    # pagination_class = Pagination # Define pagination class
 
     def filter_queryset(self, request, quizId):
-
         answers_isActive = request.GET.get('answers__isActive')
         questions_isActive = request.GET.get('questions__isActive')
         try:
@@ -82,27 +81,55 @@ class GETAllQuestionsByQuizId(APIView):
 
     @swagger_auto_schema(tags=['Question API'], manual_parameters=requested_data_for_question_schema, responses={200: get_question_response_schema})
     def get(self, request, quizId, *args, **kwargs):
+        try:
+            filter_queryset = self.filter_queryset(request=request, quizId=quizId)
 
-        filter_queryset = self.filter_queryset(request=request, quizId=quizId)
+            serializer = GETAllQuizQuestionsSerializer(filter_queryset, many=True)
 
-        # Apply pagination
-        # paginated_queryset = self.paginate_queryset(filter_queryset)
-        # if paginated_queryset is not None:
-        #     serializer = GETAllQuizQuestionsSerializer(paginated_queryset, many=True)
-        #     return self.get_paginated_response(serializer.data)
+            if len(serializer.data) < 1:
+                return Response(
+                    data={
+                        'status': 'Success',
+                        'data': {'message': "No Record Found."}
+                    },
+                    status=200
+                )
 
-        serializer = GETAllQuizQuestionsSerializer(filter_queryset, many=True)
+            return Response(data={
+                'status': 'Success',
+                'data': serializer.data
+            }, status=200)
+        except ValueError:
+            return Response(data={
+                'status': 'Failed',
+                'data': {"message": f"Excepted a number but got '{quizId}'"}
+            }, status=404)
 
-        if len(serializer.data) < 1:
-            return Response(
-                data={
+
+class PUTQuestionById(APIView):
+    @swagger_auto_schema(tags=['Question API'], request_body=UPDATEQuestionSerializer,
+                         responses={200: put_question_response_schema}, manual_parameters=put_question_requested_data_schema)
+    def put(self, request, questionId, *args, **kwargs):
+        try:
+            instance = QuizQuestions.objects.get(id=questionId)
+            serializer = UPDATEQuestionSerializer(instance=instance, data=request.data, partial=True)
+            if serializer.is_valid():
+                obj = serializer.save()
+                return Response(data={
                     'status': 'Success',
-                    'data': {'message': "No Record Found."}
-                },
-                status=200
-            )
-
-        return Response(data={
-            'status': 'Success',
-            'data': serializer.data
-        }, status=200)
+                    'data': {'message': f'Record Updated Successfully.', 'questionId': obj.id}
+                }, status=200)
+            return Response(data={
+                'status': 'Failed',
+                'data': serializer.errors
+            }, status=400)
+        except QuizQuestions.DoesNotExist:
+            return Response(data={
+                'status': 'Failed',
+                'data': {"message": f"Invalid questionId."}
+            }, status=404)
+        except ValueError:
+            return Response(data={
+                'status': 'Failed',
+                'data': {"message": f"Excepted a number but got '{questionId}'."}
+            }, status=404)

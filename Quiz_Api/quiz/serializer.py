@@ -112,7 +112,7 @@ class GETAllQuizSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = ["id", "tittle", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
-                    "organization"]
+                    "organization", "order"]
         model = Quiz
 
     def get_startDate(self, instance):

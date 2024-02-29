@@ -8,7 +8,7 @@ post_question_schema = openapi.Schema(
             type=openapi.TYPE_OBJECT,
             properties={
                 'text': openapi.Schema(type=openapi.TYPE_STRING, description="Enter the question text.", example="Can you speak English?"),
-                'type': openapi.Schema(type=openapi.TYPE_STRING, description="Means checkbox or radio", example="checkbox", default=None),
+                'type': openapi.Schema(type=openapi.TYPE_STRING, description="Means checkbox or radio", example="radio", default=None),
                 'level': openapi.Schema(type=openapi.TYPE_STRING, description="Means Easy, Medium, or Hard", example="Easy", default=None),
             },
             required=['text', 'type']
@@ -122,3 +122,27 @@ requested_data_for_question_schema = [
             ),
 
         ]
+
+
+put_question_response_schema = openapi.Schema(
+    type=openapi.TYPE_OBJECT,
+    properties={
+        'status': openapi.Schema(type=openapi.TYPE_STRING, example="Success"),
+        'data': openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            properties={
+                'message': openapi.Schema(type=openapi.TYPE_STRING, example="Record Updated Successfully."),
+                'questionId': openapi.Schema(type=openapi.TYPE_INTEGER, example=1)
+            }
+        )
+    }
+)
+
+put_question_requested_data_schema = [
+    openapi.Parameter(
+        name='questionId',
+        in_=openapi.IN_PATH,
+        type=openapi.TYPE_INTEGER,
+        description="ID of the quiz (integer)"
+    ),
+]
