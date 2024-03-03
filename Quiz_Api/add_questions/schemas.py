@@ -146,3 +146,12 @@ put_question_requested_data_schema = [
         description="ID of the quiz (integer)"
     ),
 ]
+
+requested_data_for_put_answer_schema =[
+openapi.Parameter(
+                name='answerId',
+                in_=openapi.IN_PATH,
+                type=openapi.TYPE_INTEGER,
+                description="ID of the answer (integer)"
+            ),
+]

@@ -38,6 +38,7 @@ class QuizAnswers(BaseModel):
     quizQuestion_id = models.ForeignKey('Quiz_Api.QuizQuestions', on_delete=models.CASCADE, related_name='answers')
     option = models.TextField()
     correctOption = models.BooleanField(default=False)
+    order = models.IntegerField(null=True, blank=True)
     # isVerified = models.BooleanField(default=True)
 
 # Create your models here.

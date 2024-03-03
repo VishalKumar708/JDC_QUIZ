@@ -1,8 +1,12 @@
+from django.db.models import Q
 from rest_framework import serializers
+from rest_framework.exceptions import ValidationError
+
 from ..models import Quiz, QuizQuestions, QuizAnswers
 from django.db import transaction
 
 
+# *********************************      To create question and their options(start)      ******************************
 class QuestionSerializer(serializers.Serializer):
     text = serializers.CharField()
     type = serializers.ChoiceField(choices=["radio", "checkbox"])
@@ -41,7 +45,7 @@ class CreateQuestionSerializer(serializers.Serializer):
                 errors['options'] = [f"Please select only one 'correct option' because you selected question 'type':'radio'."]
 
         # check user must pass at least two options
-        if options_data and len(options_data) < 2:
+        if options_data is not None and len(options_data) < 2:
             errors['options_data'] = ["Please add at least 2 options."]
 
         if correct_answers is not None:
@@ -117,9 +121,10 @@ class CreateQuestionSerializer(serializers.Serializer):
                 transaction.set_rollback(True)
 
         return question_instance
+# *********************************      END       ******************************
 
 
-# To fetch the questions and their answers
+# ***********************************      To get all question and answers(start)      ********************************
 
 class GETAnswerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -148,7 +153,9 @@ class GETAllQuizQuestionsSerializer(serializers.ModelSerializer):
         answers_queryset = obj.answers.all()
         serializer = GETAnswerSerializer(answers_queryset, many=True)
         return serializer.data
+# ***********************************     END       ********************************
 
+# *****************************************      To update the question(start)      **********************************
 
 class UPDATEQuestionSerializer(serializers.ModelSerializer):
     quiz_id = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=False,
@@ -192,11 +199,114 @@ class UPDATEQuestionSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(errors)
 
         return validated_data
+# *****************************************      END     ************************************
+
+# *****************************************      To update the answers(start)      ************************************
 
 
 class UPDATEAnswerSerializer(serializers.ModelSerializer):
+    isActive = serializers.BooleanField(required=False)
+    order = serializers.IntegerField(required=False)
+    option = serializers.CharField(required=False)
 
     class Meta:
+        fields = ["option", "isActive", "order"]
         model = QuizAnswers
-        fields = ["quizQuestion_id", "option", "correctOption", "isActive"]
 
+    def to_internal_value(self, data):
+        option_text = data.get('option')
+        errors = {}
+        if option_text:
+
+            filtered_data = QuizAnswers.objects.filter(~Q(id=self.context.get('answer_id')), Q(option__iexact=option_text.strip(), quizQuestion_id=self.context.get('question_id'))).count()
+            # print("filtered_data => ", filtered_data)
+            if filtered_data > 0:
+                errors['options'] = [f"This option is already exist."]
+
+        # default validation
+        validated_data = None
+        try:
+            # store all data in "validated_data" variable and return it
+            validated_data = super().to_internal_value(data)
+        except serializers.ValidationError as e:
+            new_errors = e.detail.copy()  # Make a copy of the custom errors
+            for key, value in new_errors.items():
+                if key not in errors:
+                    errors[key] = value  # Add new keys to the errors dictionary
+
+        # raise validations errors
+        if errors:
+            # print('errors ==> ', errors)
+            raise serializers.ValidationError(errors)
+
+        return validated_data
+
+    def update(self, instance, validated_data):
+        for key, value in validated_data.items():
+            setattr(instance, key, value)
+        instance.save()
+        # change the question type
+        # Get the associated QuizQuestions instance
+        question_instance = instance.quizQuestion_id
+        # check no. of options are correct
+        filtered_data = QuizAnswers.objects.filter(quizQuestion_id=instance.quizQuestion_id.id,
+                                                   correctOption=True).count()
+        if filtered_data >= 2:
+            question_instance.type = 'checkbox'
+        elif filtered_data == 1:
+            question_instance.type = 'radio'
+        question_instance.save()  # Save the modified instance to update the 'type' field
+        return instance
+
+
+class CREATEAnswerSerializer(serializers.ModelSerializer):
+    option = serializers.CharField(required=True)
+    isActive = serializers.BooleanField()
+    correctOption = serializers.BooleanField(default=False)
+
+    class Meta:
+        fields = ['quizQuestion_id', 'option', "isActive", "correctOption", "order"]
+        model = QuizAnswers
+
+    def to_internal_value(self, data):
+        question_id = data.get('quizQuestion_id')
+        option = data.get('option')
+        errors = {}
+        if option:
+            filtered_data_count = QuizAnswers.objects.filter(quizQuestion_id=question_id, option__iexact=option.strip()).count()
+            if filtered_data_count > 0:
+                errors['option'] = [f"This option is already exist."]
+
+        # default validation
+        validated_data = None
+        try:
+            # store all data in "validated_data" variable and return it
+            validated_data = super().to_internal_value(data)
+        except serializers.ValidationError as e:
+            new_errors = e.detail.copy()  # Make a copy of the custom errors
+            for key, value in new_errors.items():
+                if key not in errors:
+                    errors[key] = value  # Add new keys to the errors dictionary
+
+        # raise validations errors
+        if errors:
+            # print('errors ==> ', errors)
+            raise serializers.ValidationError(errors)
+
+        return validated_data
+
+    def create(self, validated_data):
+        instance = QuizAnswers.objects.create(**validated_data)
+        # check no. of options are correct
+        filtered_data = QuizAnswers.objects.filter(quizQuestion_id=instance.quizQuestion_id.id, correctOption=True).count()
+        # Get the associated QuizQuestions instance
+        question_instance = instance.quizQuestion_id
+
+        if filtered_data >= 2:
+            question_instance.type = 'checkbox'
+        elif filtered_data == 1:
+            question_instance.type = 'radio'
+        question_instance.save()  # Save the modified instance to update the 'type' field
+        return instance
+
+# *****************************************      END       ************************************

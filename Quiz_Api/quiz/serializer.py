@@ -106,9 +106,10 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
 
 
 class GETAllQuizSerializer(serializers.ModelSerializer):
-    startDate = serializers.DateField(input_formats=(datetime_format,))
-    endDate = serializers.DateField(input_formats=(datetime_format,))
-    resultDate = serializers.DateField(input_formats=(datetime_format,))
+    # startDate = serializers.DateField(input_formats=(datetime_format,))
+    endDate = serializers.SerializerMethodField()
+    resultDate = serializers.SerializerMethodField()
+    startDate = serializers.SerializerMethodField()
 
     class Meta:
         fields = ["id", "tittle", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
@@ -116,13 +117,13 @@ class GETAllQuizSerializer(serializers.ModelSerializer):
         model = Quiz
 
     def get_startDate(self, instance):
-        return instance.foundationDate.strftime(datetime_format)
+        return instance.startDate.strftime(datetime_format)
 
     def get_endDate(self, instance):
-        return instance.foundationDate.strftime(datetime_format)
+        return instance.endDate.strftime(datetime_format)
 
     def get_resultDate(self, instance):
-        return instance.foundationDate.strftime(datetime_format)
+        return instance.resultDate.strftime(datetime_format)
 
 
 

@@ -5,11 +5,9 @@ from .serializer import CreateQuestionSerializer
 from drf_yasg.utils import swagger_auto_schema
 from .schemas import *
 from ..models import QuizQuestions, QuizAnswers
-from .serializer import GETAllQuizQuestionsSerializer,UPDATEQuestionSerializer, UPDATEAnswerSerializer
+from .serializer import GETAllQuizQuestionsSerializer,UPDATEQuestionSerializer, UPDATEAnswerSerializer, CREATEAnswerSerializer
 from django.db.models import Prefetch
-from .filters import QuizQuestionsFilter
 from utils.utils import convert_str_to_bool
-from utils.pagination import Pagination
 
 
 class POSTQuestions(APIView):
@@ -133,3 +131,71 @@ class PUTQuestionById(APIView):
                 'status': 'Failed',
                 'data': {"message": f"Excepted a number but got '{questionId}'."}
             }, status=404)
+
+
+class PUTAnswers(APIView):
+
+    @swagger_auto_schema(tags=['Question API'], request_body=UPDATEAnswerSerializer,
+                         responses={200: put_question_response_schema},
+                         manual_parameters=requested_data_for_put_answer_schema)
+    def put(self, request, answerId, *args, **kwargs):
+        try:
+            instance = QuizAnswers.objects.get(id=answerId)
+            serializer = UPDATEAnswerSerializer(instance=instance, data=request.data, partial=True,
+                                                context={'question_id': instance.quizQuestion_id, 'answer_id': answerId})
+
+            if serializer.is_valid():
+                serializer.save()
+                return Response(data={
+                    'status': 'Success',
+                    'data': {'message': f'Record Updated Successfully.'}
+                }, status=200)
+            return Response(data={
+                'status': 'Failed',
+                'data': serializer.errors
+            }, status=400)
+        except QuizAnswers.DoesNotExist:
+            return Response(data={
+                'status': 'Failed',
+                'data': {"message": f"Invalid answerId."}
+            }, status=404)
+        except ValueError:
+            return Response(data={
+                'status': 'Failed',
+                'data': {"message": f"Excepted a number but got '{answerId}'."}
+            }, status=404)
+
+
+class POSTAnswer(APIView):
+    message = 'Record Added Successfully.'
+    success_response = openapi.Schema(
+        type=openapi.TYPE_OBJECT,
+
+        properties={
+            'status': openapi.Schema(type=openapi.TYPE_STRING, example="Success"),
+            'data': openapi.Schema(
+                type=openapi.TYPE_OBJECT,
+                properties={
+                    'message': openapi.Schema(
+                        type=openapi.TYPE_STRING,
+                        # description=message,
+                        example=message
+                    ),
+                    'option_id': openapi.Schema(type=openapi.TYPE_INTEGER, example=78),
+                }
+            )
+        }
+    )
+    @swagger_auto_schema(tags=['Question API'], request_body=CREATEAnswerSerializer, responses={200: success_response})
+    def post(self, request, *args, **kwargs):
+        serializer = CREATEAnswerSerializer(data=request.data)
+        if serializer.is_valid():
+            instance = serializer.save()
+            return Response(data={
+                'status': 'Success',
+                'data': {'message': self.message, "option_id":instance.id}
+            }, status=200)
+        return Response(data={
+            'status': 'Failed',
+            'data': serializer.errors
+        }, status=400)
