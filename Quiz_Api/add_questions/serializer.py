@@ -2,7 +2,7 @@ from django.db.models import Q
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
-from ..models import Quiz, QuizQuestions, QuizAnswers
+from ..models import Quiz, QuizQuestions, QuizOptions
 from django.db import transaction
 
 
@@ -110,12 +110,12 @@ class CreateQuestionSerializer(serializers.Serializer):
                     # match correct option to given options
                     if i in correct_answers:
                         options.append(
-                            QuizAnswers(quizQuestion_id=question_instance, option=options_data[i], correctOption=True))
+                            QuizOptions(question_id=question_instance, option=options_data[i], correctOption=True))
                     else:
-                        options.append(QuizAnswers(quizQuestion_id=question_instance, option=options_data[i]))
+                        options.append(QuizOptions(question_id=question_instance, option=options_data[i]))
 
                 # step3: create bulk answers
-                QuizAnswers.objects.bulk_create(options)
+                QuizOptions.objects.bulk_create(options)
             except Exception:
                 # Rollback transaction for the current question if any error occurs
                 transaction.set_rollback(True)
@@ -128,17 +128,17 @@ class CreateQuestionSerializer(serializers.Serializer):
 
 class GETAnswerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuizAnswers
+        model = QuizOptions
         fields = ["id", "option", "correctOption", "isActive"]
 
 
 class GETAllQuizQuestionsSerializer(serializers.ModelSerializer):
     question = serializers.SerializerMethodField()
-    answers = serializers.SerializerMethodField()
+    options = serializers.SerializerMethodField()
 
     class Meta:
         model = QuizQuestions
-        fields = ["question", "answers"]
+        fields = ["question", "options"]
 
     def get_question(self, obj):
         return {
@@ -149,28 +149,23 @@ class GETAllQuizQuestionsSerializer(serializers.ModelSerializer):
             "level": obj.level
         }
 
-    def get_answers(self, obj):
-        answers_queryset = obj.answers.all()
-        serializer = GETAnswerSerializer(answers_queryset, many=True)
+    def get_options(self, obj):
+        options_queryset = obj.options.all()
+        serializer = GETAnswerSerializer(options_queryset, many=True)
         return serializer.data
 # ***********************************     END       ********************************
 
 # *****************************************      To update the question(start)      **********************************
 
+
 class UPDATEQuestionSerializer(serializers.ModelSerializer):
-    quiz_id = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=False,
-                                                 error_messages={
-                                                     'does_not_exist': "Invalid quiz_id",
-                                                     'incorrect_type': "Incorrect type. Expected a valid quiz_id."
-                                                 }
-                                                 )
     question = serializers.CharField(required=False)
     level = serializers.CharField(required=False)
     isActive = serializers.BooleanField(required=False)
 
     class Meta:
         model = QuizQuestions
-        fields = ["quiz_id", "question", "level", "isActive"]
+        fields = ["question", "level", "isActive"]
 
     def to_internal_value(self, data):
         quiz_id = data.get('quiz_id')
@@ -204,21 +199,21 @@ class UPDATEQuestionSerializer(serializers.ModelSerializer):
 # *****************************************      To update the answers(start)      ************************************
 
 
-class UPDATEAnswerSerializer(serializers.ModelSerializer):
+class UPDATEOptionSerializer(serializers.ModelSerializer):
     isActive = serializers.BooleanField(required=False)
     order = serializers.IntegerField(required=False)
     option = serializers.CharField(required=False)
 
     class Meta:
         fields = ["option", "isActive", "order"]
-        model = QuizAnswers
+        model = QuizOptions
 
     def to_internal_value(self, data):
         option_text = data.get('option')
         errors = {}
         if option_text:
 
-            filtered_data = QuizAnswers.objects.filter(~Q(id=self.context.get('answer_id')), Q(option__iexact=option_text.strip(), quizQuestion_id=self.context.get('question_id'))).count()
+            filtered_data = QuizOptions.objects.filter(~Q(id=self.context.get('answer_id')), Q(option__iexact=option_text.strip(), question_id=self.context.get('question_id'))).count()
             # print("filtered_data => ", filtered_data)
             if filtered_data > 0:
                 errors['options'] = [f"This option is already exist."]
@@ -247,9 +242,9 @@ class UPDATEAnswerSerializer(serializers.ModelSerializer):
         instance.save()
         # change the question type
         # Get the associated QuizQuestions instance
-        question_instance = instance.quizQuestion_id
+        question_instance = instance.question_id
         # check no. of options are correct
-        filtered_data = QuizAnswers.objects.filter(quizQuestion_id=instance.quizQuestion_id.id,
+        filtered_data = QuizOptions.objects.filter(question_id=instance.question_id.id,
                                                    correctOption=True).count()
         if filtered_data >= 2:
             question_instance.type = 'checkbox'
@@ -259,9 +254,9 @@ class UPDATEAnswerSerializer(serializers.ModelSerializer):
         return instance
 
 
-class CREATEAnswerSerializer(serializers.ModelSerializer):
-    id = serializers.PrimaryKeyRelatedField(queryset=QuizQuestions.objects.all(),
-                                            source='quizQuestion_id',
+class CREATEOptionSerializer(serializers.ModelSerializer):
+    question_id = serializers.PrimaryKeyRelatedField(queryset=QuizQuestions.objects.all(),
+                                            # source='question_id',
                                             error_messages={
                                                 'does_not_exist': "Invalid question id.",
                                                 'incorrect_type': "Incorrect type. Expected a valid question id."
@@ -272,15 +267,15 @@ class CREATEAnswerSerializer(serializers.ModelSerializer):
     correctOption = serializers.BooleanField(default=False)
 
     class Meta:
-        fields = ['id', 'option', "isActive", "correctOption", "order"]
-        model = QuizAnswers
+        fields = ['question_id', 'option', "isActive", "correctOption", "order"]
+        model = QuizOptions
 
     def to_internal_value(self, data):
-        question_id = data.get('quizQuestion_id')
+        question_id = data.get('question_id')
         option = data.get('option')
         errors = {}
         if option:
-            filtered_data_count = QuizAnswers.objects.filter(quizQuestion_id=question_id, option__iexact=option.strip()).count()
+            filtered_data_count = QuizOptions.objects.filter(question_id=question_id, option__iexact=option.strip()).count()
             if filtered_data_count > 0:
                 errors['option'] = [f"This option is already exist."]
 
@@ -303,11 +298,11 @@ class CREATEAnswerSerializer(serializers.ModelSerializer):
         return validated_data
 
     def create(self, validated_data):
-        instance = QuizAnswers.objects.create(**validated_data)
+        instance = QuizOptions.objects.create(**validated_data)
         # check no. of options are correct
-        filtered_data = QuizAnswers.objects.filter(quizQuestion_id=instance.quizQuestion_id.id, correctOption=True).count()
+        filtered_data = QuizOptions.objects.filter(question_id=instance.question_id.id, correctOption=True).count()
         # Get the associated QuizQuestions instance
-        question_instance = instance.quizQuestion_id
+        question_instance = instance.question_id
 
         if filtered_data >= 2:
             question_instance.type = 'checkbox'

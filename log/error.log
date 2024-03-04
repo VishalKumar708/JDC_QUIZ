@@ -1,0 +1,5 @@
+ERROR 2024-03-04 13:49:10,246  101 The field 'organization_id' was declared on serializer CreateQuizSerializer, but has not been included in the 'fields' option.
+ERROR 2024-03-04 13:49:45,566  101 The field 'organization_id' was declared on serializer CreateQuizSerializer, but has not been included in the 'fields' option.
+ERROR 2024-03-04 15:16:35,049  160 Invalid field name(tt) pass.
+ERROR | 2024-03-04 16:12:25,147| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-04 16:12:25,147| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)

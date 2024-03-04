@@ -1,0 +1,7 @@
+WARNING 2024-03-04 15:44:20,722  162 Invalid field name(tt) pass.
+WARNING 2024-03-04 15:45:39,028 module: views.py func: get  162 Invalid field name(tt) pass.
+WARNING | 2024-03-04 15:48:18,993| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get  162 Invalid field name(tt) pass.
+WARNING | 2024-03-04 15:49:50,587| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 162 | Invalid field name(tt) pass.
+WARNING: 2024-03-04 15:51:40,877 | views.py| func: get| line number: 162| Invalid field name(tt) pass.
+WARNING | 2024-03-04 16:10:33,698| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 162 | Invalid field name(tt) pass.
+WARNING | 2024-03-04 16:14:36,722| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.

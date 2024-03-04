@@ -9,6 +9,10 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .filters import QuizFilter
 from utils.pagination import Pagination
 from django.core.exceptions import FieldError
+import logging
+error_logger = logging.getLogger('error')
+info_logger = logging.getLogger('info')
+warning_logger = logging.getLogger('warning')
 
 
 class POSTQuiz(APIView):
@@ -40,19 +44,22 @@ class POSTQuiz(APIView):
         tags=['Quiz API']
     )
     def post(self, request, *args, **kwargs):
+
         serializer = CreateQuizSerializer(data=request.data)
 
         if serializer.is_valid():
             obj = serializer.save()
+            info_logger.info("Quiz Added Successfully.")
             return Response(data={
-                "status": "Failed",
+                "status": "Success",
                 'data': {
                     'id': obj.id,
                     'message': self.message
                 }
             })
+        error_logger.warning("Quiz Creation Failed.")
         return Response(data={
-            "status": "Error",
+            "status": "Failed",
             'data': serializer.errors}, status=400)
 
 
@@ -96,20 +103,24 @@ class PUTQuiz(APIView):
             serializer = UpdateQuizSerializer(instance, data=request.data, partial=True)
             if serializer.is_valid():
                 serializer.save()
+                info_logger.info("Quiz Update Successfully.")
                 return Response({
                     'status': 'Success',
                     'data': {'message': self.message}
                 })
+            warning_logger.warning("Quiz Updation Failed.")
             return Response(data={
-                "status": "Error",
+                "status": "Failed",
                 'data': serializer.errors
             }, status=400)
         except Quiz.DoesNotExist:
+            warning_logger.warning("Received invalid 'Quiz id' to update Quiz Record.")
             return Response(data={
                 "status": "Failed",
                 'data': {'message': "Invalid Quiz Id."}
             }, status=404)
         except ValueError:
+            warning_logger.warning("Received invalid 'Quiz id' format to update Quiz Record.")
             return Response(data={
                 "status": "Failed",
                 'data': {'message': f"'quiz id' excepted a number but got '{id}'"}
@@ -128,8 +139,7 @@ class GETAllQuiz(ListAPIView):
         if order_by:
             return queryset.order_by(order_by)
 
-        return queryset.order_by('tittle')
-
+        return queryset.order_by('title')
 
     @swagger_auto_schema(
         tags=['Quiz API'],
@@ -149,8 +159,9 @@ class GETAllQuiz(ListAPIView):
         try:
             queryset = self.filter_queryset(self.get_queryset())
         except FieldError:
+            warning_logger.warning(f"Invalid field name({self.request.query_params.get('order_by')}) pass.")
             return Response(data={
-                "status": "Error",
+                "status": "Failed",
                 "data": {"message": f"Invalid field name '{self.request.query_params.get('order_by')}' specified in "
                                     f"'order_by' parameter"}
             }, status=404)
@@ -158,9 +169,11 @@ class GETAllQuiz(ListAPIView):
         if queryset.exists():
             page = self.paginate_queryset(queryset)  # Perform pagination
             serializer = self.get_serializer(page, many=True)
+            info_logger.info("Record send Successfully.")
             return self.get_paginated_response(serializer.data)
 
         else:
+            info_logger.info("No Record Found")
             return Response(data={
                 "status": "Failed",
                 "data": {

@@ -8,7 +8,7 @@ class Organization(BaseModel):
 
 
 class Quiz(BaseModel):
-    tittle = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
     startDate = models.DateField()
     endDate = models.DateField()
     resultDate = models.DateField()
@@ -16,7 +16,7 @@ class Quiz(BaseModel):
     duration = models.CharField(max_length=50)
     totalQuestions = models.IntegerField(default=None, null=True)
     order = models.IntegerField()
-    organization = models.ForeignKey('Quiz_Api.Organization', on_delete=models.SET_NULL,
+    organization_id = models.ForeignKey('Quiz_Api.Organization', on_delete=models.SET_NULL,
                                      related_name="organization_quiz", null=True, default=None, blank=True)
     isVerified = models.BooleanField(default=False)
 
@@ -34,8 +34,8 @@ class QuizQuestions(BaseModel):
     # isVerified = models.BooleanField(default=True)
 
 
-class QuizAnswers(BaseModel):
-    quizQuestion_id = models.ForeignKey('Quiz_Api.QuizQuestions', on_delete=models.CASCADE, related_name='answers')
+class QuizOptions(BaseModel):
+    question_id = models.ForeignKey('Quiz_Api.QuizQuestions', on_delete=models.CASCADE, related_name='options')
     option = models.TextField()
     correctOption = models.BooleanField(default=False)
     order = models.IntegerField(null=True, blank=True)

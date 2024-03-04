@@ -1,0 +1,8 @@
+WARNING 2024-03-04 15:09:32,221  160 Invalid field name(tt) pass.
+INFO | 2024-03-04 16:10:44,520| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: post | line_no: 52 | Quiz Added Successfully.
+INFO | 2024-03-04 16:12:02,181| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 106 | Quiz Update Successfully.
+INFO | 2024-03-04 16:12:25,169| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-04 16:13:57,826| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 214 | New Option Added Successfully.
+INFO | 2024-03-04 16:14:46,970| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 43 | Question and options are added successfully.
+INFO | 2024-03-04 16:15:15,969| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 165 | Option Updated Successfully.
+INFO | 2024-03-04 16:15:36,934| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 128 | Question update successfully.

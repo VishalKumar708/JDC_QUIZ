@@ -12,8 +12,8 @@ class CreateQuizSerializer(serializers.ModelSerializer):
     resultDate = serializers.DateField(input_formats=(datetime_format,))
 
     class Meta:
-        fields = ["tittle", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
-                    "organization", "order"]
+        fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
+                    "organization_id", "order"]
         model = Quiz
 
     def to_internal_value(self, data):
@@ -61,8 +61,8 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
     resultDate = serializers.DateField(input_formats=(datetime_format,))
 
     class Meta:
-        fields = ["tittle", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
-                    "organization", "order", "isVerified", "isActive"]
+        fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
+                    "organization_id", "order", "isVerified", "isActive"]
         model = Quiz
 
     def to_internal_value(self, data):
@@ -112,8 +112,8 @@ class GETAllQuizSerializer(serializers.ModelSerializer):
     startDate = serializers.SerializerMethodField()
 
     class Meta:
-        fields = ["id", "tittle", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
-                    "organization", "order"]
+        fields = ["id", "title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
+                    "organization_id", "order", "isActive", "isVerified"]
         model = Quiz
 
     def get_startDate(self, instance):

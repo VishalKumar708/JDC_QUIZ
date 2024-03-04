@@ -19,7 +19,7 @@ class QuizQuestionsFilter(filters.FilterSet):
     # def filter_answers_is_active(self, queryset, name, value):
     #     if value is not None:
     #         queryset = queryset.prefetch_related(
-    #             Prefetch('answers', queryset=QuizAnswers.objects.filter(isActive=value))
+    #             Prefetch('answers', queryset=QuizOptions.objects.filter(isActive=value))
     #         )
     #
     #     return queryset

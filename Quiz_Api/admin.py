@@ -10,8 +10,8 @@ admin.site.register(Organization, OrganizationAdmin)
 
 
 class QuizAdmin(admin.ModelAdmin):
-    list_display = ["id", "tittle", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
-                    "organization", "order"]
+    list_display = ["id", "title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
+                    "organization_id", "order", "isActive", "isVerified"]
 
 
 admin.site.register(Quiz, QuizAdmin)
@@ -25,10 +25,10 @@ admin.site.register(QuizQuestions, QuizQuestionsAdmin)
 
 
 class QuizAnswersAdmin(admin.ModelAdmin):
-    list_display = ["id", "quizQuestion_id", "option", "correctOption", "isActive"]
+    list_display = ["id", "question_id", "option", "correctOption", "isActive"]
 
 
-admin.site.register(QuizAnswers, QuizAnswersAdmin)
+admin.site.register(QuizOptions, QuizAnswersAdmin)
 
 
 # Register your models here.

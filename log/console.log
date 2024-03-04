@@ -1,0 +1,133 @@
+INFO 2024-03-04 13:44:09,581  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 13:46:59,824  241 Bad Request: /quizApi/POSTQuiz/
+WARNING 2024-03-04 13:46:59,825  212 "POST /quizApi/POSTQuiz/ HTTP/1.1" 400 88
+INFO 2024-03-04 13:48:48,095  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\serializer.py changed, reloading.
+INFO 2024-03-04 13:48:48,817  668 Watching for file changes with StatReloader
+INFO 2024-03-04 13:48:53,774  212 "GET /api-playground/ HTTP/1.1" 200 2430
+INFO 2024-03-04 13:48:54,024  212 "GET /api-playground/?format=openapi HTTP/1.1" 200 14066
+ERROR 2024-03-04 13:49:10,247  241 Internal Server Error: /quizApi/POSTQuiz/
+ERROR 2024-03-04 13:49:10,248  212 "POST /quizApi/POSTQuiz/ HTTP/1.1" 500 85
+ERROR 2024-03-04 13:49:45,567  241 Internal Server Error: /quizApi/POSTQuiz/
+ERROR 2024-03-04 13:49:45,568  212 "POST /quizApi/POSTQuiz/ HTTP/1.1" 500 85
+INFO 2024-03-04 13:49:45,632  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\serializer.py changed, reloading.
+INFO 2024-03-04 13:49:46,463  668 Watching for file changes with StatReloader
+INFO 2024-03-04 13:50:10,914  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 13:50:19,701  241 Bad Request: /quizApi/POSTQuiz/
+WARNING 2024-03-04 13:50:19,702  212 "POST /quizApi/POSTQuiz/ HTTP/1.1" 400 73
+INFO 2024-03-04 13:51:19,684  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\models.py changed, reloading.
+INFO 2024-03-04 13:51:20,514  668 Watching for file changes with StatReloader
+INFO 2024-03-04 13:51:45,269  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\serializer.py changed, reloading.
+INFO 2024-03-04 13:51:46,000  668 Watching for file changes with StatReloader
+INFO 2024-03-04 13:55:59,960  668 Watching for file changes with StatReloader
+INFO 2024-03-04 13:56:05,234  212 "POST /quizApi/POSTQuiz/ HTTP/1.1" 200 79
+WARNING 2024-03-04 13:56:31,705  241 Bad Request: /quizApi/POSTQuiz/
+WARNING 2024-03-04 13:56:31,706  212 "POST /quizApi/POSTQuiz/ HTTP/1.1" 400 91
+INFO 2024-03-04 13:58:02,849  212 "GET /api-playground/ HTTP/1.1" 200 2430
+INFO 2024-03-04 13:58:03,123  212 "GET /api-playground/?format=openapi HTTP/1.1" 200 14181
+INFO 2024-03-04 13:58:19,654  212 "GET /quizApi/GETAllQuestionsByQuizId/1/ HTTP/1.1" 200 264
+INFO 2024-03-04 13:58:58,865  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 13:58:59,564  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 14:00:41,554  241 Bad Request: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 14:00:41,554  212 "GET /quizApi/GETAllQuiz/?organization_id=1 HTTP/1.1" 400 95
+INFO 2024-03-04 14:01:22,544  212 "GET /api-documentation/ HTTP/1.1" 200 924
+INFO 2024-03-04 14:01:22,734  212 "GET /api-documentation/?format=openapi HTTP/1.1" 200 14181
+INFO 2024-03-04 14:03:20,985  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\schemas.py changed, reloading.
+INFO 2024-03-04 14:03:21,697  668 Watching for file changes with StatReloader
+INFO 2024-03-04 14:03:24,858  212 "GET /api-documentation/ HTTP/1.1" 200 924
+INFO 2024-03-04 14:03:25,157  212 "GET /api-documentation/?format=openapi HTTP/1.1" 200 14190
+INFO 2024-03-04 14:12:55,305  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\schemas.py changed, reloading.
+INFO 2024-03-04 14:12:56,126  668 Watching for file changes with StatReloader
+INFO 2024-03-04 14:23:41,187  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\admin.py changed, reloading.
+INFO 2024-03-04 14:23:42,130  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 14:25:32,742  241 Bad Request: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 14:25:32,744  212 "GET /quizApi/GETAllQuiz/?organization_id=1 HTTP/1.1" 400 95
+INFO 2024-03-04 14:25:41,608  212 "GET /quizApi/GETAllQuiz/ HTTP/1.1" 200 5373
+INFO 2024-03-04 14:38:10,675  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 14:38:11,428  668 Watching for file changes with StatReloader
+INFO 2024-03-04 14:42:51,460  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 14:42:52,533  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:04:08,390  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:04:09,580  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:09:19,974  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py changed, reloading.
+INFO 2024-03-04 15:09:20,724  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:09:32,222  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:09:32,223  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 97
+INFO 2024-03-04 15:11:29,429  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:11:30,547  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:11:42,720  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:11:42,722  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 97
+WARNING 2024-03-04 15:12:59,005  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:12:59,006  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 97
+INFO 2024-03-04 15:13:25,922  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:13:26,811  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:13:50,836  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:13:50,837  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO 2024-03-04 15:16:30,561  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:16:31,464  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:16:35,051  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:16:35,052  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO 2024-03-04 15:25:11,103  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 15:26:19,911  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:26:40,359  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 15:26:41,154  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:26:58,191  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:26:59,028  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:27:04,058  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:27:04,058  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO 2024-03-04 15:34:15,073  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:34:16,060  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:35:13,078  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:35:13,857  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:35:16,722  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:35:16,723  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO 2024-03-04 15:36:26,767  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 15:36:27,483  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:36:30,903  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:36:30,903  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO 2024-03-04 15:40:28,457  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 15:40:29,518  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:40:49,942  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 15:40:50,985  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:42:36,132  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 15:42:37,337  668 Watching for file changes with StatReloader
+INFO 2024-03-04 15:44:16,858  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO 2024-03-04 15:44:17,669  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:44:20,723  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:44:20,724  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO 2024-03-04 15:45:34,229  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO 2024-03-04 15:45:35,209 module: autoreload.py func: run_with_reloader  668 Watching for file changes with StatReloader
+WARNING 2024-03-04 15:45:39,029 module: log.py func: log_response  241 Not Found: /quizApi/GETAllQuiz/
+WARNING 2024-03-04 15:45:39,031 module: basehttp.py func: log_message  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO 2024-03-04 15:46:44,230 module: autoreload.py func: trigger_reload  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-04 15:46:45,358| module: autoreload.py | func: run_with_reloader  668 Watching for file changes with StatReloader
+INFO | 2024-03-04 15:48:14,560| module: autoreload.py | func: trigger_reload  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-04 15:48:15,322| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader  668 Watching for file changes with StatReloader
+WARNING | 2024-03-04 15:48:18,994| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response  241 Not Found: /quizApi/GETAllQuiz/
+WARNING | 2024-03-04 15:48:18,994| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message  212 "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO | 2024-03-04 15:49:42,921| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload  266 C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-04 15:49:43,714| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+WARNING | 2024-03-04 15:49:50,587| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Not Found: /quizApi/GETAllQuiz/
+WARNING | 2024-03-04 15:49:50,588| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO | 2024-03-04 15:51:34,284| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-04 15:51:35,112| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+WARNING | 2024-03-04 15:51:40,877| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Not Found: /quizApi/GETAllQuiz/
+WARNING | 2024-03-04 15:51:40,878| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO | 2024-03-04 15:52:56,884| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-04 15:52:57,633| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-04 15:58:11,415| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py changed, reloading.
+INFO | 2024-03-04 15:58:12,598| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-04 16:01:41,371| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py changed, reloading.
+INFO | 2024-03-04 16:01:42,579| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-04 16:10:25,859| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py changed, reloading.
+INFO | 2024-03-04 16:10:26,917| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+WARNING | 2024-03-04 16:10:33,699| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Not Found: /quizApi/GETAllQuiz/
+WARNING | 2024-03-04 16:10:33,700| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/?order_by=tt HTTP/1.1" 404 98
+INFO | 2024-03-04 16:10:44,521| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuiz/ HTTP/1.1" 200 80
+INFO | 2024-03-04 16:12:02,181| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "PUT /quizApi/PUTQuiz/100/ HTTP/1.1" 200 70
+INFO | 2024-03-04 16:12:25,169| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuestionsByQuizId/1/ HTTP/1.1" 200 264
+INFO | 2024-03-04 16:13:57,827| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTOption/ HTTP/1.1" 200 82
+WARNING | 2024-03-04 16:14:36,723| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Bad Request: /quizApi/POSTQuestions/
+WARNING | 2024-03-04 16:14:36,723| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuestions/ HTTP/1.1" 400 84
+INFO | 2024-03-04 16:14:46,970| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuestions/ HTTP/1.1" 200 85
+INFO | 2024-03-04 16:15:15,970| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "PUT /quizApi/PUTOption/5/ HTTP/1.1" 200 70
+INFO | 2024-03-04 16:15:36,937| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "PUT /quizApi/PUTQuestionById/25/ HTTP/1.1" 200 86

@@ -39,7 +39,7 @@ get_question_response_schema = openapi.Schema(
                             'level': openapi.Schema(type=openapi.TYPE_STRING, example="Easy"),
                         },
                     ),
-                    'answers': openapi.Schema(
+                    'options': openapi.Schema(
                         type=openapi.TYPE_ARRAY,
                         items=openapi.Schema(
                             type=openapi.TYPE_OBJECT,
@@ -76,7 +76,7 @@ get_question_response_schema = openapi.Schema(
                         "isActive": True,
                         "level": "Easy"
                     },
-                    "answers": [
+                    "options": [
                         {
                             "id": 23,
                             "option": "Yes",
@@ -113,7 +113,7 @@ requested_data_for_question_schema = [
                 required=False
             ),
             openapi.Parameter(
-                name='answers__isActive',
+                name='options__isActive',
                 in_=openapi.IN_QUERY,
                 type=openapi.TYPE_BOOLEAN,
                 description="Boolean value indicating whether to filter based on the 'isActive' field in answers.",
@@ -147,9 +147,9 @@ put_question_requested_data_schema = [
     ),
 ]
 
-requested_data_for_put_answer_schema =[
+requested_data_for_put_option_schema =[
 openapi.Parameter(
-                name='answerId',
+                name='optionId',
                 in_=openapi.IN_PATH,
                 type=openapi.TYPE_INTEGER,
                 description="ID of the answer (integer)"

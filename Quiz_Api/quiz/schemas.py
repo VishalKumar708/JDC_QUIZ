@@ -6,18 +6,18 @@ from drf_yasg import openapi
 post_quiz_schema = openapi.Schema(
     type=openapi.TYPE_OBJECT,
     properties={
-        'tittle': openapi.Schema(type=openapi.TYPE_STRING, default='HTML QUIZ'),
+        'title': openapi.Schema(type=openapi.TYPE_STRING, default='HTML QUIZ'),
         'startDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'endDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'resultDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'prize': openapi.Schema(type=openapi.TYPE_STRING, default='100 JCoins'),
         'duration': openapi.Schema(type=openapi.TYPE_STRING, default='10 minutes'),
         'totalQuestions': openapi.Schema(type=openapi.TYPE_INTEGER, default=10),
-        'organization': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID", default=None),
+        'organization_id': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID", default=None),
         'order': openapi.Schema(type=openapi.TYPE_INTEGER, default=1, description="Order of the Quiz"),
 
     },
-    required=['tittle', 'startDate', 'endDate', 'resultDate', 'prize', 'duration', 'order'],
+    required=['title', 'startDate', 'endDate', 'resultDate', 'prize', 'duration', 'order'],
 
 )
 
@@ -27,14 +27,14 @@ put_quiz_schema = openapi.Schema(
     type=openapi.TYPE_OBJECT,
     properties={
         'id': openapi.Schema(type=openapi.TYPE_INTEGER, example=1),
-        'tittle': openapi.Schema(type=openapi.TYPE_STRING, default='HTML QUIZ'),
+        'title': openapi.Schema(type=openapi.TYPE_STRING, default='HTML QUIZ'),
         'startDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'endDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'resultDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'prize': openapi.Schema(type=openapi.TYPE_STRING, default='100 JCoins'),
         'duration': openapi.Schema(type=openapi.TYPE_STRING, default='10 minutes'),
         'totalQuestions': openapi.Schema(type=openapi.TYPE_INTEGER, default=10),
-        'organization': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID"),
+        'organization_id': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID"),
         'order': openapi.Schema(type=openapi.TYPE_INTEGER, default=1, description="Order of the Quiz"),
         'isActive': openapi.Schema(type=openapi.TYPE_BOOLEAN, default=True),
         'isVerified': openapi.Schema(type=openapi.TYPE_BOOLEAN, default=False),
@@ -46,18 +46,19 @@ data_item_schema = openapi.Schema(
     type=openapi.TYPE_OBJECT,
     properties={
         'id': openapi.Schema(type=openapi.TYPE_INTEGER, example=1),
-        'tittle': openapi.Schema(type=openapi.TYPE_STRING),
+        'title': openapi.Schema(type=openapi.TYPE_STRING),
         'startDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, example='24 February, 2024'),
         'endDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, example='24 February, 2024'),
         'resultDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, example='24 February, 2024'),
         'prize': openapi.Schema(type=openapi.TYPE_STRING, example='100 JCoins'),
         'duration': openapi.Schema(type=openapi.TYPE_STRING, example='10 minutes'),
         'totalQuestions': openapi.Schema(type=openapi.TYPE_INTEGER, example=10),
-        'organization': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID"),
+        'organization_id': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID"),
         'order': openapi.Schema(type=openapi.TYPE_INTEGER, example=1, description="Order of the Quiz"),
         'isActive': openapi.Schema(type=openapi.TYPE_BOOLEAN, example=True),
         'isVerified': openapi.Schema(type=openapi.TYPE_BOOLEAN, example=False),
     }
+
 )
 
 
