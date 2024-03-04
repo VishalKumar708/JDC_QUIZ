@@ -260,12 +260,19 @@ class UPDATEAnswerSerializer(serializers.ModelSerializer):
 
 
 class CREATEAnswerSerializer(serializers.ModelSerializer):
+    id = serializers.PrimaryKeyRelatedField(queryset=QuizQuestions.objects.all(),
+                                            source='quizQuestion_id',
+                                            error_messages={
+                                                'does_not_exist': "Invalid question id.",
+                                                'incorrect_type': "Incorrect type. Expected a valid question id."
+                                            }
+                                            )
     option = serializers.CharField(required=True)
     isActive = serializers.BooleanField()
     correctOption = serializers.BooleanField(default=False)
 
     class Meta:
-        fields = ['quizQuestion_id', 'option', "isActive", "correctOption", "order"]
+        fields = ['id', 'option', "isActive", "correctOption", "order"]
         model = QuizAnswers
 
     def to_internal_value(self, data):

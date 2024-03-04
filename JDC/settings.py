@@ -158,10 +158,91 @@ SWAGGER_SETTINGS = {
 }
 
 
+
+
+# # *************************    Django Logger   ****************************
+# # import os
+# LOG_DIR = os.path.join(BASE_DIR, 'log')
+#
+# # Ensure the log directory exists, and create it if it doesn't
+# if not os.path.exists(LOG_DIR):
+#     os.makedirs(LOG_DIR)
+#
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": False,
+#     "formatters": {
+#         "verbose": {
+#             "format": "%(levelname)s %(asctime)s  %(lineno)s %(message)s",
+#         },
+#         "plain": {
+#             "format": "%(levelname)s: %(asctime)s | %(module)s.py| func: %(funcName)s| line number: %(lineno)s| %(message)s",
+#         },
+#     },
+#     "filters": {
+#         "require_debug_true": {
+#             "()": "django.utils.log.RequireDebugTrue",
+#         },
+#     },
+#     "handlers": {
+#         "console": {
+#             "level": "INFO",
+#             "filters": ["require_debug_true"],
+#             "class": "logging.StreamHandler",
+#             "formatter": "verbose",
+#         },
+#         'info': {
+#             "level": "INFO",
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': os.path.join(LOG_DIR, "info.log"),
+#             'maxBytes': 30 * 1024 * 1024,
+#             'backupCount': 10,
+#             "formatter": "verbose",
+#             "encoding": 'utf-8'
+#         },
+#         'error': {
+#             "level": "ERROR",
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': os.path.join(LOG_DIR, "error.log"),
+#             'maxBytes': 30 * 1024 * 1024,
+#             'backupCount': 10,
+#             "formatter": "verbose",
+#             "encoding": 'utf-8'
+#         },
+#         'terminal': {
+#             "level": "INFO",
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': os.path.join(LOG_DIR, "console.log"),
+#             'maxBytes': 30 * 1024 * 1024,
+#             'backupCount': 10,
+#             "formatter": "verbose",
+#             "encoding": 'utf-8'
+#         },
+#     },
+#     "loggers": {
+#         "django": {
+#             "handlers": ["console", "terminal"],
+#             "propagate": False,
+#             "level": "INFO"
+#         },
+#         "info": {
+#             "handlers": ["info"],
+#             "propagate": False,
+#             "level": "INFO"
+#         },
+#         "error": {
+#             "handlers": ["error"],
+#             "level": "ERROR",
+#             "propagate": False,
+#         }
+#
+#     },
+#     "root": {
+#         "handlers": ["info", "error", "console"],  # Send messages to both info and error handlers
+#         "level": "INFO",
+#     },
+# }
+
 # Global variables
 DEFAULT_DATE_FORMAT = "%d %B, %Y"
 APPEND_SLASH = False
-
-
-
-

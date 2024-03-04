@@ -91,16 +91,16 @@ class InternalServerErrorMiddleware:
         # print('exception method called on middleware')
         print('calling process_exception method')
         print('exceptions ==> ', exception)
-        # if exception:
-        #     response_data = {
-        #         'statusCode': 500,
-        #         'status': 'failed',
-        #         'data': {'message': 'Internal Server Error'},
-        #
-        #     }
-        #     error_logger.error(str(exception))
-        #     print(exception)
-        #     return JsonResponse(response_data, status=response_data['statusCode'])
+        if exception:
+            response_data = {
+                'statusCode': 500,
+                'status': 'failed',
+                'data': {'message': 'Internal Server Error'},
+
+            }
+            error_logger.error(str(exception))
+            print(exception)
+            return JsonResponse(response_data, status=response_data['statusCode'])
         return self.get_response(request)
 
 

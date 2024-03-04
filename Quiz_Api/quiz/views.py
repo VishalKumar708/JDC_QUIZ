@@ -19,6 +19,7 @@ class POSTQuiz(APIView):
     success_response = openapi.Schema(
             type=openapi.TYPE_OBJECT,
             properties={
+                'status': openapi.Schema(type=openapi.TYPE_STRING, example="Success"),
                 'data': openapi.Schema(
                     type=openapi.TYPE_OBJECT,
                     properties={
@@ -62,6 +63,7 @@ class PUTQuiz(APIView):
     success_response = openapi.Schema(
         type=openapi.TYPE_OBJECT,
         properties={
+            'status': openapi.Schema(type=openapi.TYPE_STRING, example="Success"),
             'data': openapi.Schema(
                 type=openapi.TYPE_OBJECT,
                 properties={
