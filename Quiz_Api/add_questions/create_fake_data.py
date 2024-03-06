@@ -53,12 +53,12 @@ def create_question_and_options():
                 no_of_options = random.randint(2, 5)
                 print("no of options==> ", no_of_options)
                 if option_type == 2:
-                    options_list = [QuizOptions(question_id=question_instance, option=fake.name, correctOption=True if i==0 else random.choice([True, False]))
+                    options_list = [QuizOptions(question_id=question_instance, option=fake.name(), correctOption=True if i==0 else random.choice([True, False]))
                                             for i in range(no_of_options)]
                 elif option_type == 1:
                     random_correct_option = random.randint(0, no_of_options-1)
                     print("random_correct_option==> ", random_correct_option)
-                    options_list = [QuizOptions(question_id=question_instance, option=fake.name,
+                    options_list = [QuizOptions(question_id=question_instance, option=fake.name(),
                                                 correctOption=True if i == random_correct_option else False)
                                     for i in range(no_of_options)]
                 # for i in range(2, no_of_options):
@@ -85,7 +85,6 @@ def create_question_and_options():
         except Exception as e:
             transaction.set_rollback(True)
             print("Exception:==> ", str(e))
-
 
     # return f"Time taken to create {number_of_question} questions in a quiz: {total_time} seconds"
     return None
