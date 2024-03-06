@@ -190,9 +190,9 @@ class GETQuizCount(APIView):
 
     def get_queryset(self):
         today = datetime.today().date()
-        print("today date==> ", today)
+        # print("today date==> ", today)
         return (
-            Quiz.objects.filter(Q(isActive=True) & Q(isVerified=True))
+            Quiz.objects.filter(Q(isActive=False) | Q(isVerified=True))
             .aggregate(
                 total_quiz_count=Coalesce(Sum(Case(When(Q(pk__isnull=False), then=1), output_field=IntegerField())),
                                           Value(0)),
@@ -210,7 +210,7 @@ class GETQuizCount(APIView):
     @swagger_auto_schema(tags=['Quiz API'])
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        print("queryset==> ", queryset)
+        # print("queryset==> ", queryset)
         return Response(
             data={
                 'total_quiz': queryset['total_quiz_count'],
@@ -220,4 +220,5 @@ class GETQuizCount(APIView):
                 'result_quiz_count': queryset['result_quiz_count']
             }
         )
+
 

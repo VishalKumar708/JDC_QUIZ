@@ -20,47 +20,50 @@ class CreateQuestionSerializer(serializers.Serializer):
     correct_answer = serializers.ListField(child=serializers.IntegerField())
 
     def to_internal_value(self, data):
-        quiz_id = data['quizId']
-        question_data = data['question']
-        options_data = data['options']
-        correct_answers = data['correct_answer']
+        print("data==> ", data)
         errors = {}
-        # custom validation
+        if data:
+            quiz_id = data.get('quizId')
+            question_data = data.get('question')
+            options_data = data.get('options')
+            correct_answers = data.get('correct_answer')
 
-        # check a question exist only one time in a quiz
-        if quiz_id and question_data.get('text'):
-            print("condition working..")
-            filtered_data = QuizQuestions.objects.filter(quiz_id=quiz_id, question__icontains=question_data['text'].strip()).count()
-            if filtered_data > 0:
-                errors['question'] = {'text': ["This question is already Added."]}
+            # custom validation
 
-        # apply validation to add correct_answers based on question 'type'
-        # if user select question 'type' =='checkbox' then he must enter at least two correct options
-        if question_data.get('type') == 'checkbox' and correct_answers:
-            if len(correct_answers) < 2:
-                errors['options'] = [f"Please select more then one 'correct options' because you selected question 'type':'checkbox'."]
-        # if user select question 'type' == 'radio' then it can add only one correct option
-        elif question_data.get('type') == 'radio' and correct_answers:
-            if len(correct_answers) > 1:
-                errors['options'] = [f"Please select only one 'correct option' because you selected question 'type':'radio'."]
+            # check a question exist only one time in a quiz
+            if quiz_id and question_data.get('text'):
+                print("condition working..")
+                filtered_data = QuizQuestions.objects.filter(quiz_id=quiz_id, question__icontains=question_data['text'].strip()).count()
+                if filtered_data > 0:
+                    errors['question'] = {'text': ["This question is already Added."]}
 
-        # check user must pass at least two options
-        if options_data is not None and len(options_data) < 2:
-            errors['options_data'] = ["Please add at least 2 options."]
+            # apply validation to add correct_answers based on question 'type'
+            # if user select question 'type' =='checkbox' then he must enter at least two correct options
+            if question_data.get('type') == 'checkbox' and correct_answers:
+                if len(correct_answers) < 2:
+                    errors['options'] = {0: [f"Please select more then one 'correct options' because you selected question 'type':'checkbox'."]}
+            # if user select question 'type' == 'radio' then it can add only one correct option
+            elif question_data.get('type') == 'radio' and correct_answers:
+                if len(correct_answers) > 1:
+                    errors['options'] ={0: [f"Please select only one 'correct option' because you selected question 'type':'radio'."]}
 
-        if correct_answers is not None:
-            # length of correct answers not more then length of options
-            if len(correct_answers) > len(options_data):
-                errors['correct_answer'] = [f"'correct_answer' doesn't more then 'options'."]
-            else:
-                # check user passes correct options or not in 'correct_answer' key
-                answers = [value for index, value in enumerate(options_data) if index in correct_answers]
-                if len(answers) < 1:
-                    errors['correct_answer'] = [f"Please select valid option."]
+            # check user must pass at least two options
+            if options_data is not None and len(options_data) < 2:
+                errors['options'] = ["Please add at least 2 options."]
+            #
+            if correct_answers is not None:
+                # length of correct answers not more then length of options
+                if len(correct_answers) > len(options_data):
+                    errors['correct_answer'] = [f"'correct_answer' doesn't more then 'options'."]
+                else:
+                    # check user passes correct options or not in 'correct_answer' key
+                    answers = [value for index, value in enumerate(options_data) if index in correct_answers]
+                    if len(answers) < 1:
+                        errors['correct_answer'] = [f"Please select valid option."]
 
-        # change field into text into title case
-        if question_data.get("text"):
-            question_data['text'] = question_data['text'].capitalize()
+            # change field into text into title case
+            if question_data.get("text"):
+                question_data['text'] = question_data['text'].capitalize()
 
         # default validation
         validated_data = None
@@ -135,10 +138,11 @@ class GETAnswerSerializer(serializers.ModelSerializer):
 class GETAllQuizQuestionsSerializer(serializers.ModelSerializer):
     question = serializers.SerializerMethodField()
     options = serializers.SerializerMethodField()
+    correctOptions = serializers.SerializerMethodField()
 
     class Meta:
         model = QuizQuestions
-        fields = ["question", "options"]
+        fields = ["question", "options", "correctOptions"]
 
     def get_question(self, obj):
         return {
@@ -153,6 +157,14 @@ class GETAllQuizQuestionsSerializer(serializers.ModelSerializer):
         options_queryset = obj.options.all()
         serializer = GETAnswerSerializer(options_queryset, many=True)
         return serializer.data
+
+    def get_correctOptions(self, obj):
+
+        correctOptions_queryset = obj.options.filter(correctOption=True).values('id')
+        result = [option['id'] for option in correctOptions_queryset]
+
+        return result
+
 # ***********************************     END       ********************************
 
 # *****************************************      To update the question(start)      **********************************

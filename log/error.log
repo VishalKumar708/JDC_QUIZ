@@ -3,3 +3,58 @@ ERROR 2024-03-04 13:49:45,566  101 The field 'organization_id' was declared on s
 ERROR 2024-03-04 15:16:35,049  160 Invalid field name(tt) pass.
 ERROR | 2024-03-04 16:12:25,147| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
 ERROR | 2024-03-04 16:12:25,147| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-04 18:27:34,221| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'quizId'
+ERROR | 2024-03-05 10:10:35,055| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'quizId'
+ERROR | 2024-03-05 10:11:42,043| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'quizId'
+ERROR | 2024-03-05 10:13:42,388| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'quizId'
+ERROR | 2024-03-05 10:13:56,881| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'quizId'
+ERROR | 2024-03-05 10:15:11,981| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'NoneType' object has no attribute 'get'
+ERROR | 2024-03-05 10:16:08,466| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'NoneType' object has no attribute 'get'
+ERROR | 2024-03-05 10:17:15,187| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | cannot access local variable 'errors' where it is not associated with a value
+ERROR | 2024-03-05 11:38:54,440| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 68 | Invalid JSON data. Extra data: line 74 column 1 (char 402)
+ERROR | 2024-03-06 10:19:39,978| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-06 10:20:35,424| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:20:35,425| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:20:35,439| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The field 'correctOptions' was declared on serializer GETAllQuizQuestionsSerializer, but has not been included in the 'fields' option.
+ERROR | 2024-03-06 10:21:27,362| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:21:27,362| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:21:27,377| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuerySet' object has no attribute 'value'
+ERROR | 2024-03-06 10:21:30,674| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:21:30,675| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:21:30,681| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuerySet' object has no attribute 'value'
+ERROR | 2024-03-06 10:21:50,954| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:21:50,956| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:22:32,425| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:22:32,426| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:22:32,438| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'dict' object has no attribute 'id'
+ERROR | 2024-03-06 10:22:59,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:22:59,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:23:44,040| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-06 10:23:48,722| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-06 10:24:50,612| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:24:50,613| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:28:52,953| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:28:52,954| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 10:29:42,807| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 10:29:42,808| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 11:40:14,631| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 11:40:14,632| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 11:42:00,283| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 11:42:00,283| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 11:47:46,709| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 11:47:46,710| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 11:50:50,926| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-06 11:51:19,328| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 11:51:19,329| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 12:15:08,015| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 12:15:08,017| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 12:19:23,114| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 12:19:23,114| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 12:19:40,048| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 12:19:40,049| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 12:25:29,828| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 12:25:29,828| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 12:35:15,771| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 12:35:15,771| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)
+ERROR | 2024-03-06 12:47:29,401| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 63 | str(e)
+ERROR | 2024-03-06 12:47:29,402| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 69 | str(e)

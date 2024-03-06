@@ -6,3 +6,18 @@ INFO | 2024-03-04 16:13:57,826| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Q
 INFO | 2024-03-04 16:14:46,970| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 43 | Question and options are added successfully.
 INFO | 2024-03-04 16:15:15,969| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 165 | Option Updated Successfully.
 INFO | 2024-03-04 16:15:36,934| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 128 | Question update successfully.
+INFO | 2024-03-06 10:21:50,969| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 10:22:59,453| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 10:24:50,639| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 10:28:52,968| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 10:29:42,818| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 11:40:14,640| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 98 | Not any question added yet inside this quiz.
+INFO | 2024-03-06 11:42:00,336| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 11:47:57,290| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 11:51:33,662| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 12:15:08,114| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 12:19:23,333| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 12:19:40,219| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 12:25:30,113| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 12:35:15,868| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.
+INFO | 2024-03-06 12:47:29,505| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 106 | Return all questions with option Successfully.

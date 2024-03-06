@@ -5,3 +5,11 @@ WARNING | 2024-03-04 15:49:50,587| path: C:\Users\vs123\OneDrive\Desktop\quiz\JD
 WARNING: 2024-03-04 15:51:40,877 | views.py| func: get| line number: 162| Invalid field name(tt) pass.
 WARNING | 2024-03-04 16:10:33,698| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 162 | Invalid field name(tt) pass.
 WARNING | 2024-03-04 16:14:36,722| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 10:12:36,394| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 10:18:09,210| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 11:29:07,614| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 11:31:37,552| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 11:39:04,049| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 11:39:33,333| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 11:40:29,156| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
+WARNING | 2024-03-05 11:42:22,929| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 48 | Error occured while creating questions.
