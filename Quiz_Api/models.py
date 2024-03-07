@@ -1,5 +1,6 @@
 from django.db import models
 from utils.base_model import BaseModel
+from django.utils import timezone
 
 
 class Organization(BaseModel):
@@ -40,6 +41,27 @@ class QuizOptions(BaseModel):
     correctOption = models.BooleanField(default=False)
     order = models.IntegerField(null=True, blank=True)
     # isVerified = models.BooleanField(default=True)
+
+
+class QuizEnrollment(BaseModel):
+    STATUS_CHOICES = (
+        ('enroll', "Enroll"),
+        # ('pending', "Pending"),
+        ('start', "Start"),
+        ('complete', "Complete"),
+        # ('expire', "Expire"),
+    )
+    user_id = models.ForeignKey('User.User', on_delete=models.CASCADE, related_name='quiz_enrollments')
+    quiz_id = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='enrollments')
+    enrollmentDate = models.DateTimeField(default=timezone.now)
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES)
+    completingDate = models.DateTimeField(null=True, blank=True)
+    score = models.IntegerField(default=0)
+    timeTaken = models.IntegerField(default=0)
+    correctAnswer = models.IntegerField(default=0)
+    incorrectAnswer = models.IntegerField(default=0)
+    pendingAnswer = models.IntegerField(default=0)
+
 
 # Create your models here.
 

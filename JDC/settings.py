@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'drf_yasg',
     "User",
-    "Quiz_Api"
+    "Quiz_Api",
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'JDC.urls'
-
+AUTH_USER_MODEL = 'User.User'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -85,7 +86,7 @@ WSGI_APPLICATION = 'JDC.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'quiz',
+        'NAME': 'jdc_quiz',
         'USER': 'root',
         'PASSWORD': 'admin',
         'HOST': 'localhost',

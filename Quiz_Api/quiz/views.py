@@ -175,10 +175,10 @@ class GETAllQuiz(ListAPIView):
         else:
             info_logger.info("No Record Found")
             return Response(data={
-                "status": "Failed",
+                "status": "Success",
                 "data": {
                     "message": "No Record Found"}
-            }, status=404)
+            }, status=200)
 
 
 from django.db.models import Q, Case, When, IntegerField, Sum, Value

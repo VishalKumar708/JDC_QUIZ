@@ -37,7 +37,7 @@ class POSTQuestions(APIView):
         }
     )
 
-    @swagger_auto_schema(tags=['Question API'], request_body=post_question_schema, responses={200: success_response})
+    @swagger_auto_schema(tags=['Question API'], request_body=CreateQuestionSerializer(), responses={200: success_response})
     def post(self, request, *args, **kwargs):
         print('question method call....')
         serializer = CreateQuestionSerializer(data=request.data)

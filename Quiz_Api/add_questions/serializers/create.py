@@ -1,9 +1,8 @@
 
 from rest_framework import serializers
-
-
 from ...models import Quiz, QuizQuestions, QuizOptions
 from django.db import transaction
+from collections import Counter
 
 
 class QuestionSerializer(serializers.Serializer):
@@ -12,53 +11,58 @@ class QuestionSerializer(serializers.Serializer):
     level = serializers.CharField()
 
 
+class OptionsSerializer(serializers.ModelSerializer):
+    correctOption = serializers.BooleanField(required=True)
+
+    class Meta:
+        model = QuizOptions
+        fields = ["option", "isActive", "correctOption", "order"]
+
+
 class CreateQuestionSerializer(serializers.Serializer):
     quizId = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all())
     question = QuestionSerializer()
-    options = serializers.ListField(child=serializers.CharField())
-    correct_answer = serializers.ListField(child=serializers.IntegerField())
+    options = serializers.ListField(child=OptionsSerializer())
+    # correct_answer = serializers.ListField(child=serializers.IntegerField())
 
     def to_internal_value(self, data):
-        print("data==> ", data)
+        # print("data==> ", data)
         errors = {}
         if data:
             quiz_id = data.get('quizId')
             question_data = data.get('question')
             options_data = data.get('options')
-            correct_answers = data.get('correct_answer')
 
+            # check same option shouldn't come more than 1 time
+            correct_answers_count = None if options_data is None else sum(1 for item in options_data if item.get('correctOption') == True)
+            option_counts = Counter(option['option'].strip().lower() for option in options_data if option['option'] is not None)
+            # Find the key with the maximum integer value
+            max_key = max(option_counts, key=option_counts.get)
+            if option_counts[max_key] > 1:
+                errors["options"] = [f"'{max_key}' option came {option_counts[max_key]} times."]
+            # print('correct_answer_count==> ', correct_answers_count)
             # custom validation
 
             # check a question exist only one time in a quiz
             if quiz_id and question_data.get('text'):
                 print("condition working..")
-                filtered_data = QuizQuestions.objects.filter(quiz_id=quiz_id, question__icontains=question_data['text'].strip()).count()
+                filtered_data = QuizQuestions.objects.filter(quiz_id=quiz_id, question__iexact=question_data['text'].strip()).count()
                 if filtered_data > 0:
                     errors['question'] = {'text': ["This question is already Added."]}
 
             # apply validation to add correct_answers based on question 'type'
             # if user select question 'type' =='checkbox' then he must enter at least two correct options
-            if question_data.get('type') == 'checkbox' and correct_answers:
-                if len(correct_answers) < 2:
+            if question_data.get('type') == 'checkbox' and correct_answers_count is not None:
+                if correct_answers_count < 2:
                     errors['options'] = {0: [f"Please select more then one 'correct options' because you selected question 'type':'checkbox'."]}
             # if user select question 'type' == 'radio' then it can add only one correct option
-            elif question_data.get('type') == 'radio' and correct_answers:
-                if len(correct_answers) > 1:
+            elif question_data.get('type') == 'radio' and correct_answers_count is not None:
+                if correct_answers_count > 1:
                     errors['options'] ={0: [f"Please select only one 'correct option' because you selected question 'type':'radio'."]}
 
             # check user must pass at least two options
             if options_data is not None and len(options_data) < 2:
                 errors['options'] = ["Please add at least 2 options."]
-            #
-            if correct_answers is not None:
-                # length of correct answers not more then length of options
-                if len(correct_answers) > len(options_data):
-                    errors['correct_answer'] = [f"'correct_answer' doesn't more then 'options'."]
-                else:
-                    # check user passes correct options or not in 'correct_answer' key
-                    answers = [value for index, value in enumerate(options_data) if index in correct_answers]
-                    if len(answers) < 1:
-                        errors['correct_answer'] = [f"Please select valid option."]
 
             # change field into text into title case
             if question_data.get("text"):
@@ -72,23 +76,25 @@ class CreateQuestionSerializer(serializers.Serializer):
         except serializers.ValidationError as e:
             new_errors = e.detail.copy()  # Make a copy of the custom errors
             for key, value in new_errors.items():
-                if key not in errors:
-                    errors[key] = value  # Add new keys to the errors dictionary
+                # if key not in errors:
+                errors[key] = value  # Add new keys to the errors dictionary
+                # else:
+                #     print(f"value==>{key} ", value)
 
         # raise validations errors
         if errors:
             # print('errors ==> ', errors)
             raise serializers.ValidationError(errors)
-
+        # print("to_internal_function end.....")
         return validated_data
 
     def create(self, validated_data):
-
+        # print("validated_data=> ", validated_data)
         # Extract data from validated_data
         quiz_id = validated_data['quizId']
         question_data = validated_data['question']
         options_data = validated_data['options']
-        correct_answers = validated_data['correct_answer']
+        # correct_answers = validated_data['correct_answer']
 
         # List to store created question instances
         question_instance = None
@@ -103,20 +109,14 @@ class CreateQuestionSerializer(serializers.Serializer):
                     type=question_data['type'],
                     level=question_data['level']
                 )
-                # question_instances.append(question_instance.id)
-                # 2 Step: match correct answer value
-                options = []
-                total_options = len(options_data)
 
-                for i in range(total_options):
-                    # match correct option to given options
-                    if i in correct_answers:
-                        options.append(
-                            QuizOptions(question_id=question_instance, option=options_data[i], correctOption=True))
-                    else:
-                        options.append(QuizOptions(question_id=question_instance, option=options_data[i]))
+                # 2 Step: create objects
+                options = [QuizOptions(question_id=question_instance, **option) for option in options_data]
+                # for option in options_data:
+                #     options.append()
 
-                # step3: create bulk answers
+                # print("options==>", options)
+                # step3: create bulk objects
                 QuizOptions.objects.bulk_create(options)
             except Exception:
                 # Rollback transaction for the current question if any error occurs

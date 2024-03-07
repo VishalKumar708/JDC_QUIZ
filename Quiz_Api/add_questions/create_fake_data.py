@@ -8,7 +8,7 @@ import random
 fake = faker.Faker()
 
 
-def create_question_and_options():
+def add_questions():
     number_of_question = None
     start_time = time.time()
     with (transaction.atomic()):
