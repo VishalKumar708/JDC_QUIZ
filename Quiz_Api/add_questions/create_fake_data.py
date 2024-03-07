@@ -62,7 +62,7 @@ def create_question_and_options():
                                                 correctOption=True if i == random_correct_option else False)
                                     for i in range(no_of_options)]
                 # for i in range(2, no_of_options):
-                #     option = {
+                #     option = {..
                 #         "question_id": question_instance,
                 #         "option": fake.text(),
                 #         "correctOption": random.choice([True, False])

@@ -1,11 +1,14 @@
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializer import CreateQuestionSerializer
+
 from drf_yasg.utils import swagger_auto_schema
 from .schemas import *
 from ..models import QuizQuestions, QuizOptions
-from .serializer import GETAllQuizQuestionsSerializer,UPDATEQuestionSerializer, UPDATEOptionSerializer, CREATEOptionSerializer
+from .serializers.get import GETAllQuizQuestionsSerializer
+from .serializers.create import CreateQuestionSerializer, CREATEOptionSerializer
+from .serializers.update import UPDATEQuestionSerializer, UPDATEOptionSerializer
+
 from django.db.models import Prefetch
 from utils.utils import convert_str_to_bool
 import logging
@@ -122,7 +125,7 @@ class PUTQuestionById(APIView):
     def put(self, request, questionId, *args, **kwargs):
         try:
             instance = QuizQuestions.objects.get(id=questionId)
-            serializer = UPDATEQuestionSerializer(instance=instance, data=request.data, partial=True)
+            serializer = UPDATEQuestionSerializer(instance=instance, data=request.data, partial=True, context={"quiz_id":instance.quiz_id,"question_id":questionId})
             if serializer.is_valid():
                 obj = serializer.save()
                 info_logger.info("Question update successfully.")
