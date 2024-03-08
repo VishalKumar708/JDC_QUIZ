@@ -4,13 +4,13 @@ from django.db.models import Q
 
 class UserManager(BaseUserManager):
 
-    def create_user(self, username, id, phoneNumber, password=None):
+    def create_user(self, name, id, phoneNumber, password=None):
         if not phoneNumber:
             raise ValueError("The Mobile Number field must be set")
         user = self.model(
             id=id,
             phoneNumber=phoneNumber,
-            username=username
+            name=name
         )
         user.set_password(password)
         # user.headId = user
@@ -18,12 +18,12 @@ class UserManager(BaseUserManager):
 
         return user
 
-    def create_superuser(self, username, id, phoneNumber,  password=None):
+    def create_superuser(self, name, id, phoneNumber,  password=None):
         user = self.create_user(
             id=id,
             phoneNumber=phoneNumber,
             password=password,
-            username=username
+            name=name
         )
         user.is_admin = True
         user.is_staff = True

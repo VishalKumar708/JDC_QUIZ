@@ -54,11 +54,11 @@ class CreateQuestionSerializer(serializers.Serializer):
             # if user select question 'type' =='checkbox' then he must enter at least two correct options
             if question_data.get('type') == 'checkbox' and correct_answers_count is not None:
                 if correct_answers_count < 2:
-                    errors['options'] = {0: [f"Please select more then one 'correct options' because you selected question 'type':'checkbox'."]}
+                    errors['options'] = [f"Please select more then one 'correct options' because you selected question 'type':'checkbox'."]
             # if user select question 'type' == 'radio' then it can add only one correct option
             elif question_data.get('type') == 'radio' and correct_answers_count is not None:
                 if correct_answers_count > 1:
-                    errors['options'] ={0: [f"Please select only one 'correct option' because you selected question 'type':'radio'."]}
+                    errors['options'] = [f"Please select only one 'correct option' because you selected question 'type':'radio'."]
 
             # check user must pass at least two options
             if options_data is not None and len(options_data) < 2:

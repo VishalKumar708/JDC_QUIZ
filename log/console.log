@@ -865,3 +865,395 @@ INFO | 2024-03-07 18:44:55,642| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\
 INFO | 2024-03-07 18:44:55,772| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 304 0
 INFO | 2024-03-07 18:44:55,773| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 304 0
 INFO | 2024-03-07 18:44:55,939| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 14409
+INFO | 2024-03-07 19:03:27,969| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-07 19:03:37,165| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/ HTTP/1.1" 200 2426
+INFO | 2024-03-07 19:03:37,692| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/?format=openapi HTTP/1.1" 200 14409
+INFO | 2024-03-07 19:03:46,182| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+INFO | 2024-03-07 19:03:46,474| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 14409
+INFO | 2024-03-08 10:11:57,916| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+WARNING | 2024-03-08 10:12:02,501| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Not Found: /
+WARNING | 2024-03-08 10:12:02,503| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET / HTTP/1.1" 404 94
+INFO | 2024-03-08 10:12:06,376| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/ HTTP/1.1" 200 7147
+INFO | 2024-03-08 10:12:06,434| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,450| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,457| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,458| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,536| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,542| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO | 2024-03-08 10:12:06,542| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+WARNING | 2024-03-08 10:12:06,598| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Not Found: /favicon.ico
+WARNING | 2024-03-08 10:12:06,599| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /favicon.ico HTTP/1.1" 404 94
+INFO | 2024-03-08 10:12:18,954| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/ HTTP/1.1" 200 2426
+INFO | 2024-03-08 10:12:19,248| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/?format=openapi HTTP/1.1" 200 14409
+INFO | 2024-03-08 10:12:29,519| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+INFO | 2024-03-08 10:12:29,749| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 14409
+INFO | 2024-03-08 10:37:34,058| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\models.py changed, reloading.
+INFO | 2024-03-08 10:37:35,047| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 11:30:57,533| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 11:31:15,977| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/ HTTP/1.1" 200 557
+INFO | 2024-03-08 11:32:57,434| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py changed, reloading.
+INFO | 2024-03-08 11:32:58,182| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 11:33:02,539| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/ HTTP/1.1" 200 557
+INFO | 2024-03-08 12:06:33,842| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py changed, reloading.
+INFO | 2024-03-08 12:06:35,240| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 12:06:56,482| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/GETAllQuiz/
+Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR | 2024-03-08 12:06:56,484| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/ HTTP/1.1" 500 89025
+INFO | 2024-03-08 12:07:46,171| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py changed, reloading.
+INFO | 2024-03-08 12:07:47,467| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:08:24,127| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-08 12:08:25,042| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 12:08:28,251| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/GETAllQuiz/
+Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR | 2024-03-08 12:08:28,255| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/ HTTP/1.1" 500 88714
+ERROR | 2024-03-08 12:08:30,469| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/GETAllQuiz/
+Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR | 2024-03-08 12:08:30,473| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/ HTTP/1.1" 500 88714
+ERROR | 2024-03-08 12:08:32,947| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/GETAllQuiz/
+Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR | 2024-03-08 12:08:32,951| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/ HTTP/1.1" 500 88714
+INFO | 2024-03-08 12:10:02,910| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-08 12:10:04,162| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:14:14,132| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-08 12:14:15,083| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 12:14:18,085| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/GETAllQuiz/
+ERROR | 2024-03-08 12:14:18,085| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /quizApi/GETAllQuiz/ HTTP/1.1" 500 85
+INFO | 2024-03-08 12:15:00,629| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\JDC\settings.py changed, reloading.
+INFO | 2024-03-08 12:15:01,517| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:49:59,483| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\urls.py changed, reloading.
+INFO | 2024-03-08 12:50:00,552| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:50:38,295| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py changed, reloading.
+INFO | 2024-03-08 12:50:39,121| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:50:41,534| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 12:50:41,790| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+INFO | 2024-03-08 12:50:41,791| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 304 0
+ERROR | 2024-03-08 12:50:41,792| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 12:50:54,873| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py changed, reloading.
+INFO | 2024-03-08 12:50:55,693| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:50:57,137| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 12:50:57,215| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 12:50:57,216| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 12:50:58,156| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 12:50:58,267| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 12:50:58,267| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 12:50:58,820| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 12:50:59,019| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 12:50:59,019| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 12:53:05,499| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py changed, reloading.
+INFO | 2024-03-08 12:53:06,290| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:53:08,586| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 12:53:08,781| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 12:53:08,782| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 12:53:34,026| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py changed, reloading.
+INFO | 2024-03-08 12:53:34,914| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:53:36,285| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+INFO | 2024-03-08 12:53:36,502| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 14619
+INFO | 2024-03-08 12:53:43,656| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py changed, reloading.
+INFO | 2024-03-08 12:53:44,477| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:53:48,041| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+INFO | 2024-03-08 12:53:48,292| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 14619
+INFO | 2024-03-08 12:54:01,667| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py changed, reloading.
+INFO | 2024-03-08 12:54:02,442| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:54:05,306| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+INFO | 2024-03-08 12:54:05,524| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 14619
+INFO | 2024-03-08 12:58:14,637| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py changed, reloading.
+INFO | 2024-03-08 12:58:15,415| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:58:18,952| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 12:58:19,106| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 12:58:19,107| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 12:59:12,658| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 12:59:13,474| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:59:16,075| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+INFO | 2024-03-08 12:59:16,226| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 15201
+INFO | 2024-03-08 12:59:44,109| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 12:59:44,911| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 12:59:55,661| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/ HTTP/1.1" 200 2426
+INFO | 2024-03-08 12:59:56,169| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/?format=openapi HTTP/1.1" 200 15095
+INFO | 2024-03-08 13:04:41,966| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:04:43,227| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 13:04:47,897| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/POSTQuizEnrollment/
+ERROR | 2024-03-08 13:04:47,897| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 500 85
+INFO | 2024-03-08 13:05:04,537| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:05:05,360| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:05:07,824| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 136
+INFO | 2024-03-08 13:08:34,369| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:08:35,720| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:19:26,485| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:19:28,253| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:25:19,854| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:25:20,798| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:25:51,355| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 159
+INFO | 2024-03-08 13:26:13,079| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 117
+INFO | 2024-03-08 13:26:39,507| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:26:40,375| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:26:42,232| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 117
+INFO | 2024-03-08 13:26:47,653| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 117
+INFO | 2024-03-08 13:27:40,003| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:27:40,999| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:27:42,066| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 117
+INFO | 2024-03-08 13:28:49,106| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:28:49,847| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 13:29:25,667| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/POSTQuizEnrollment/
+ERROR | 2024-03-08 13:29:25,668| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 500 85
+INFO | 2024-03-08 13:29:45,363| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:29:46,309| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:30:00,046| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+INFO | 2024-03-08 13:30:10,425| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/ HTTP/1.1" 200 7147
+INFO | 2024-03-08 13:54:08,653| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 115
+INFO | 2024-03-08 13:54:24,354| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 70
+INFO | 2024-03-08 13:54:43,069| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:54:43,855| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 13:54:49,114| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/POSTQuizEnrollment/
+ERROR | 2024-03-08 13:54:49,117| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 500 85
+INFO | 2024-03-08 13:56:22,974| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:56:23,734| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 13:56:27,575| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/POSTQuizEnrollment/
+ERROR | 2024-03-08 13:56:27,575| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 500 85
+INFO | 2024-03-08 13:57:29,369| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:57:30,159| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:57:34,430| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+INFO | 2024-03-08 13:58:54,400| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:58:55,410| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:58:55,854| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+INFO | 2024-03-08 13:59:36,705| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 13:59:37,551| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 13:59:39,508| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 101
+INFO | 2024-03-08 14:00:14,505| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 14:00:15,313| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:00:53,430| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 14:00:54,208| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:05:21,754| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\admin.py changed, reloading.
+INFO | 2024-03-08 14:05:22,853| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:05:55,538| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\admin.py changed, reloading.
+INFO | 2024-03-08 14:05:56,295| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:06:01,145| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/ HTTP/1.1" 200 7614
+INFO | 2024-03-08 14:06:04,869| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quizenrollment/ HTTP/1.1" 200 12495
+INFO | 2024-03-08 14:06:04,926| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,936| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,936| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,936| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,937| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,948| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,949| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,951| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,954| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,971| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:04,994| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 14:06:05,038| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO | 2024-03-08 14:06:44,222| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\models.py changed, reloading.
+INFO | 2024-03-08 14:06:44,972| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:09:39,091| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:09:42,525| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quizenrollment/ HTTP/1.1" 200 12856
+INFO | 2024-03-08 14:09:42,566| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 14:13:55,312| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\serializers\create.py changed, reloading.
+INFO | 2024-03-08 14:13:56,062| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:47:51,865| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\admin.py changed, reloading.
+INFO | 2024-03-08 14:47:53,038| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:56:38,916| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 14:56:41,535| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 14:58:36,456| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 14:58:39,001| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 16:15:22,704| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 16:15:24,739| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 16:15:34,928| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quizenrollment/ HTTP/1.1" 200 12856
+INFO | 2024-03-08 16:15:35,134| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 16:40:54,981| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 16:40:56,602| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 16:44:09,415| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 16:44:10,576| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 16:44:38,295| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 16:44:39,313| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 16:44:44,255| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quizenrollment/ HTTP/1.1" 200 12856
+INFO | 2024-03-08 16:44:44,329| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 16:44:49,019| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 101
+INFO | 2024-03-08 16:45:18,653| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 74
+INFO | 2024-03-08 16:53:58,625| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 16:54:00,050| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 17:12:49,121| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 17:12:50,190| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 17:39:15,687| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 17:39:17,087| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 17:40:08,776| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 17:40:09,583| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 17:45:07,035| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 17:45:08,183| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 17:56:37,934| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 17:56:38,890| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:01:57,745| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\admin.py changed, reloading.
+INFO | 2024-03-08 18:01:58,814| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:02:02,672| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quizenrollment/ HTTP/1.1" 200 12856
+INFO | 2024-03-08 18:02:02,767| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 18:02:04,721| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quiz/ HTTP/1.1" 200 12676
+INFO | 2024-03-08 18:02:04,852| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO | 2024-03-08 18:02:04,863| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 18:02:06,940| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quiz/ HTTP/1.1" 200 12676
+INFO | 2024-03-08 18:02:07,081| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 18:10:56,371| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\admin.py changed, reloading.
+INFO | 2024-03-08 18:10:57,849| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:15:43,937| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:15:45,170| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:17:04,892| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:17:06,173| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 18:17:10,524| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 18:17:10,524| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 18:17:12,208| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 18:17:12,290| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 18:17:12,290| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 18:17:13,265| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 18:17:13,345| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 18:17:13,346| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 18:17:14,172| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+ERROR | 2024-03-08 18:17:14,285| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /api-documentation/
+ERROR | 2024-03-08 18:17:14,287| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 500 85
+INFO | 2024-03-08 18:18:11,907| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:18:12,655| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:18:53,034| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:18:53,838| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:18:57,016| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/ HTTP/1.1" 200 924
+INFO | 2024-03-08 18:18:57,099| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-documentation/?format=openapi HTTP/1.1" 200 15276
+INFO | 2024-03-08 18:19:46,086| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/ HTTP/1.1" 200 2426
+INFO | 2024-03-08 18:19:46,440| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/?format=openapi HTTP/1.1" 200 15276
+ERROR | 2024-03-08 18:20:38,683| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/POSTQuizEnrollment/
+ERROR | 2024-03-08 18:20:38,684| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 500 85
+INFO | 2024-03-08 18:22:31,542| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:22:32,329| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 18:22:34,928| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/POSTQuizEnrollment/
+ERROR | 2024-03-08 18:22:34,930| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 500 85
+INFO | 2024-03-08 18:23:13,243| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:23:14,064| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:23:18,254| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 59
+INFO | 2024-03-08 18:24:03,186| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+INFO | 2024-03-08 18:24:22,438| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+INFO | 2024-03-08 18:24:24,079| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+INFO | 2024-03-08 18:24:30,067| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/Quiz_Api/quizenrollment/ HTTP/1.1" 200 14860
+INFO | 2024-03-08 18:24:30,126| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO | 2024-03-08 18:26:29,546| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:26:30,326| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:26:50,375| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 74
+INFO | 2024-03-08 18:27:04,287| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 74
+INFO | 2024-03-08 18:27:27,435| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 125
+INFO | 2024-03-08 18:28:59,054| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/ HTTP/1.1" 200 2426
+INFO | 2024-03-08 18:28:59,311| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/?format=openapi HTTP/1.1" 200 15276
+INFO | 2024-03-08 18:33:41,382| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\User\models.py changed, reloading.
+INFO | 2024-03-08 18:33:42,308| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:33:59,948| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:34:43,802| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:34:44,581| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:34:49,213| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/ HTTP/1.1" 200 2426
+INFO | 2024-03-08 18:34:49,524| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/?format=openapi HTTP/1.1" 200 15264
+INFO | 2024-03-08 18:35:11,473| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 140
+INFO | 2024-03-08 18:35:56,852| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 94
+INFO | 2024-03-08 18:36:13,132| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 74
+INFO | 2024-03-08 18:40:39,109| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+INFO | 2024-03-08 18:40:45,445| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 74
+INFO | 2024-03-08 18:42:48,404| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 94
+INFO | 2024-03-08 18:43:10,502| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 125
+INFO | 2024-03-08 18:44:32,721| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 125
+INFO | 2024-03-08 18:44:42,514| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 66
+INFO | 2024-03-08 18:46:03,520| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:46:04,462| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:46:08,809| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 66
+INFO | 2024-03-08 18:46:59,607| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:47:00,406| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:47:06,449| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 66
+INFO | 2024-03-08 18:48:05,716| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:48:06,681| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+ERROR | 2024-03-08 18:48:07,930| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Internal Server Error: /quizApi/POSTQuizEnrollment/
+ERROR | 2024-03-08 18:48:07,931| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 500 85
+INFO | 2024-03-08 18:48:43,018| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:48:43,797| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:48:48,517| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 66
+INFO | 2024-03-08 18:55:34,156| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:55:34,910| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:55:37,683| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 66
+INFO | 2024-03-08 18:57:00,414| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:57:01,404| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:57:04,203| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 128
+INFO | 2024-03-08 18:58:47,658| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 18:58:48,560| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 18:58:50,811| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 128
+INFO | 2024-03-08 18:58:58,007| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 125
+INFO | 2024-03-08 18:59:14,722| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 59
+INFO | 2024-03-08 18:59:40,106| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 74
+INFO | 2024-03-08 18:59:47,976| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 84
+WARNING | 2024-03-08 18:59:59,933| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\log.py | func: log_response | line_no: 241 | Bad Request: /quizApi/POSTQuizEnrollment/
+WARNING | 2024-03-08 18:59:59,934| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 400 172
+INFO | 2024-03-08 19:00:05,171| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "POST /quizApi/POSTQuizEnrollment/ HTTP/1.1" 200 66
+INFO | 2024-03-08 19:00:30,433| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: trigger_reload | line_no: 266 | C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\serializer.py changed, reloading.
+INFO | 2024-03-08 19:00:31,227| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\utils\autoreload.py | func: run_with_reloader | line_no: 668 | Watching for file changes with StatReloader
+INFO | 2024-03-08 19:01:32,098| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/ HTTP/1.1" 200 2426
+INFO | 2024-03-08 19:01:32,390| path: C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\core\servers\basehttp.py | func: log_message | line_no: 212 | "GET /api-playground/?format=openapi HTTP/1.1" 200 15264

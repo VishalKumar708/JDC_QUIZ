@@ -156,6 +156,8 @@ class GETAllQuiz(ListAPIView):
         ]
     )
     def get(self, request, *args, **kwargs):
+        client_timezone = request.headers
+        print('client timezone=> ', client_timezone)
         try:
             queryset = self.filter_queryset(self.get_queryset())
         except FieldError:

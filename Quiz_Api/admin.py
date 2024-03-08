@@ -12,6 +12,7 @@ admin.site.register(Organization, OrganizationAdmin)
 class QuizAdmin(admin.ModelAdmin):
     list_display = ["id", "title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
                     "organization_id", "order", "isActive", "isVerified"]
+    # list_max_show_all = 100000000
 
 
 admin.site.register(Quiz, QuizAdmin)
@@ -31,4 +32,10 @@ class QuizAnswersAdmin(admin.ModelAdmin):
 admin.site.register(QuizOptions, QuizAnswersAdmin)
 
 
+class QuizEnrollmentAdmin(admin.ModelAdmin):
+    list_display = ['id', 'user_id', 'quiz_id', 'enrollmentDate', 'completingDate', 'score', 'timeTaken',
+                     'correctAnswer', 'incorrectAnswer', 'pendingAnswer']
+
+
+admin.site.register(QuizEnrollment, QuizEnrollmentAdmin)
 # Register your models here.

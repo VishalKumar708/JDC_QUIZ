@@ -8,14 +8,14 @@ from django.utils import timezone
 
 
 class User(BaseModel, AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     phoneNumber = PhoneNumberField()
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(default=timezone.now)
 
     USERNAME_FIELD = "id"
-    REQUIRED_FIELDS = ["phoneNumber", "username"]
+    REQUIRED_FIELDS = ["phoneNumber", "name"]
     objects = UserManager()
 
     def __str__(self):
