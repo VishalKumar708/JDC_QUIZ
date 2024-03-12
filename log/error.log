@@ -126,3 +126,21 @@ ERROR | 2024-03-08 18:20:38,682| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-03-08 18:22:34,928| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'int' object is not subscriptable
 ERROR | 2024-03-08 18:48:07,926| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | cannot access local variable 'errors' where it is not associated with a value
 ERROR | 2024-03-08 18:59:59,925| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 68 | Invalid JSON data. Expecting property name enclosed in double quotes: line 8 column 1 (char 83)
+ERROR | 2024-03-11 13:24:42,751| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-11 13:24:49,589| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-11 14:09:44,965| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'NoneType' object has no attribute 'get'
+ERROR | 2024-03-11 14:11:28,255| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'NoneType' object has no attribute 'get'
+ERROR | 2024-03-11 14:12:37,429| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'NoneType' object has no attribute 'get'
+ERROR | 2024-03-11 15:24:10,175| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The field 'phonenumbers' was declared on serializer UserSerializer, but has not been included in the 'fields' option.
+ERROR | 2024-03-11 15:54:11,292| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuerySet' object has no attribute 'queries'
+ERROR | 2024-03-11 16:36:06,936| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-12 10:48:54,534| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-12 10:51:04,348| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-12 12:25:06,529| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `total_questionsorganization_id` is not valid for model `Quiz`.
+ERROR | 2024-03-12 12:25:31,683| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `total_questions` is not valid for model `Quiz`.
+ERROR | 2024-03-12 12:25:33,500| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `total_questions` is not valid for model `Quiz`.
+ERROR | 2024-03-12 12:28:15,937| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The field 'total_question' was declared on serializer GETAllQuizSerializer, but has not been included in the 'fields' option.
+ERROR | 2024-03-12 12:28:17,166| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The field 'total_question' was declared on serializer GETAllQuizSerializer, but has not been included in the 'fields' option.
+ERROR | 2024-03-12 12:34:53,331| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The annotation 'totalQuestions' conflicts with a field on the model.
+ERROR | 2024-03-12 12:56:15,484| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | type object 'bool' has no attribute 'split'
+ERROR | 2024-03-12 12:57:17,996| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected parent FilterSet 'Quiz_Api.quiz.filters.QuizFilter' to have a '.filter_total_questions_gt()' method.

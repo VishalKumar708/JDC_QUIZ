@@ -10,7 +10,7 @@ admin.site.register(Organization, OrganizationAdmin)
 
 
 class QuizAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
+    list_display = ["id", "title", "startDate", "endDate", "resultDate", "prize", "duration",
                     "organization_id", "order", "isActive", "isVerified"]
     # list_max_show_all = 100000000
 

@@ -32,5 +32,4 @@ class User(BaseModel, AbstractBaseUser, PermissionsMixin):
         return True
 
 
-
 # Create your models here.

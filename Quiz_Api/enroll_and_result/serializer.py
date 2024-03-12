@@ -12,20 +12,13 @@ class UserSerializer(serializers.ModelSerializer):
 
     def to_internal_value(self, data):
         errors = {}
-        # user_name = data.get('username')
         phone_number = data.get('phone_number')
-
-        # if user_name is None and phone_number is None:
-        #     errors['user_id'] = [f"please either provide 'user_id' or ('username','phoneNumber')."]
-
-        # if user_name and phone_number:
-        #     errors['user_id'] = [f"Please11 pass either  'user_id' field or '('username', 'phoneNumber')'. "]
 
         if phone_number:
             filtered_records = User.objects.filter(phoneNumber=phone_number).count()
             print('filtered_record==> ', filtered_records)
             if filtered_records > 0:
-                errors['phoneNumber'] = ["This number is already register please pass 'user_id'."]
+                errors['phoneNumber'] = ["This number is already register."]
 
         # default validation
         validated_data = None
@@ -49,10 +42,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class QuizEnrolmentSerializer(serializers.ModelSerializer):
-    # username = serializers.CharField(required=False, allow_null=True)
-    # phoneNumber = PhoneNumberField(required=False, allow_null=True)
-    user = UserSerializer(required=False)
-    # user = serializers.Serializer(UserSerializer(), required=False)
+    user = UserSerializer(required=False, allow_null=True)
     user_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), required=False, error_messages={
         'does_not_exist': "Invalid user id.",
         'incorrect_type': "Incorrect type. Expected a valid user id."
@@ -77,10 +67,8 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
         print("outer data=> ", data)
 
         if data:
-
             quiz_id = data.get('quiz_id')
-
-            phone_number = user_data.get('phoneNumber')
+            phone_number = user_data.get('phoneNumber') if user_data is not None else None
 
             # check user exist or not
             if phone_number and user_id is None:
@@ -97,7 +85,7 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
                         errors['user'] = serializer.errors
 
             #  check user is already enrolled or not
-            user_id = data['user_id']
+            user_id = user_id if data['user_id'] is not None else data['user_id']
             if user_id and quiz_id:
                 enrolled_count = QuizEnrollment.objects.filter(quiz_id=quiz_id, user_id=user_id).count()
                 if enrolled_count > 0:
@@ -105,7 +93,6 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
             # if user_id is None and user_data:
 
         # default validation
-        # print('data=> ', data)
         validated_data = None
         try:
             # store all data in "validated_data" variable and return it
@@ -130,3 +117,4 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
         quiz_id = validated_data.get('quiz_id')
         QuizEnrollment.objects.create(user_id=user_id, quiz_id=quiz_id, status='enroll')
         return user_id
+

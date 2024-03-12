@@ -49,3 +49,11 @@ WARNING | 2024-03-07 18:38:57,624| path: C:\Users\vs123\OneDrive\Desktop\quiz\JD
 WARNING | 2024-03-07 18:40:45,470| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 51 | Error occured while creating questions.
 WARNING | 2024-03-07 18:41:16,391| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 51 | Error occured while creating questions.
 WARNING | 2024-03-07 18:43:10,914| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 51 | Error occured while creating questions.
+WARNING | 2024-03-12 10:58:14,303| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 43 | Error occured while enroll in a quiz
+WARNING | 2024-03-12 10:58:23,374| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 43 | Error occured while enroll in a quiz
+WARNING | 2024-03-12 11:00:40,834| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 43 | Error occured while enroll in a quiz
+WARNING | 2024-03-12 11:02:38,995| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 43 | Error occured while enroll in a quiz
+WARNING | 2024-03-12 11:02:52,978| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 43 | Error occured while enroll in a quiz
+WARNING | 2024-03-12 11:03:17,275| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 43 | Error occured while enroll in a quiz
+WARNING | 2024-03-12 12:53:04,993| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 165 | Invalid field name(abc) pass.
+WARNING | 2024-03-12 12:59:00,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 165 | Invalid field name(gg) pass.

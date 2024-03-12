@@ -111,6 +111,9 @@ class GETAllQuizSerializer(serializers.ModelSerializer):
     resultDate = serializers.SerializerMethodField()
     startDate = serializers.SerializerMethodField()
 
+    # custom field to get 'questions count'
+    totalQuestions = serializers.IntegerField()
+
     class Meta:
         fields = ["id", "title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
                     "organization_id", "order", "isActive", "isVerified"]

@@ -15,7 +15,7 @@ class Quiz(BaseModel):
     resultDate = models.DateField()
     prize = models.CharField(max_length=150)
     duration = models.CharField(max_length=50)
-    totalQuestions = models.IntegerField(default=None, null=True)
+    # totalQuestions = models.IntegerField(default=None, null=True)
     order = models.IntegerField()
     organization_id = models.ForeignKey('Quiz_Api.Organization', on_delete=models.SET_NULL,
                                      related_name="organization_quiz", null=True, default=None, blank=True)

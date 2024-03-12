@@ -126,7 +126,7 @@ class PUTQuiz(APIView):
                 'data': {'message': f"'quiz id' excepted a number but got '{id}'"}
             }, status=404)
 
-
+from django.db.models import Count
 class GETAllQuiz(ListAPIView):
     serializer_class = GETAllQuizSerializer
     filter_backends = [DjangoFilterBackend]
@@ -134,7 +134,8 @@ class GETAllQuiz(ListAPIView):
     pagination_class = Pagination
 
     def get_queryset(self):
-        queryset = Quiz.objects.all()
+        queryset = Quiz.objects.annotate(totalQuestions=Count('quiz_questions__id', filter=Q(quiz_questions__isActive=True)))
+        # print("queries==> ", queryset.query)
         order_by = self.request.query_params.get('order_by')
         if order_by:
             return queryset.order_by(order_by)
@@ -157,7 +158,7 @@ class GETAllQuiz(ListAPIView):
     )
     def get(self, request, *args, **kwargs):
         client_timezone = request.headers
-        print('client timezone=> ', client_timezone)
+        # print('client timezone=> ', client_timezone)
         try:
             queryset = self.filter_queryset(self.get_queryset())
         except FieldError:
