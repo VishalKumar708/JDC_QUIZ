@@ -98,7 +98,11 @@ class UPDATEOptionSerializer(serializers.ModelSerializer):
                                                    correctOption=True).count()
         if filtered_data >= 2:
             question_instance.type = 'checkbox'
+            question_instance.isActive = True
         elif filtered_data == 1:
             question_instance.type = 'radio'
+            question_instance.isActive = True
+        elif filtered_data == 0:
+            question_instance.isActive = False
         question_instance.save()  # Save the modified instance to update the 'type' field
         return instance

@@ -12,6 +12,4 @@ if value is not None:
     question_count = [i.total_questions for i in filtered_data2]
     print(f"question count after filtering {value}=> ", filtered_data2)
 
-# filtered_data3 = filtered_data.filter(quiz_questions__isActive=False)
-# question_counts = [i.total_questions for i in filtered_data3]
-# print("question count after filtering False=> ", filtered_data3)
+

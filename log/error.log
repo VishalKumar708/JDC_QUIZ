@@ -144,3 +144,10 @@ ERROR | 2024-03-12 12:28:17,166| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-03-12 12:34:53,331| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The annotation 'totalQuestions' conflicts with a field on the model.
 ERROR | 2024-03-12 12:56:15,484| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | type object 'bool' has no attribute 'split'
 ERROR | 2024-03-12 12:57:17,996| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected parent FilterSet 'Quiz_Api.quiz.filters.QuizFilter' to have a '.filter_total_questions_gt()' method.
+ERROR | 2024-03-13 11:10:23,990| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-13 11:10:23,991| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-13 11:13:18,843| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-13 11:13:18,844| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-13 11:14:15,453| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-13 11:14:15,454| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-13 11:14:38,803| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
