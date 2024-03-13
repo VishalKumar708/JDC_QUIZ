@@ -34,7 +34,8 @@ class CreateQuestionSerializer(serializers.Serializer):
             options_data = data.get('options')
 
             # check same option shouldn't come more than 1 time
-            correct_answers_count = None if options_data is None else sum(1 for item in options_data if item.get('correctOption') == True)
+            correct_answers_count = 0 if options_data is None else sum(1 for item in options_data if item.get('correctOption') == True)
+            print("correct_answers_count==> ", correct_answers_count)
             option_counts = Counter(option['option'].strip().lower() for option in options_data if option['option'] is not None)
             # Find the key with the maximum integer value
             max_key = max(option_counts, key=option_counts.get)
@@ -52,13 +53,16 @@ class CreateQuestionSerializer(serializers.Serializer):
 
             # apply validation to add correct_answers based on question 'type'
             # if user select question 'type' =='checkbox' then he must enter at least two correct options
-            if question_data.get('type') == 'checkbox' and correct_answers_count is not None:
-                if correct_answers_count < 2:
-                    errors['options'] = [f"Please select more then one 'correct options' because you selected question 'type':'checkbox'."]
-            # if user select question 'type' == 'radio' then it can add only one correct option
-            elif question_data.get('type') == 'radio' and correct_answers_count is not None:
-                if correct_answers_count > 1:
-                    errors['options'] = [f"Please select only one 'correct option' because you selected question 'type':'radio'."]
+            if correct_answers_count and correct_answers_count > 0:
+                if question_data.get('type') == 'checkbox':
+                    if correct_answers_count < 2:
+                        errors['options'] = [f"Please select more then one 'correct options' because you selected question 'type':'checkbox'."]
+                # if user select question 'type' == 'radio' then it can add only one correct option
+                elif question_data.get('type') == 'radio':
+                    if correct_answers_count > 1:
+                        errors['options'] = [f"Please select only one 'correct option' because you selected question 'type':'radio'."]
+            else:
+                errors['options'] = ["Please select at least one correct option."]
 
             # check user must pass at least two options
             if options_data is not None and len(options_data) < 2:

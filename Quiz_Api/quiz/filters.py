@@ -7,7 +7,7 @@ from django.db.models import Count
 
 
 class QuizFilter(django_filters.FilterSet):
-    organization = django_filters.CharFilter(method='filter_organization')
+    # organization = django_filters.CharFilter(method='filter_organization')
     # show only those quiz where use is not enrolled
     exclude_user_id = django_filters.NumberFilter(method='filter_exclude_user_id')
     # total questions
@@ -29,16 +29,16 @@ class QuizFilter(django_filters.FilterSet):
             'duration': ['exact', 'icontains'],
             # 'totalQuestions': ['exact', 'gte', 'lte'],
             'order': ['exact', 'gte', 'lte'],
-            'organization_id': ['exact'],
+            'organization_id__name': ['icontains',],
             'isVerified': ['exact'],
             'isActive': ['exact'],
             'enrollments__user_id': ['exact']
         }
 
-    def filter_organization(self, queryset, name, value):
-        if value.lower() == 'null':
-            return queryset.filter(organization__isnull=True)
-        return queryset.filter(organization=value)
+    # def filter_organization(self, queryset, name, value):
+    #     if value.lower() == 'null':
+    #         return queryset.filter(organization__isnull=True)
+    #     return queryset.filter(organization=value)
 
     def filter_exclude_user_id(self, queryset, name, value):
         if value:

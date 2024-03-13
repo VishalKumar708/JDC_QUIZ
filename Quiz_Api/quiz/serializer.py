@@ -12,7 +12,7 @@ class CreateQuizSerializer(serializers.ModelSerializer):
     resultDate = serializers.DateField(input_formats=(datetime_format,))
 
     class Meta:
-        fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
+        fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration"
                     "organization_id", "order"]
         model = Quiz
 
@@ -61,7 +61,7 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
     resultDate = serializers.DateField(input_formats=(datetime_format,))
 
     class Meta:
-        fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration", "totalQuestions",
+        fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration",
                     "organization_id", "order", "isVerified", "isActive"]
         model = Quiz
 

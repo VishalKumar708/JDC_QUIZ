@@ -38,7 +38,7 @@ def add_questions():
                 resultDate=datetime.now(),
                 prize=f'Prize',
                 duration='30 minutes',
-                totalQuestions=10,
+                # totalQuestions=10,
                 order=random.randint(1, 59),
                 isVerified=True
             )
@@ -47,8 +47,8 @@ def add_questions():
                 question_instance = QuizQuestions.objects.create(
                     quiz_id=quiz_id,
                     question=fake.text(),
-                    type="Checkbox",
-                    level="Easy"
+                    type="checkbox",
+                    level="easy"
                 )
                 no_of_options = random.randint(2, 5)
                 print("no of options==> ", no_of_options)
@@ -73,9 +73,9 @@ def add_questions():
                 no_of_correctOptions = question_instance.options.filter(correctOption=True).count()
                 print("no_of_correctOptions=> ", no_of_correctOptions)
                 if no_of_correctOptions > 1:
-                    question_instance.type = 'Checkbox'
+                    question_instance.type = 'checkbox'
                 elif no_of_correctOptions == 1:
-                    question_instance.type = 'Radio'
+                    question_instance.type = 'radio'
                 question_instance.save()
 
             end_time = time.time()
