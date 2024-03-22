@@ -33,9 +33,18 @@ admin.site.register(QuizOptions, QuizAnswersAdmin)
 
 
 class QuizEnrollmentAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user_id', 'quiz_id', 'enrollmentDate', 'completingDate', 'score', 'timeTaken',
+    list_display = ['id', 'user_id', 'quiz_id', 'enrollmentDate', 'status', 'completingDate', 'score', 'timeTaken',
                      'correctAnswer', 'incorrectAnswer', 'pendingAnswer']
 
 
 admin.site.register(QuizEnrollment, QuizEnrollmentAdmin)
 # Register your models here.
+
+
+class QuizPlayAdmin(admin.ModelAdmin):
+    list_display = ["id", "userId", "quizId", "questionId", "answerId"]
+
+
+admin.site.register(QuizPlay, QuizPlayAdmin)
+
+

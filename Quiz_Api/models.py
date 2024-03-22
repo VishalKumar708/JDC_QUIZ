@@ -1,6 +1,5 @@
 from django.db import models
 from utils.base_model import BaseModel
-from django.utils import timezone
 
 
 class Organization(BaseModel):
@@ -27,11 +26,16 @@ class QuizQuestions(BaseModel):
         ("radio", "Radio"),
         ("checkbox", "Checkbox")
     ]
+    LEVEL_CHOICE = [
+        ("easy", "Easy"),
+        ("medium", "Medium"),
+        ("hard", "Hard")
+    ]
 
     quiz_id = models.ForeignKey('Quiz_Api.Quiz', on_delete=models.CASCADE, related_name='quiz_questions')
     question = models.TextField()
     type = models.CharField(max_length=150, choices=TYPE_CHOICES)
-    level = models.CharField(max_length=100)
+    level = models.CharField(max_length=100, choices=LEVEL_CHOICE)
     # isVerified = models.BooleanField(default=True)
 
 
@@ -48,10 +52,10 @@ class QuizEnrollment(BaseModel):
         ('enroll', "Enroll"),
         # ('pending', "Pending"),
         ('start', "Start"),
+        ('playing', "Playing"),
         ('complete', "Complete"),
         # ('expire', "Expire"),
     )
-
     user_id = models.ForeignKey('User.User', on_delete=models.CASCADE, related_name='quiz_enrollments')
     quiz_id = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='enrollments')
     enrollmentDate = models.DateTimeField(auto_now_add=True)
@@ -62,10 +66,13 @@ class QuizEnrollment(BaseModel):
     correctAnswer = models.IntegerField(default=0)
     incorrectAnswer = models.IntegerField(default=0)
     pendingAnswer = models.IntegerField(default=0)
-
 # Create your models here.
 
 
-
+class QuizPlay(BaseModel):
+    userId = models.ForeignKey('User.User', on_delete=models.CASCADE, related_name='quiz_plays')
+    quizId = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='quiz_plays')
+    questionId = models.ForeignKey('Quiz_Api.QuizQuestions', on_delete=models.CASCADE, related_name='quiz_plays')
+    answerId = models.ForeignKey('Quiz_Api.QuizOptions', on_delete=models.CASCADE, related_name='quiz_plays')
 
 

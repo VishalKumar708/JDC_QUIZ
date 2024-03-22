@@ -2,7 +2,8 @@ from django.urls import path
 from .quiz.views import *
 
 from .add_questions.views import *
-from .enroll_and_result.views import POSTQuizEnrollment
+from .enroll_and_result.views import *
+from .quiz_play.views import *
 
 urlpatterns = [
     path('POSTQuiz/', POSTQuiz.as_view()),
@@ -15,7 +16,12 @@ urlpatterns = [
     path('PUTQuestionById/<slug:questionId>/', PUTQuestionById.as_view()),
     path('PUTOption/<slug:optionId>/', PUTOption.as_view()),
     path('POSTOption/', POSTOption.as_view()),
-    path('POSTQuizEnrollment/', POSTQuizEnrollment.as_view())
+    path('POSTQuizEnrollment/', POSTQuizEnrollment.as_view()),
+    path('GETAllQuizEnrollment/', GETAllQuizEnrollment.as_view()),
+
+    path('POSTQuizPlay/', POSTQuizPlay.as_view()),
+    path('GETReadyToPlayQuiz/<slug:userId>/<slug:quizId>/', GETReadyPlayQuiz.as_view())
+
 ]
 
 

@@ -1,9 +1,14 @@
+from django.core.exceptions import FieldError
 from drf_yasg import openapi
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializer import QuizEnrolmentSerializer
+from .serializer import QuizEnrolmentSerializer, GETAllQuizEnrolmentSerializer
+from rest_framework.generics import ListAPIView
 from ..models import QuizEnrollment
 from drf_yasg.utils import swagger_auto_schema
+from django_filters.rest_framework import DjangoFilterBackend
+from .filters import QuizEnrollmentFilter
+from utils.pagination import Pagination
 import logging
 error_logger = logging.getLogger('error')
 info_logger = logging.getLogger('info')
@@ -47,4 +52,59 @@ class POSTQuizEnrollment(APIView):
         })
 
 
+class GETAllQuizEnrollment(ListAPIView):
+    serializer_class = GETAllQuizEnrolmentSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = QuizEnrollmentFilter
+    pagination_class = Pagination
+
+
+
+    def get_queryset(self):
+        queryset = QuizEnrollment.objects.all()
+        order_by = self.request.query_params.get('order_by')
+        if order_by:
+            return queryset.order_by(order_by)
+        return queryset.order_by('enrollmentDate')
+
+    @swagger_auto_schema(
+        tags=['Quiz API'],
+        # responses={
+        #     200: openapi.Response('Successful response', get_response_schema),
+        #     404: openapi.Response('No Record Found'),
+        # },
+        pagination_class=Pagination,
+        manual_parameters=[
+            openapi.Parameter('page', openapi.IN_QUERY, description="Page number", type=openapi.TYPE_INTEGER),
+            openapi.Parameter('page_size', openapi.IN_QUERY, description="Number of results per page",
+                              type=openapi.TYPE_INTEGER),
+            openapi.Parameter('order_by', openapi.IN_QUERY, description="Field to order by", type=openapi.TYPE_STRING),
+        ]
+    )
+    def get(self, request, *args, **kwargs):
+        client_timezone = request.headers
+        # print('client timezone=> ', client_timezone)
+        try:
+            queryset = self.filter_queryset(self.get_queryset())
+        except FieldError:
+            warning_logger.warning(f"Invalid field name({self.request.query_params.get('order_by')}) pass.")
+            return Response(data={
+                "status": "Failed",
+                "data": {"message": f"Invalid field name '{self.request.query_params.get('order_by')}' specified in "
+                                    f"'order_by' parameter"}
+            }, status=404)
+
+        if queryset.exists():
+            page = self.paginate_queryset(queryset)  # Perform pagination
+            serializer = self.get_serializer(page, many=True)
+            info_logger.info("Record send Successfully.")
+            return self.get_paginated_response(serializer.data)
+
+        else:
+            info_logger.info("No Record Found")
+            return Response(data={
+                "status": "Success",
+                "data": {
+                    "message": "No Record Found"}
+            }, status=200)
 

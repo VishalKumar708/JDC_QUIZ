@@ -109,3 +109,42 @@ INFO | 2024-03-13 15:10:14,463| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Q
 INFO | 2024-03-13 15:47:15,809| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
 INFO | 2024-03-13 15:47:25,245| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
 INFO | 2024-03-13 15:57:43,396| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 179 | No Record Found
+INFO | 2024-03-19 13:57:20,811| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 38 | User Enrolled Successfully in a Quiz.
+INFO | 2024-03-19 13:58:57,632| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 38 | User Enrolled Successfully in a Quiz.
+INFO | 2024-03-19 14:19:34,674| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 46 | Question and options are added successfully.
+INFO | 2024-03-20 14:01:39,646| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-20 17:08:25,515| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-20 17:52:19,947| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-20 17:54:54,564| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-21 10:11:25,678| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-21 10:16:11,912| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-21 10:17:56,663| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-21 10:25:54,720| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 38 | User played quiz successfully.
+INFO | 2024-03-21 11:43:45,489| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 39 | User played quiz successfully.
+INFO | 2024-03-21 14:18:10,586| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:18:38,814| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:18:53,071| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:21:13,616| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:22:29,562| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:23:58,319| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:27:03,696| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:29:30,249| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:30:12,269| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:30:13,247| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 14:30:28,950| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 16:38:43,774| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 16:39:25,659| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 16:40:12,557| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 16:45:17,449| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 16:45:34,085| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 16:52:31,219| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-21 17:15:53,237| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 39 | User played quiz successfully.
+INFO | 2024-03-21 17:18:33,802| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 39 | User played quiz successfully.
+INFO | 2024-03-21 17:20:30,982| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 39 | User played quiz successfully.
+INFO | 2024-03-22 10:18:44,705| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 39 | User played quiz successfully.
+INFO | 2024-03-22 11:32:34,356| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 39 | User played quiz successfully.
+INFO | 2024-03-22 12:05:15,963| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
+INFO | 2024-03-22 12:05:40,339| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
+INFO | 2024-03-22 12:06:09,174| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
+INFO | 2024-03-22 12:07:07,177| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
+INFO | 2024-03-22 12:07:15,292| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.

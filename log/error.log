@@ -151,3 +151,149 @@ ERROR | 2024-03-13 11:13:18,844| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-03-13 11:14:15,453| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
 ERROR | 2024-03-13 11:14:15,454| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
 ERROR | 2024-03-13 11:14:38,803| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-19 10:10:51,012| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-19 13:10:51,125| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-19 13:11:05,276| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The field 'userId' was declared on serializer QuizEnrolmentSerializer, but has not been included in the 'fields' option.
+ERROR | 2024-03-19 13:15:44,302| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'user_id'
+ERROR | 2024-03-19 13:16:46,529| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:20:11,317| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:21:12,728| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:23:53,437| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:27:05,282| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:29:47,070| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:33:13,163| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:35:37,602| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:36:48,268| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:40:46,607| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:42:41,663| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:43:19,080| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:43:49,437| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:44:37,578| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:46:45,516| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:49:12,816| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:56:13,255| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'user_id_id' cannot be null")
+ERROR | 2024-03-19 13:56:50,793| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'quiz_id_id' cannot be null")
+ERROR | 2024-03-19 14:08:57,037| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-19 16:58:14,645| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | .validate() should return the validated data
+ERROR | 2024-03-19 17:14:49,377| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | .validate() should return the validated data
+ERROR | 2024-03-19 17:15:32,448| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | .validate() should return the validated data
+ERROR | 2024-03-19 17:16:21,378| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | .validate() should return the validated data
+ERROR | 2024-03-19 17:16:41,750| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | .validate() should return the validated data
+ERROR | 2024-03-19 17:17:29,367| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | .validate() should return the validated data
+ERROR | 2024-03-19 17:17:57,801| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Got a `TypeError` when calling `QuizPlay.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `QuizPlay.objects.create()`. You may need to make the field read-only, or override the CreateQuizPlaySerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: QuizPlay() got unexpected keyword arguments: 'optionId'
+
+ERROR | 2024-03-19 17:20:15,646| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Got a `TypeError` when calling `QuizPlay.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `QuizPlay.objects.create()`. You may need to make the field read-only, or override the CreateQuizPlaySerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: QuizPlay() got unexpected keyword arguments: 'optionId'
+
+ERROR | 2024-03-19 17:23:50,654| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Got a `TypeError` when calling `QuizPlay.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `QuizPlay.objects.create()`. You may need to make the field read-only, or override the CreateQuizPlaySerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: QuizPlay() got unexpected keyword arguments: 'optionId'
+
+ERROR | 2024-03-19 17:52:24,677| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Got a `TypeError` when calling `QuizPlay.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `QuizPlay.objects.create()`. You may need to make the field read-only, or override the CreateQuizPlaySerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: QuizPlay() got unexpected keyword arguments: 'optionId'
+
+ERROR | 2024-03-19 17:56:26,103| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Got a `TypeError` when calling `QuizPlay.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `QuizPlay.objects.create()`. You may need to make the field read-only, or override the CreateQuizPlaySerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vs123\OneDrive\Desktop\quiz\venv\Lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: QuizPlay() got unexpected keyword arguments: 'optionId'
+
+ERROR | 2024-03-20 10:05:07,577| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-20 10:10:38,625| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-20 10:12:07,268| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizQuestions' object has no attribute 'count'
+ERROR | 2024-03-20 10:12:30,434| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | type object 'QuizQuestions' has no attribute 'filter'
+ERROR | 2024-03-20 10:12:31,707| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | type object 'QuizQuestions' has no attribute 'filter'
+ERROR | 2024-03-20 10:12:48,399| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field 'id' expected a number but got <QuizQuestions: QuizQuestions object (49)>.
+ERROR | 2024-03-20 10:17:09,856| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field 'id' expected a number but got <QuizQuestions: QuizQuestions object (49)>.
+ERROR | 2024-03-20 11:45:12,290| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Manager isn't accessible via QuizQuestions instances
+ERROR | 2024-03-20 11:45:34,932| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizQuestions' object has no attribute 'answers'
+ERROR | 2024-03-20 11:53:51,778| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuerySet' object has no attribute 'values_listt'
+ERROR | 2024-03-20 12:56:29,917| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | object of type 'int' has no len()
+ERROR | 2024-03-20 14:36:03,881| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'User' object has no attribute 'options'
+ERROR | 2024-03-20 14:36:41,370| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | `create()` did not return an object instance.
+ERROR | 2024-03-20 14:58:34,957| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | '>' not supported between instances of 'QuerySet' and 'int'
+ERROR | 2024-03-20 16:50:37,351| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | `create()` did not return an object instance.
+ERROR | 2024-03-20 16:55:37,340| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'RelatedManager' object has no attribute 'incorrectAnswer'
+ERROR | 2024-03-20 17:00:33,666| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'RelatedManager' object has no attribute 'correctAnswer'
+ERROR | 2024-03-20 17:07:07,365| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | QuizEnrollment() got unexpected keyword arguments: 'userId', 'quizId'
+ERROR | 2024-03-20 17:54:06,449| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'first'
+ERROR | 2024-03-21 14:15:48,728| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `user` is not valid for model `QuizEnrollment`.
+ERROR | 2024-03-21 14:17:05,462| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `userId` is not valid for model `QuizEnrollment`.
+ERROR | 2024-03-21 14:17:08,364| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `userId` is not valid for model `QuizEnrollment`.
+ERROR | 2024-03-21 14:22:29,564| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `user_id__name` is not valid for model `QuizEnrollment`.
+ERROR | 2024-03-21 14:29:30,250| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The field 'title' was declared on serializer GETAllQuizEnrolmentSerializer, but has not been included in the 'fields' option.
+ERROR | 2024-03-21 14:30:12,273| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'GETAllQuizEnrolmentSerializer' object has no attribute 'get_title'
+ERROR | 2024-03-21 14:30:13,249| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'GETAllQuizEnrolmentSerializer' object has no attribute 'get_title'
+ERROR | 2024-03-21 16:39:25,671| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'NoneType' object has no attribute 'strftime'
+ERROR | 2024-03-22 10:14:06,363| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-22 10:14:35,357| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-22 10:28:17,908| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-22 10:28:55,848| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR | 2024-03-22 10:30:27,262| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR | 2024-03-22 10:31:45,330| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR | 2024-03-22 10:32:37,788| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR | 2024-03-22 10:34:43,932| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuerySet' object has no attribute 'save'
+ERROR | 2024-03-22 12:05:40,357| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | rest_framework/api.html
+ERROR | 2024-03-22 12:07:07,180| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | rest_framework/api.html

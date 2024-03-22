@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'utils.middleware.ValidateURLMiddleware',
     'utils.middleware.JSONCheckMiddleware',
     'utils.middleware.InternalServerErrorMiddleware',
-    'utils.middleware.CustomizeResponseMiddleware',
+    # 'utils.middleware.CustomizeResponseMiddleware',
 
 ]
 

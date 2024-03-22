@@ -1,7 +1,8 @@
-from ..models import QuizEnrollment, Quiz
+from ..models import QuizEnrollment, Quiz, QuizPlay
 from User.models import User
 from rest_framework import serializers
-from phonenumber_field.serializerfields import PhoneNumberField
+from django.conf import settings
+datetime_format = getattr(settings, 'DEFAULT_DATE_FORMAT', "%d/%m/%Y")
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -16,7 +17,7 @@ class UserSerializer(serializers.ModelSerializer):
 
         if phone_number:
             filtered_records = User.objects.filter(phoneNumber=phone_number).count()
-            print('filtered_record==> ', filtered_records)
+            # print('filtered_record==> ', filtered_records)
             if filtered_records > 0:
                 errors['phoneNumber'] = ["This number is already register."]
 
@@ -47,14 +48,14 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
         'does_not_exist': "Invalid user id.",
         'incorrect_type': "Incorrect type. Expected a valid user id."
     }, allow_null=True)
-    quiz_id = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=True, error_messages={
+    quizId = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=True, error_messages={
         'does_not_exist': "Invalid quiz id.",
         'incorrect_type': "Incorrect type. Expected a valid quiz id."
-    })
+    }, source='quiz_id')
 
     class Meta:
         model = QuizEnrollment
-        fields = ['user', 'user_id', 'quiz_id']
+        fields = ['user', 'user_id', 'quizId']
         # 'completingDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer'
 
     def to_internal_value(self, data):
@@ -64,16 +65,15 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
         # check if user don't pass 'user' data and 'user_id'
         if user_data is None and user_id is None:
             errors['user_id'] = [f"please either provide 'user' data or 'user_id'."]
-        print("outer data=> ", data)
 
         if data:
-            quiz_id = data.get('quiz_id')
+            quiz_id = data.get('quizId')
             phone_number = user_data.get('phoneNumber') if user_data is not None else None
 
             # check user exist or not
             if phone_number and user_id is None:
                 filtered_records = User.objects.filter(phoneNumber=phone_number)
-                # print('filtered_record==> ', filtered_records)
+
                 if len(filtered_records) > 0:
                     data['user_id'] = filtered_records[0].id
                 else:
@@ -83,15 +83,13 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
                         data['user_id'] = user_object.id
                     else:
                         errors['user'] = serializer.errors
-
             #  check user is already enrolled or not
-            user_id = user_id if data['user_id'] is not None else data['user_id']
+            user_id = user_id if data['user_id'] is None else data['user_id']
+
             if user_id and quiz_id:
                 enrolled_count = QuizEnrollment.objects.filter(quiz_id=quiz_id, user_id=user_id).count()
                 if enrolled_count > 0:
                     errors['user_id'] = [f"This user has already enrolled."]
-            # if user_id is None and user_data:
-
         # default validation
         validated_data = None
         try:
@@ -107,7 +105,7 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
 
         # raise validations errors
         if errors:
-            print('errors ==> ', errors)
+            # print('errors ==> ', errors)
             raise serializers.ValidationError(errors)
         # print("to_internal_function end.....")
         return validated_data
@@ -117,4 +115,27 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
         quiz_id = validated_data.get('quiz_id')
         QuizEnrollment.objects.create(user_id=user_id, quiz_id=quiz_id, status='enroll')
         return user_id
+
+
+class GETAllQuizEnrolmentSerializer(serializers.ModelSerializer):
+    name = serializers.SerializerMethodField()
+    title = serializers.SerializerMethodField()
+    completingDate = serializers.SerializerMethodField()
+
+    class Meta:
+        model = QuizEnrollment
+        fields = ['id', 'name', 'title', 'completingDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer']
+        # 'completingDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer'
+
+    def get_name(self, instance):
+        return instance.user_id.name
+
+    def get_title(self, instance):
+        return instance.quiz_id.title
+
+    def get_completingDate(self, instance):
+        if instance.completingDate is not None:
+            return instance.completingDate.strftime(datetime_format)
+        return None
+
 
