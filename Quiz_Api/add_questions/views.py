@@ -232,8 +232,9 @@ class POSTOption(APIView):
 
 
 class GETAllQuestionsByUserIdAndQuizId(APIView):
-    description = ("This api will return all Active questions and shorted options based on 'order' field."
-                   "It will use to play Quiz.")
+    description = ("This API selectively displays active questions and sorts options based on the 'order' field. "
+                   "It returns both attempted and unattempted questions associated with a specific 'userId'. "
+                   "The primary purpose of this API is to facilitate participation in quizzes.")
 
     def filter_queryset(self, request, quizId):
         queryset = QuizQuestions.objects.select_related('quiz_id').prefetch_related(
