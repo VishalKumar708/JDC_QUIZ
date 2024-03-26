@@ -297,3 +297,37 @@ ERROR | 2024-03-22 10:32:37,788| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-03-22 10:34:43,932| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuerySet' object has no attribute 'save'
 ERROR | 2024-03-22 12:05:40,357| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | rest_framework/api.html
 ERROR | 2024-03-22 12:07:07,180| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | rest_framework/api.html
+ERROR | 2024-03-22 13:07:56,302| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | rest_framework/api.html
+ERROR | 2024-03-22 13:11:26,633| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-22 13:11:26,633| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-22 13:11:41,388| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-22 13:11:41,389| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-22 13:13:01,873| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-22 13:13:01,873| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-26 10:02:12,578| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-26 10:06:17,763| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-26 10:06:17,763| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-26 10:07:21,805| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-26 10:07:21,807| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-26 10:18:14,984| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-26 10:18:19,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-26 11:53:50,114| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 66 | str(e)
+ERROR | 2024-03-26 11:53:50,115| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 72 | str(e)
+ERROR | 2024-03-26 13:40:23,651| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | GETAllQuestionsByQuizIdAndUserId.filter_queryset() missing 1 required positional argument: 'userId'
+ERROR | 2024-03-26 13:44:37,912| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 13:44:46,018| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 13:47:55,368| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 13:50:17,317| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 13:50:33,264| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 14:12:21,172| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 14:17:25,112| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 14:18:23,888| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 14:32:21,754| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 14:33:58,108| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'F' object has no attribute 'filter'
+ERROR | 2024-03-26 15:04:09,527| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 15:04:10,774| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1242, 'Subquery returns more than 1 row')
+ERROR | 2024-03-26 15:04:43,913| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'int' object is not subscriptable
+ERROR | 2024-03-26 15:04:45,312| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'int' object is not subscriptable
+ERROR | 2024-03-26 16:24:11,028| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'GETAllQuizQuestionsByQuizIdAndUserIdSerializer' object has no attribute 'get_selected_option'
+ERROR | 2024-03-26 16:27:14,008| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'GETAllQuizQuestionsByQuizIdAndUserIdSerializer' object has no attribute 'get_selected_option'
+ERROR | 2024-03-26 17:04:20,560| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'str' object has no attribute 'in_'

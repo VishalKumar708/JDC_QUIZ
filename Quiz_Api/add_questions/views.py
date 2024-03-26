@@ -1,15 +1,17 @@
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-
+from django.db.models import Q
 from drf_yasg.utils import swagger_auto_schema
 from .schemas import *
-from ..models import QuizQuestions, QuizOptions
-from .serializers.get import GETAllQuizQuestionsSerializer
+from ..models import QuizQuestions, QuizOptions, QuizPlay, QuizEnrollment
+from .serializers.get import GETAllQuizQuestionsSerializer, GETAllQuizQuestionsByQuizIdAndUserIdSerializer
 from .serializers.create import CreateQuestionSerializer, CREATEOptionSerializer
 from .serializers.update import UPDATEQuestionSerializer, UPDATEOptionSerializer
 
-from django.db.models import Prefetch
+from django.db.models import Prefetch, Subquery, OuterRef, Exists, F
+from django.db.models import Aggregate
+
 from utils.utils import convert_str_to_bool
 import logging
 error_logger = logging.getLogger('error')
@@ -71,8 +73,6 @@ class GETAllQuestionsByQuizId(APIView):
         except Exception as e:
             error_logger.error(f'str(e)')
             questions_isActive = None
-        # print("option id=> ", options_isActive)
-        # print("question => ", questions_isActive)
         if options_isActive is not None and questions_isActive is not None:
             return QuizQuestions.objects.select_related('quiz_id').prefetch_related(
                 Prefetch('options', queryset=QuizOptions.objects.filter(isActive=options_isActive))
@@ -94,10 +94,13 @@ class GETAllQuestionsByQuizId(APIView):
     def get(self, request, quizId, *args, **kwargs):
         try:
             filter_queryset = self.filter_queryset(request=request, quizId=quizId)
-
-            serializer = GETAllQuizQuestionsSerializer(filter_queryset, many=True)
-
-            if len(serializer.data) < 1:
+            # submitted_questions = QuizPlay.objects.filter(quizId=quizId, userId=userId).values_list('questionId')
+            #
+            # if len(submitted_questions) < 1:
+            #     filter_queryset = questions_queryset
+            # else:
+            #     filter_queryset = questions_queryset.exclude(id__in=questions_queryset)
+            if len(filter_queryset) < 1:
                 info_logger.info("Not any question added yet inside this quiz.")
                 return Response(
                     data={
@@ -106,6 +109,8 @@ class GETAllQuestionsByQuizId(APIView):
                     },
                     status=200
                 )
+            serializer = GETAllQuizQuestionsSerializer(filter_queryset, many=True)
+
             info_logger.info("Return all questions with option Successfully.")
             return Response(data={
                 'status': 'Success',
@@ -224,3 +229,96 @@ class POSTOption(APIView):
             'status': 'Failed',
             'data': serializer.errors
         }, status=400)
+
+
+class GETAllQuestionsByUserIdAndQuizId(APIView):
+    description = ("This api will return all Active questions and shorted options based on 'order' field."
+                   "It will use to play Quiz.")
+
+    def filter_queryset(self, request, quizId):
+        queryset = QuizQuestions.objects.select_related('quiz_id').prefetch_related(
+                Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
+            ).filter(quiz_id=quizId, isActive=True)
+        return queryset
+
+
+    # def filter_queryset(self, request, quizId, userId):
+    #     queryset = QuizQuestions.objects.select_related('quiz_id').prefetch_related(
+    #         Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
+    #     ).annotate(
+    #         correct_answer=Subquery(
+    #             QuizOptions.objects.filter(
+    #                 correctOption=True,
+    #                 question_id=OuterRef('id')
+    #             ).values_list('id', flat=True)
+    #         )
+    #         ,
+    #         selected_options=Subquery(
+    #             QuizPlay.objects.filter(
+    #                 userId=userId,
+    #                 quizId=quizId,
+    #                 questionId=OuterRef('id')
+    #             ).values_list('answerId', flat=True)
+    #         )
+    #
+    #     ).filter(quiz_id=quizId, isActive=True)
+    #
+    #     return queryset
+
+    @swagger_auto_schema(tags=['Question API'], description=description,responses={200: get_questions_response_schema})
+    def get(self, request, quizId, userId, *args, **kwargs):
+        try:
+            questions_queryset = self.filter_queryset(request=request, quizId=quizId)
+            quiz_result = QuizEnrollment.objects.filter(quiz_id=quizId, user_id=userId).first()
+            print("questions_queryset==> ", questions_queryset)
+            if len(questions_queryset) < 1:
+                info_logger.info("Not any question added yet inside this quiz.")
+                return Response(
+                    data={
+                        'status': 'Success',
+                        'data': {'message': "No Record Found."}
+                    },
+                    status=200
+                )
+
+            # get all attempted questionsId
+            attempted_questions_queryset = QuizPlay.objects.filter(userId=userId, quizId=quizId).values_list('questionId', flat=True)
+            if attempted_questions_queryset:
+                unattempted_queryset = questions_queryset.exclude(id__in=attempted_questions_queryset)
+                attempted_queryset = questions_queryset.exclude(~Q(id__in=attempted_questions_queryset))
+
+                attempted_questions_serializer = GETAllQuizQuestionsByQuizIdAndUserIdSerializer(attempted_queryset, many=True,
+                                                                            context={'user_id': userId,
+                                                                                     'quiz_id': quizId})
+                unattempted_questions_serializer = GETAllQuizQuestionsByQuizIdAndUserIdSerializer(unattempted_queryset, many=True,
+                                                                            context={'user_id': userId,
+                                                                                     'quiz_id': quizId})
+                return Response(data={
+                    'status': 'Success',
+                    'data': {
+                        'correct_answers': quiz_result.correctAnswer,
+                        'incorrect_answers': quiz_result.incorrectAnswer,
+                        'unattempted_questions': unattempted_questions_serializer.data,
+                        'attempted_questions': attempted_questions_serializer.data,
+                    }
+                }, status=200)
+
+            # print('queryset123==> ', questions_queryset)
+            serializer = GETAllQuizQuestionsByQuizIdAndUserIdSerializer(questions_queryset, many=True, context={'user_id':userId, 'quiz_id': quizId})
+
+            info_logger.info("Return all questions with option Successfully.")
+            return Response(data={
+                'status': 'Success',
+                'data': {
+                    'correct_answers': quiz_result.correctAnswer,
+                    'incorrect_answers': quiz_result.incorrectAnswer,
+                    'unattempted_questions': serializer.data,
+                    'attempted_questions': []
+                }
+            }, status=200)
+        except ValueError:
+            warning_logger.warning("Quiz Id type error.")
+            return Response(data={
+                'status': 'Failed',
+                'data': {"message": f"Excepted a number but got '{quizId}'"}
+            }, status=404)

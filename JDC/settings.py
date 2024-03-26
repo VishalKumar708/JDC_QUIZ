@@ -149,6 +149,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'utils.pagination.Pagination',
     'PAGE_SIZE': 20, # Default page size
     # 'DEFAULT_PAGE_SIZE': 150
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
 }
 
 
@@ -157,8 +160,6 @@ SWAGGER_SETTINGS = {
     'VALIDATOR_URL': 'http://localhost:8189',
 
 }
-
-
 
 
 # # *************************    Django Logger   ****************************
