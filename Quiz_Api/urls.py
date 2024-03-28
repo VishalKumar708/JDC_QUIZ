@@ -17,8 +17,8 @@ urlpatterns = [
     path('PUTOption/<slug:optionId>/', PUTOption.as_view()),
     path('POSTOption/', POSTOption.as_view()),
     path('POSTQuizEnrollment/', POSTQuizEnrollment.as_view()),
-    path('GETAllQuizResult/', GETAllQuizEnrollment.as_view()),
-    path('GETAllQuestionsByQuizIdAndUserId/<slug:userId>/<slug:quizId>/', GETAllQuestionsByUserIdAndQuizId.as_view()),
+    path('GETAllQuizResult/', GETAllQuizResult.as_view()),
+    path('GETAllQuestionsByUserIdAndQuizId/<slug:userId>/<slug:quizId>/', GETAllQuestionsByUserIdAndQuizId.as_view()),
 
     path('POSTQuizPlay/', POSTQuizPlay.as_view()),
     # path('GETReadyToPlayQuiz/<slug:userId>/<slug:quizId>/', GETReadyPlayQuiz.as_view())

@@ -75,3 +75,4 @@ WARNING | 2024-03-19 14:19:03,354| path: C:\Users\vs123\OneDrive\Desktop\quiz\JD
 WARNING | 2024-03-19 14:20:55,486| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 51 | Error occured while creating questions.
 WARNING | 2024-03-19 17:14:24,450| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 43 | Error occured while playing a quiz
 WARNING | 2024-03-19 17:14:37,710| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 43 | Error occured while playing a quiz
+WARNING | 2024-03-28 14:19:16,195| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 92 | Invalid field name(xyz) pass.

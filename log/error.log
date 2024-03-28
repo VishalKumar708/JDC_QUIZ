@@ -331,3 +331,47 @@ ERROR | 2024-03-26 15:04:45,312| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-03-26 16:24:11,028| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'GETAllQuizQuestionsByQuizIdAndUserIdSerializer' object has no attribute 'get_selected_option'
 ERROR | 2024-03-26 16:27:14,008| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'GETAllQuizQuestionsByQuizIdAndUserIdSerializer' object has no attribute 'get_selected_option'
 ERROR | 2024-03-26 17:04:20,560| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'str' object has no attribute 'in_'
+ERROR | 2024-03-27 10:27:17,083| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-27 10:59:10,644| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-27 11:01:13,019| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'status' cannot be null")
+ERROR | 2024-03-27 11:03:29,029| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | (1048, "Column 'status' cannot be null")
+ERROR | 2024-03-27 12:03:56,058| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:03:56,058| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:04:56,273| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:04:56,273| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:05:07,339| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:05:07,339| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:05:08,799| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:05:08,799| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:05:10,075| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:05:10,076| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:05:11,510| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:05:11,511| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:05:12,763| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:05:12,764| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:05:14,382| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 68 | str(e)
+ERROR | 2024-03-27 12:05:14,382| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 74 | str(e)
+ERROR | 2024-03-27 12:16:55,850| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-27 12:18:56,268| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuerySet' object has no attribute 'exist'
+ERROR | 2024-03-28 10:18:40,741| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-28 10:19:10,727| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Got AttributeError when attempting to get a value for field `startDate` on serializer `GETAllQuizEnrolmentSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuizEnrollment` instance.
+Original exception text was: 'QuizEnrollment' object has no attribute 'quizId__startDate'.
+ERROR | 2024-03-28 10:19:54,395| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Got AttributeError when attempting to get a value for field `startDate` on serializer `GETAllQuizEnrolmentSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuizEnrollment` instance.
+Original exception text was: 'QuizEnrollment' object has no attribute 'quiz_id__startDate'.
+ERROR | 2024-03-28 10:24:52,729| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'startDate'
+ERROR | 2024-03-28 10:25:32,057| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'startDate'
+ERROR | 2024-03-28 10:26:48,960| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'startDate'
+ERROR | 2024-03-28 10:27:47,827| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'quizId'
+ERROR | 2024-03-28 10:27:50,316| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'quizId'
+ERROR | 2024-03-28 10:29:56,177| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'startDate'
+ERROR | 2024-03-28 10:31:01,890| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'QuizEnrollment' object has no attribute 'startDate'
+ERROR | 2024-03-28 10:56:51,264| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'dict' object has no attribute 'order_by'
+ERROR | 2024-03-28 11:46:01,751| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | The field 'startDate' was declared on serializer GETAllQuizEnrolmentSerializer, but has not been included in the 'fields' option.
+ERROR | 2024-03-28 11:52:57,158| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `price` is not valid for model `Quiz`.
+ERROR | 2024-03-28 12:10:13,529| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected a `date`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+ERROR | 2024-03-28 13:24:45,400| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'DeferredAttribute' object is not iterable
+ERROR | 2024-03-28 14:02:17,450| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'Options' object has no attribute 'get_all_field_names'
+ERROR | 2024-03-28 14:10:19,683| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'Options' object has no attribute 'get_all_field_names'
+ERROR | 2024-03-28 14:17:35,116| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'label'

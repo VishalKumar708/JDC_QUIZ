@@ -33,7 +33,7 @@ admin.site.register(QuizOptions, QuizAnswersAdmin)
 
 
 class QuizEnrollmentAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user_id', 'quiz_id', 'enrollmentDate', 'status', 'completingDate', 'score', 'timeTaken',
+    list_display = ['id', 'user_id', 'quiz_id', 'enrollmentDate', 'status', 'playedDate', 'score', 'timeTaken',
                      'correctAnswer', 'incorrectAnswer', 'pendingAnswer']
 
 

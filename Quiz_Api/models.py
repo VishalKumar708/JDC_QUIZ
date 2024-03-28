@@ -50,17 +50,15 @@ class QuizOptions(BaseModel):
 class QuizEnrollment(BaseModel):
     STATUS_CHOICES = (
         ('enroll', "Enroll"),
-        # ('pending', "Pending"),
         ('start', "Start"),
         ('playing', "Playing"),
         ('complete', "Complete"),
-        # ('expire', "Expire"),
     )
     user_id = models.ForeignKey('User.User', on_delete=models.CASCADE, related_name='quiz_enrollments')
     quiz_id = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='enrollments')
     enrollmentDate = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES)
-    completingDate = models.DateTimeField(null=True, blank=True)
+    playedDate = models.DateTimeField(null=True, blank=True)
     score = models.IntegerField(default=0)
     timeTaken = models.IntegerField(default=0)
     correctAnswer = models.IntegerField(default=0)
@@ -74,5 +72,4 @@ class QuizPlay(BaseModel):
     quizId = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='quiz_plays')
     questionId = models.ForeignKey('Quiz_Api.QuizQuestions', on_delete=models.CASCADE, related_name='quiz_plays')
     answerId = models.ForeignKey('Quiz_Api.QuizOptions', on_delete=models.CASCADE, related_name='quiz_plays')
-
 

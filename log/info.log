@@ -178,3 +178,82 @@ INFO | 2024-03-26 16:29:38,302| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Q
 INFO | 2024-03-26 16:36:26,130| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 308 | Return all questions with option Successfully.
 INFO | 2024-03-26 16:41:45,578| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 308 | Return all questions with option Successfully.
 INFO | 2024-03-26 16:41:58,220| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 308 | Return all questions with option Successfully.
+INFO | 2024-03-27 11:09:03,277| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 39 | User played quiz successfully.
+INFO | 2024-03-27 12:03:56,082| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:04:56,305| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:05:07,358| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:05:08,817| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:05:10,102| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:05:11,547| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:05:12,793| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:05:14,404| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 114 | Return all questions with option Successfully.
+INFO | 2024-03-27 12:55:37,670| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 287 | Not any question added yet inside this quiz.
+INFO | 2024-03-27 12:57:13,199| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 287 | Not any question added yet inside this quiz.
+INFO | 2024-03-27 12:57:21,060| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 287 | Not any question added yet inside this quiz.
+INFO | 2024-03-27 14:07:00,989| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 287 | Not any question added yet inside this quiz.
+INFO | 2024-03-27 14:07:07,349| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 323 | Return all questions with option Successfully.
+INFO | 2024-03-27 14:08:36,075| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 323 | Return all questions with option Successfully.
+INFO | 2024-03-27 14:10:39,875| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 324 | Return all questions with option Successfully.
+INFO | 2024-03-27 16:31:40,312| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 42 | User played quiz successfully.
+INFO | 2024-03-27 16:32:32,225| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-27 16:33:17,025| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
+INFO | 2024-03-27 16:40:22,338| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 100 | Record send Successfully.
+INFO | 2024-03-27 16:42:53,970| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
+INFO | 2024-03-28 10:19:10,717| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:19:54,389| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:24:52,722| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:25:32,045| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:26:48,946| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:27:47,819| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:27:50,310| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:29:56,170| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:31:01,885| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:34:58,386| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:35:25,357| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:35:30,874| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:49:32,090| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:49:49,473| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:57:26,653| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 10:57:34,694| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 98 | Record send Successfully.
+INFO | 2024-03-28 11:07:28,216| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:07:32,836| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:08:10,425| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:18:43,297| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 175 | Record send Successfully.
+INFO | 2024-03-28 11:46:01,750| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:46:23,249| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:47:30,727| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:52:57,152| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:54:01,141| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:54:52,050| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:54:56,188| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:54:59,578| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:55:13,092| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:55:25,833| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:55:29,832| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:55:33,711| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 11:56:00,324| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:03:01,141| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:09:11,756| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:10:13,527| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:10:34,471| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:28:03,112| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:28:25,073| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:36:48,375| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:38:06,426| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:40:59,357| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:42:37,786| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 12:49:15,516| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 13:07:23,064| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 13:07:40,795| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 106 | No Record Found
+INFO | 2024-03-28 13:07:51,467| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 13:16:00,723| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 13:16:47,335| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 13:17:03,326| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 106 | No Record Found
+INFO | 2024-03-28 13:28:01,006| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 13:28:19,992| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 13:28:33,453| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 102 | Record send Successfully.
+INFO | 2024-03-28 14:08:14,921| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 109 | Record send Successfully.
+INFO | 2024-03-28 14:11:30,587| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 103 | Record send Successfully.
+INFO | 2024-03-28 14:21:36,419| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 103 | Record send Successfully.
+INFO | 2024-03-28 14:38:32,061| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 103 | Record send Successfully.
+INFO | 2024-03-28 14:38:43,392| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 103 | Record send Successfully.

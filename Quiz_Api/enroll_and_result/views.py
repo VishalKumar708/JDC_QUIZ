@@ -52,16 +52,18 @@ class POSTQuizEnrollment(APIView):
         })
 
 
-class GETAllQuizEnrollment(ListAPIView):
+class GETAllQuizResult(ListAPIView):
     serializer_class = GETAllQuizEnrolmentSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = QuizEnrollmentFilter
     pagination_class = Pagination
 
-
-
     def get_queryset(self):
-        queryset = QuizEnrollment.objects.all()
+        # QuizQuestions.objects.select_related('quiz_id').prefetch_related(
+        #     Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
+        # ).filter(quiz_id=quizId, isActive=True)
+        # queryset = QuizEnrollment.objects.all()
+        queryset = QuizEnrollment.objects.select_related('quiz_id')
         order_by = self.request.query_params.get('order_by')
         if order_by:
             return queryset.order_by(order_by)
@@ -78,7 +80,7 @@ class GETAllQuizEnrollment(ListAPIView):
             openapi.Parameter('page', openapi.IN_QUERY, description="Page number", type=openapi.TYPE_INTEGER),
             openapi.Parameter('page_size', openapi.IN_QUERY, description="Number of results per page",
                               type=openapi.TYPE_INTEGER),
-            openapi.Parameter('order_by', openapi.IN_QUERY, description="Field to order by", type=openapi.TYPE_STRING),
+            # openapi.Parameter('order_by', openapi.IN_QUERY, description="Enter a valid field name to display the sorted results based on the specified field.", type=openapi.TYPE_STRING),
         ]
     )
     def get(self, request, *args, **kwargs):
@@ -96,10 +98,10 @@ class GETAllQuizEnrollment(ListAPIView):
 
         if queryset.exists():
             page = self.paginate_queryset(queryset)  # Perform pagination
+            # print("page==> ", page)
             serializer = self.get_serializer(page, many=True)
             info_logger.info("Record send Successfully.")
             return self.get_paginated_response(serializer.data)
-
         else:
             info_logger.info("No Record Found")
             return Response(data={

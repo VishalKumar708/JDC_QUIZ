@@ -240,6 +240,7 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
         queryset = QuizQuestions.objects.select_related('quiz_id').prefetch_related(
                 Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
             ).filter(quiz_id=quizId, isActive=True)
+
         return queryset
 
 
@@ -266,13 +267,24 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
     #
     #     return queryset
 
+
     @swagger_auto_schema(tags=['Question API'], description=description,responses={200: get_questions_response_schema})
     def get(self, request, quizId, userId, *args, **kwargs):
         try:
-            questions_queryset = self.filter_queryset(request=request, quizId=quizId)
             quiz_result = QuizEnrollment.objects.filter(quiz_id=quizId, user_id=userId).first()
-            print("questions_queryset==> ", questions_queryset)
-            if len(questions_queryset) < 1:
+            # if user has overed this quiz already
+            if quiz_result and quiz_result.status == 'complete':
+                return Response(
+                    data={
+                        'status': 'Failed',
+                        'data': {'message': "You have finished this quiz."}
+                    },
+                    status=400
+                )
+
+            questions_queryset = self.filter_queryset(request=request, quizId=quizId)
+            # print("questions_queryset==> ", questions_queryset)
+            if not questions_queryset.exists():
                 info_logger.info("Not any question added yet inside this quiz.")
                 return Response(
                     data={
@@ -285,8 +297,11 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
             # get all attempted questionsId
             attempted_questions_queryset = QuizPlay.objects.filter(userId=userId, quizId=quizId).values_list('questionId', flat=True)
             if attempted_questions_queryset:
-                unattempted_queryset = questions_queryset.exclude(id__in=attempted_questions_queryset)
+                unattempted_queryset = questions_queryset.exclude(id__in=attempted_questions_queryset).order_by('?')
+                # print('explanation=> ', unattempted_queryset.explain())
                 attempted_queryset = questions_queryset.exclude(~Q(id__in=attempted_questions_queryset))
+                # print("queryset order==> ", attempted_queryset.query)
+                # print("attempted_queryset order==> ", attempted_queryset.query)
 
                 attempted_questions_serializer = GETAllQuizQuestionsByQuizIdAndUserIdSerializer(attempted_queryset, many=True,
                                                                             context={'user_id': userId,
@@ -311,8 +326,8 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
             return Response(data={
                 'status': 'Success',
                 'data': {
-                    'correct_answers': quiz_result.correctAnswer,
-                    'incorrect_answers': quiz_result.incorrectAnswer,
+                    'correct_answers': 0 if quiz_result is None else quiz_result.correctAnswer,
+                    'incorrect_answers': 0 if quiz_result is None else quiz_result.incorrectAnswer,
                     'unattempted_questions': serializer.data,
                     'attempted_questions': []
                 }

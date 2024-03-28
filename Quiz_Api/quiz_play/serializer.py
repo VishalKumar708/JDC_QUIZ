@@ -6,10 +6,11 @@ from django.utils import timezone
 
 class CreateQuizPlaySerializer(serializers.ModelSerializer):
     optionId = serializers.ListSerializer(child=serializers.PrimaryKeyRelatedField(queryset=QuizOptions.objects.all()))
+    quizStatus = serializers.ChoiceField(choices=[choice for choice in QuizEnrollment.STATUS_CHOICES if choice[0] in ['playing', 'complete']], source='status')
 
     class Meta:
         model = QuizPlay
-        fields = ["userId", "quizId", "questionId", "optionId"]
+        fields = ["userId", "quizId", "questionId", "optionId", "quizStatus"]
 
     def to_internal_value(self, data):
         errors = {}
@@ -44,10 +45,12 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
 
         errors = {}
         if user_instance and quiz_instance:
-            enrolled_objects = QuizEnrollment.objects.filter(user_id=user_instance, quiz_id=quiz_instance).count()
-            if enrolled_objects < 1:
+            enrolled_objects = QuizEnrollment.objects.filter(user_id=user_instance, quiz_id=quiz_instance)
+            if not enrolled_objects.exists():
                 errors['userId'] = [f"You are not enrolled in this quiz, Please first enrolled in the quiz."]
-
+            elif enrolled_objects[0].status == 'complete':
+                print("quiz__status=> ", enrolled_objects[0].status)
+                raise serializers.ValidationError({'userId': 'You have finished this quiz.'})
         if quiz_instance and question_instance:
             if quiz_instance != question_instance.quiz_id:
                 errors['questionId'] = [f"Invalid Question for this quiz."]
@@ -72,6 +75,8 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
         quiz_instance = validated_data.get('quizId')
         question_instance = validated_data.get('questionId')
         correct_options = question_instance.options.filter(correctOption=True)
+        quiz_status = validated_data.get('status')
+        # print("quiz_status=> ", quiz_status)
 
         # store user answers
         objects = [QuizPlay(userId=user_instance, quizId=quiz_instance, questionId=question_instance, answerId=option) for option in options_instance]
@@ -86,8 +91,8 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
         else:
             enrollment_user_instance.incorrectAnswer = enrollment_user_instance.incorrectAnswer+1
             # print("total incorrect answers ==> ", enrollment_user_instance.incorrectAnswer)
-        enrollment_user_instance.completingDate = timezone.now()
-        # enrollment_user_instance.status = "complete"
+        enrollment_user_instance.playedDate = timezone.now()
+        enrollment_user_instance.status = quiz_status
         enrollment_user_instance.save()
 
         return created_options_instances
