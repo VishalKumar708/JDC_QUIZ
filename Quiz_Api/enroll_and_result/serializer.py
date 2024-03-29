@@ -2,6 +2,7 @@ from ..models import QuizEnrollment, Quiz, QuizPlay
 from User.models import User
 from rest_framework import serializers
 from django.conf import settings
+from django.core.cache import cache
 date_format = getattr(settings, 'DEFAULT_DATE_FORMAT', "%d/%m/%Y")
 
 
@@ -122,35 +123,41 @@ class UserDetailsSerializer(serializers.ModelSerializer):
         model = User
         fields = ['name']
 
+
 class QuizDetailsSerializer(serializers.ModelSerializer):
     startDate = serializers.DateField(format=date_format)
     endDate = serializers.DateField(format=date_format)
     resultDate = serializers.DateField(format=date_format)
+    totalQuestions = serializers.SerializerMethodField()
 
     class Meta:
         model = Quiz
-        fields = ['title', 'startDate', 'endDate', 'resultDate', 'prize', 'duration']
+        fields = ['id', 'title', 'startDate', 'endDate', 'resultDate', 'prize', 'duration', 'totalQuestions']
+
+    def get_totalQuestions(self, instance):
+        cache_key = f"quiz_{instance.pk}_total_questions"
+        # get value from cache
+        total_questions = cache.get(cache_key)
+        # print(f'cache value=>{cache_key}:{total_questions}')
+        if total_questions is None:
+            total_questions = instance.quiz_questions.filter(isActive=True).count()
+            # store value in cache
+            cache.set(cache_key, total_questions, timeout=30)  # Cache for 2 seconds
+            # print("orm total questions=> ", total_questions)
+        return total_questions
 
 
 class GETAllQuizEnrolmentSerializer(serializers.ModelSerializer):
-    playedDate = serializers.DateTimeField(format="%d %B, %Y")
+    playedDate = serializers.DateTimeField(format=date_format)
     quiz = QuizDetailsSerializer(source='quiz_id')
     user = UserDetailsSerializer(source='user_id')
 
     class Meta:
         model = QuizEnrollment
         fields = ['playedDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer', 'user', 'quiz']
-        # 'playedDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer'
 
     def get_name(self, instance):
         return instance.user_id.name
 
-    # def get_title(self, instance):
-    #     return instance.quiz_id.title
-
-    # def get_playedDate(self, instance):
-    #     if instance.playedDate is not None:
-    #         return instance.playedDate.strftime(date_format)
-    #     return None
 
 

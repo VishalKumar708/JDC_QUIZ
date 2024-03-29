@@ -10,6 +10,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .filters import QuizEnrollmentFilter
 from utils.pagination import Pagination
 import logging
+
 error_logger = logging.getLogger('error')
 info_logger = logging.getLogger('info')
 warning_logger = logging.getLogger('warning')
@@ -59,11 +60,7 @@ class GETAllQuizResult(ListAPIView):
     pagination_class = Pagination
 
     def get_queryset(self):
-        # QuizQuestions.objects.select_related('quiz_id').prefetch_related(
-        #     Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
-        # ).filter(quiz_id=quizId, isActive=True)
-        # queryset = QuizEnrollment.objects.all()
-        queryset = QuizEnrollment.objects.select_related('quiz_id')
+        queryset = QuizEnrollment.objects.all()
         order_by = self.request.query_params.get('order_by')
         if order_by:
             return queryset.order_by(order_by)

@@ -32,7 +32,7 @@ class QuizFilter(django_filters.FilterSet):
             'organization_id__name': ['icontains',],
             'isVerified': ['exact'],
             'isActive': ['exact'],
-            'enrollments__user_id': ['exact']
+            'enrollments__user_id': ['exact'],
         }
 
     # def filter_organization(self, queryset, name, value):

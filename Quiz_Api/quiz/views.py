@@ -126,6 +126,8 @@ class PUTQuiz(APIView):
                 'data': {'message': f"'quiz id' excepted a number but got '{id}'"}
             }, status=404)
 
+
+
 from django.db.models import Count
 class GETAllQuiz(ListAPIView):
     serializer_class = GETAllQuizSerializer
