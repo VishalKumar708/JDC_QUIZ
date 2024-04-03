@@ -12,6 +12,12 @@ warning_logger = logging.getLogger('warning')
 
 
 class POSTQuizPlay(APIView):
+    description = """
+        <p>This API <strong>records</strong> user <strong>input</strong> as they <strong>play</strong> the
+         <strong>quiz</strong>, <strong>storing</strong> inputs for each <strong>question</strong> as users
+          <strong>progress</strong> through the <strong>quiz</strong>.</p>
+
+    """
     success_message = "Answer submitted successfully."
     success_response = openapi.Schema(
         type=openapi.TYPE_OBJECT,
@@ -31,7 +37,10 @@ class POSTQuizPlay(APIView):
         }
     )
 
-    @swagger_auto_schema(request_body=CreateQuizPlaySerializer(), responses={200: success_response})
+    @swagger_auto_schema(
+        tags=["Quiz Enrollment And Play APIs"],
+        request_body=CreateQuizPlaySerializer(),
+        responses={200: success_response})
     def post(self, request, *args, **kwargs):
         # print("request=> ", request.headers)
         # print("timezone==> ", request.headers.get('Timezone'))

@@ -76,3 +76,24 @@ WARNING | 2024-03-19 14:20:55,486| path: C:\Users\vs123\OneDrive\Desktop\quiz\JD
 WARNING | 2024-03-19 17:14:24,450| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 43 | Error occured while playing a quiz
 WARNING | 2024-03-19 17:14:37,710| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 43 | Error occured while playing a quiz
 WARNING | 2024-03-28 14:19:16,195| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 92 | Invalid field name(xyz) pass.
+WARNING | 2024-04-02 14:42:13,040| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 55 | Error occured while enroll in a quiz
+WARNING | 2024-04-02 14:42:23,731| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 55 | Error occured while enroll in a quiz
+WARNING | 2024-04-02 14:42:32,997| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 55 | Error occured while enroll in a quiz
+WARNING | 2024-04-02 15:58:48,968| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 16:01:14,825| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 16:01:41,170| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 16:04:29,226| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 16:09:44,210| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 17:04:53,300| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 17:25:54,110| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 162 | Some Error occured while updating Quiz Question.
+WARNING | 2024-04-02 17:31:56,422| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 17:39:31,490| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-02 17:45:12,920| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-03 10:11:19,978| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-03 10:13:30,262| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-03 10:16:39,043| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-03 10:18:38,830| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-03 10:20:28,060| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 62 | Error occured while creating questions.
+WARNING | 2024-04-03 10:28:28,626| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 255 | While adding new option some error occured.
+WARNING | 2024-04-03 10:34:43,722| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 203 | While updating option some error occured.
+WARNING | 2024-04-03 10:36:35,505| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 203 | While updating option some error occured.

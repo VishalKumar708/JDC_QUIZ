@@ -21,8 +21,6 @@ urlpatterns = [
     path('GETAllQuestionsByUserIdAndQuizId/<slug:userId>/<slug:quizId>/', GETAllQuestionsByUserIdAndQuizId.as_view()),
 
     path('POSTQuizPlay/', POSTQuizPlay.as_view()),
-    # path('GETReadyToPlayQuiz/<slug:userId>/<slug:quizId>/', GETReadyPlayQuiz.as_view())
-
 ]
 
 

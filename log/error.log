@@ -391,3 +391,18 @@ ERROR | 2024-03-29 12:04:38,060| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-03-29 12:44:00,014| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected parent FilterSet 'Quiz_Api.enroll_and_result.filters.QuizEnrollmentFilter' to have a '.filter_order_by()' method.
 ERROR | 2024-03-29 16:07:37,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected parent FilterSet 'Quiz_Api.enroll_and_result.filters.QuizEnrollmentFilter' to have a '.filter_quiz_endDate__lte()' method.
 ERROR | 2024-03-29 16:22:35,514| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Expected parent FilterSet 'Quiz_Api.enroll_and_result.filters.QuizEnrollmentFilter' to have a '.filter_quiz_endDate__lte()' method.
+ERROR | 2024-03-30 10:06:57,104| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-30 10:07:04,935| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-03-30 16:05:56,693| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-01 10:28:16,954| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-01 10:28:21,562| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-01 11:39:59,858| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-02 14:38:20,941| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-02 15:51:37,509| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'Quiz' object has no attribute 'strftime'
+ERROR | 2024-04-02 15:52:44,889| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'Quiz' object has no attribute 'strftime'
+ERROR | 2024-04-02 15:52:46,490| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'Quiz' object has no attribute 'strftime'
+ERROR | 2024-04-02 15:53:13,946| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | '>=' not supported between instances of 'datetime.datetime' and 'str'
+ERROR | 2024-04-02 15:53:55,843| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | can't compare datetime.datetime to datetime.date
+ERROR | 2024-04-02 17:20:53,732| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field 'id' expected a number but got <Quiz: Quiz object (1)>.
+ERROR | 2024-04-03 10:08:23,884| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-03 10:09:43,572| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.

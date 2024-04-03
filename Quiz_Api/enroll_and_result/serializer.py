@@ -118,10 +118,11 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
         QuizEnrollment.objects.create(user_id=user_id, quiz_id=quiz_id, status='enroll')
         return user_id
 
+
 class UserDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['name']
+        fields = ['name', 'phoneNumber']
 
 
 class QuizDetailsSerializer(serializers.ModelSerializer):
@@ -154,7 +155,7 @@ class GETAllQuizEnrolmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuizEnrollment
-        fields = ['playedDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer', 'user', 'quiz']
+        fields = ['id', 'playedDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer', 'user', 'quiz']
 
     def get_name(self, instance):
         return instance.user_id.name

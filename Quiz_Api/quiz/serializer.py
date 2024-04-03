@@ -21,7 +21,7 @@ class CreateQuizSerializer(serializers.ModelSerializer):
         validated_data = None
         start_date = data.get('startDate')
         end_date = data.get('endDate')
-        result_date = data.get('result_date')
+        result_date = data.get('resultDate')
 
         # check startDate is greater than or equal to endDate
         try:
@@ -32,9 +32,12 @@ class CreateQuizSerializer(serializers.ModelSerializer):
 
         # check resultDate is greater than or equal to startDate and endDate
         try:
+            # print("result date >= start_date=> ", compare_dates(result_date, start_date))
+            # print("result date>= end_date=> ", compare_dates(result_date, end_date))
             if not compare_dates(result_date, start_date) and not compare_dates(result_date, end_date):
                 errors['resultDate'] = [f"'resultDate' should be greater then or equal to 'startDate' and 'endDate' "]
         except ValueError:
+            # print("value error occured in serializer")
             pass
 
         # default validation
@@ -70,7 +73,7 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
         validated_data = None
         start_date = data.get('startDate')
         end_date = data.get('endDate')
-        result_date = data.get('result_date')
+        result_date = data.get('resultDate')
 
         # check startDate is greater than or equal to endDate
         try:
@@ -83,7 +86,7 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
         try:
             if start_date and end_date and result_date:
                 if not compare_dates(result_date, start_date) and not compare_dates(result_date, end_date):
-                    errors['resultDate'] = [f"'resultDate' should be greater then or equal to 'startDate' and 'endDate' "]
+                    errors['resultDate'] = [f"'resultDate' should be greater then or equal to 'startDate' and 'endDate'"]
         except ValueError:
             pass
 

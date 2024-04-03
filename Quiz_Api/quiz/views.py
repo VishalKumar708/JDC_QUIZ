@@ -16,6 +16,8 @@ warning_logger = logging.getLogger('warning')
 
 
 class POSTQuiz(APIView):
+    description = """
+        <p>This API <strong>facilitates</strong> the <em>creation</em> of new quizzes by <strong>accepting</strong> and <strong>processing</strong> relevant information provided by the user.</p>"""
 
     message = "Record Added Successfully."
 
@@ -41,7 +43,7 @@ class POSTQuiz(APIView):
     @swagger_auto_schema(
         request_body=post_quiz_schema,
         responses={200: success_response},
-        tags=['Quiz API']
+        tags=['Quiz APIs']
     )
     def post(self, request, *args, **kwargs):
 
@@ -65,7 +67,9 @@ class POSTQuiz(APIView):
 
 class PUTQuiz(APIView):
     message = 'Record Updated Successfully.'
-
+    description = """
+        <p>This api update specific fields in a quiz by passing the relevant data.</p>
+    """
     # Define the response schema for success (200) response
     success_response = openapi.Schema(
         type=openapi.TYPE_OBJECT,
@@ -85,7 +89,7 @@ class PUTQuiz(APIView):
     )
 
     @swagger_auto_schema(
-        tags=['Quiz API'],
+        tags=['Quiz APIs'],
         request_body=put_quiz_schema,
         responses={200: success_response},
         manual_parameters=[
@@ -130,6 +134,10 @@ class PUTQuiz(APIView):
 
 from django.db.models import Count
 class GETAllQuiz(ListAPIView):
+    description = (
+        "The API is designed to provide access to all available quizzes. "
+        "Users have the flexibility to apply filters to refine the retrieved records according to their specific requirements."
+    )
     serializer_class = GETAllQuizSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = QuizFilter
@@ -145,7 +153,7 @@ class GETAllQuiz(ListAPIView):
         return queryset.order_by('title')
 
     @swagger_auto_schema(
-        tags=['Quiz API'],
+        tags=['Quiz APIs'],
         responses={
             200: openapi.Response('Successful response', get_response_schema),
             404: openapi.Response('No Record Found'),
@@ -212,7 +220,7 @@ class GETQuizCount(APIView):
             )
         )
 
-    @swagger_auto_schema(tags=['Quiz API'])
+    @swagger_auto_schema(tags=['Quiz APIs'])
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
         # print("queryset==> ", queryset)
@@ -225,5 +233,3 @@ class GETQuizCount(APIView):
                 'result_quiz_count': queryset['result_quiz_count']
             }
         )
-
-

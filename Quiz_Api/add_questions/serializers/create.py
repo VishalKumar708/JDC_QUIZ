@@ -3,6 +3,10 @@ from rest_framework import serializers
 from ...models import Quiz, QuizQuestions, QuizOptions
 from django.db import transaction
 from collections import Counter
+from utils.validators import compare_dates
+from django.conf import settings
+
+datetime_format = getattr(settings, 'DEFAULT_DATE_FORMAT', "%d/%m/%Y")
 
 
 class QuestionSerializer(serializers.Serializer):
@@ -32,6 +36,32 @@ class CreateQuestionSerializer(serializers.Serializer):
             quiz_id = data.get('quizId')
             question_data = data.get('question')
             options_data = data.get('options')
+
+            # check quiz.startDate > today date or not
+            try:
+                quiz_instance = Quiz.objects.get(id=quiz_id)
+                quiz_startDate_greate_then_todayDate = compare_dates(
+                    end_date=quiz_instance.startDate.strftime(datetime_format))
+                quiz_endDate_greater_then_todayDate = compare_dates(
+                    end_date=quiz_instance.endDate.strftime(datetime_format))
+
+                print("quiz.startDate==> ", quiz_startDate_greate_then_todayDate)
+                print("quiz.endDate==> ", quiz_endDate_greater_then_todayDate)
+
+                if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
+                    raise serializers.ValidationError({
+                        'quiz_id': ["Quiz has ended now you can't add more questions."]
+                    })
+                elif quiz_startDate_greate_then_todayDate:
+                    raise serializers.ValidationError({
+                        'quiz_id': ["Quiz has started now you can't add more questions."]
+                    })
+            except Quiz.DoesNotExist:
+                # print('error in quiz instance serializer')
+                pass
+            except ValueError:
+                # print('error in quiz instance serializer')
+                pass
 
             # check same option shouldn't come more than 1 time
             correct_answers_count = 0 if options_data is None else sum(1 for item in options_data if item.get('correctOption') == True)
@@ -148,6 +178,31 @@ class CREATEOptionSerializer(serializers.ModelSerializer):
         question_id = data.get('question_id')
         option = data.get('option')
         errors = {}
+        # check quiz.startDate > today date or not
+        if question_id:
+            try:
+                quiz_instance = QuizQuestions.objects.get(id=question_id).quiz_id
+                print("quiz_instance")
+                quiz_startDate_greate_then_todayDate = compare_dates(
+                    end_date=quiz_instance.startDate.strftime(datetime_format))
+                quiz_endDate_greater_then_todayDate = compare_dates(
+                    end_date=quiz_instance.endDate.strftime(datetime_format))
+
+                if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
+                    raise serializers.ValidationError({
+                        'quiz_id': ["Quiz has ended now you can't add more questions."]
+                    })
+                elif quiz_startDate_greate_then_todayDate:
+                    raise serializers.ValidationError({
+                        'quiz_id': ["Quiz has started now you can't add more questions."]
+                    })
+            except QuizQuestions.DoesNotExist:
+                # print('error in quiz instance serializer')
+                pass
+            except ValueError:
+                # print('error in quiz instance serializer')
+                pass
+
         if option:
             filtered_data_count = QuizOptions.objects.filter(question_id=question_id, option__iexact=option.strip()).count()
             if filtered_data_count > 0:

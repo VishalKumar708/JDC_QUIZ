@@ -20,6 +20,15 @@ warning_logger = logging.getLogger('warning')
 
 
 class POSTQuestions(APIView):
+    description = """
+    <p>This API facilitates the creation of questions individually, enabling the specification of options and correct answers. Questions can be of two types:</p>
+    <ul>
+        <li><strong>Radio type:</strong> Users can select only one correct option.</li>
+        <li><strong>Checkbox type:</strong> Users can select <strong>at least two or more correct options</strong>.</li>
+    </ul>
+    <p>It is mandatory for users to provide a minimum of <strong>two options</strong> for each question.</p>
+
+    """
     message = "Record Added Successfully."
     success_response = openapi.Schema(
         type=openapi.TYPE_OBJECT,
@@ -39,7 +48,7 @@ class POSTQuestions(APIView):
         }
     )
 
-    @swagger_auto_schema(tags=['Question API'], request_body=CreateQuestionSerializer(), responses={200: success_response})
+    @swagger_auto_schema(tags=['Question APIs'], request_body=CreateQuestionSerializer(), responses={200: success_response})
     def post(self, request, *args, **kwargs):
         print('question method call....')
         serializer = CreateQuestionSerializer(data=request.data)
@@ -58,6 +67,12 @@ class POSTQuestions(APIView):
 
 
 class GETAllQuestionsByQuizId(APIView):
+    description ="""
+        <p>This API returns all questions associated with the provided quiz ID.<br><br>
+         Users have the ability to filter records based on the status of questions (<strong>active</strong>/<strong>inactive</strong>) and 
+         the status of options within questions (<strong>active</strong>/<strong>inactive</strong>).<br><br>
+         This API is intended for administrative purposes to enable the viewing of all records.</p>
+    """
 
     def filter_queryset(self, request, quizId):
         options_isActive = request.GET.get('options__isActive')
@@ -90,7 +105,7 @@ class GETAllQuestionsByQuizId(APIView):
                 Prefetch('options', queryset=QuizOptions.objects.all())
             ).filter(quiz_id=quizId)
 
-    @swagger_auto_schema(tags=['Question API'], manual_parameters=requested_data_for_question_schema, responses={200: get_question_response_schema})
+    @swagger_auto_schema(tags=['Question APIs'], manual_parameters=requested_data_for_question_schema, responses={200: get_question_response_schema})
     def get(self, request, quizId, *args, **kwargs):
         try:
             filter_queryset = self.filter_queryset(request=request, quizId=quizId)
@@ -125,12 +140,18 @@ class GETAllQuestionsByQuizId(APIView):
 
 
 class PUTQuestionById(APIView):
-    @swagger_auto_schema(tags=['Question API'], request_body=UPDATEQuestionSerializer,
+    description = """
+        <p>This API facilitates the updating of questions based on the provided question ID. <br><br>
+        Users can also toggle the status of a question between <strong>active</strong> and <strong>inactive</strong>
+         by specifying a value in the <strong>isActive</strong> field, along with updating other fields.</p>
+    """
+
+    @swagger_auto_schema(tags=['Question APIs'], request_body=UPDATEQuestionSerializer,
                          responses={200: put_question_response_schema}, manual_parameters=put_question_requested_data_schema)
     def put(self, request, questionId, *args, **kwargs):
         try:
             instance = QuizQuestions.objects.get(id=questionId)
-            serializer = UPDATEQuestionSerializer(instance=instance, data=request.data, partial=True, context={"quiz_id":instance.quiz_id,"question_id":questionId})
+            serializer = UPDATEQuestionSerializer(instance=instance, data=request.data, partial=True, context={"quiz_id": instance.quiz_id, "question_id":questionId})
             if serializer.is_valid():
                 obj = serializer.save()
                 info_logger.info("Question update successfully.")
@@ -158,8 +179,12 @@ class PUTQuestionById(APIView):
 
 
 class PUTOption(APIView):
-
-    @swagger_auto_schema(tags=['Question API'], request_body=UPDATEOptionSerializer,
+    description = """
+        <p>This API facilitates the updating of option text and other associated fields by specifying the option ID. <br><br>
+        Users can also adjust the order of options within a question and toggle the <strong>active/inactive</strong>
+         status of existing options within the question.</p>
+    """
+    @swagger_auto_schema(tags=['Question APIs'], request_body=UPDATEOptionSerializer,
                          responses={200: put_question_response_schema},
                          manual_parameters=requested_data_for_put_option_schema)
     def put(self, request, optionId, *args, **kwargs):
@@ -195,6 +220,9 @@ class PUTOption(APIView):
 
 
 class POSTOption(APIView):
+    description = """
+        <p>This API assists in adding new options within a question by specifying the required fields.</p>
+    """
     message = 'Record Added Successfully.'
     success_response = openapi.Schema(
         type=openapi.TYPE_OBJECT,
@@ -213,7 +241,7 @@ class POSTOption(APIView):
             )
         }
     )
-    @swagger_auto_schema(tags=['Question API'], request_body=CREATEOptionSerializer, responses={200: success_response})
+    @swagger_auto_schema(tags=['Question APIs'], request_body=CREATEOptionSerializer, responses={200: success_response})
     def post(self, request, *args, **kwargs):
         serializer = CREATEOptionSerializer(data=request.data)
 
@@ -232,9 +260,12 @@ class POSTOption(APIView):
 
 
 class GETAllQuestionsByUserIdAndQuizId(APIView):
-    description = ("This API selectively displays active questions and sorts options based on the 'order' field. "
-                   "It returns both attempted and unattempted questions associated with a specific 'userId'. "
-                   "The primary purpose of this API is to facilitate participation in quizzes.")
+    description = """
+        <p>This API selectively displays <strong>active</strong> questions and sorts options based on the '<strong>order</strong>' field.<br> 
+        All the options of a questions will come in sorted order. <br><br>
+         It returns both <strong>attempted</strong> and <strong>unattempted</strong> questions associated with a specific '<strong>userId</strong>'.<br>
+         <strong>Unattempted</strong> questions will always come in random order.<br><br>
+    """
 
     def filter_queryset(self, request, quizId):
         queryset = QuizQuestions.objects.select_related('quiz_id').prefetch_related(
@@ -268,7 +299,7 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
     #     return queryset
 
 
-    @swagger_auto_schema(tags=['Question API'], description=description,responses={200: get_questions_response_schema})
+    @swagger_auto_schema(tags=['Question APIs'], description=description,responses={200: get_questions_response_schema})
     def get(self, request, quizId, userId, *args, **kwargs):
         try:
             quiz_result = QuizEnrollment.objects.filter(quiz_id=quizId, user_id=userId).first()

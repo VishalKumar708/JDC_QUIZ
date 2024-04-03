@@ -1,9 +1,13 @@
 from rest_framework import serializers
 
 
-from ...models import QuizQuestions, QuizOptions
+from ...models import QuizQuestions, QuizOptions, Quiz
 
 from django.db.models import Q
+from utils.validators import compare_dates
+from django.conf import settings
+
+datetime_format = getattr(settings, 'DEFAULT_DATE_FORMAT', "%d/%m/%Y")
 
 
 class UPDATEQuestionSerializer(serializers.ModelSerializer):
@@ -24,11 +28,35 @@ class UPDATEQuestionSerializer(serializers.ModelSerializer):
         # print("quiz_id=> ", quiz_id)
         # print("question_id=> ", question_id)
         # print("question_text=> ", question_text)
+        #
+
+        try:
+            quiz_instance = quiz_id
+            quiz_startDate_greate_then_todayDate = compare_dates(
+                end_date=quiz_instance.startDate.strftime(datetime_format))
+            quiz_endDate_greater_then_todayDate = compare_dates(
+                end_date=quiz_instance.endDate.strftime(datetime_format))
+
+            if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
+                raise serializers.ValidationError({
+                    'quiz_id': ["Quiz has ended now you can't add more questions."]
+                })
+            elif quiz_startDate_greate_then_todayDate:
+                raise serializers.ValidationError({
+                    'quiz_id': ["Quiz has started now you can't add more questions."]
+                })
+        except Quiz.DoesNotExist:
+            # print('error in quiz instance serializer')
+            pass
+        except ValueError:
+            # print('error in quiz instance serializer')
+            pass
 
         if quiz_id is not None and question_text:
             filtered_data = QuizQuestions.objects.filter(Q(question__icontains=question_text.strip(), quiz_id=quiz_id), ~Q(id=question_id)).count()
             if filtered_data > 0:
                 errors['text'] = ["This question is already added."]
+
 
         # default validation
         validated_data = None
@@ -48,7 +76,6 @@ class UPDATEQuestionSerializer(serializers.ModelSerializer):
         return validated_data
 
 
-
 class UPDATEOptionSerializer(serializers.ModelSerializer):
     isActive = serializers.BooleanField(required=False)
     order = serializers.IntegerField(required=False)
@@ -61,9 +88,34 @@ class UPDATEOptionSerializer(serializers.ModelSerializer):
 
     def to_internal_value(self, data):
         option_text = data.get('option')
+        question_id = self.context.get('question_id')
         errors = {}
+        if question_id:
+            try:
+                quiz_instance = question_id.quiz_id
+                print("quiz_instance")
+                quiz_startDate_greate_then_todayDate = compare_dates(
+                    end_date=quiz_instance.startDate.strftime(datetime_format))
+                quiz_endDate_greater_then_todayDate = compare_dates(
+                    end_date=quiz_instance.endDate.strftime(datetime_format))
+
+                if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
+                    raise serializers.ValidationError({
+                        'quiz_id': ["Quiz has ended now you can't add more questions."]
+                    })
+                elif quiz_startDate_greate_then_todayDate:
+                    raise serializers.ValidationError({
+                        'quiz_id': ["Quiz has started now you can't add more questions."]
+                    })
+            except QuizQuestions.DoesNotExist:
+                # print('error in quiz instance serializer')
+                pass
+            except ValueError:
+                # print('error in quiz instance serializer')
+                pass
+
         if option_text:
-            filtered_data = QuizOptions.objects.filter(~Q(id=self.context.get('answer_id')), Q(option__iexact=option_text.strip(), question_id=self.context.get('question_id'))).count()
+            filtered_data = QuizOptions.objects.filter(~Q(id=self.context.get('answer_id')), Q(option__iexact=option_text.strip(), question_id=question_id)).count()
             # print("filtered_data => ", filtered_data)
             if filtered_data > 0:
                 errors['option'] = [f"This option is already exist."]

@@ -92,6 +92,7 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
             enrollment_user_instance.incorrectAnswer = enrollment_user_instance.incorrectAnswer+1
             # print("total incorrect answers ==> ", enrollment_user_instance.incorrectAnswer)
         enrollment_user_instance.playedDate = timezone.now()
+        print("enrollment_user=>", enrollment_user_instance.playedDate)
         enrollment_user_instance.status = quiz_status
         enrollment_user_instance.save()
 

@@ -17,6 +17,9 @@ warning_logger = logging.getLogger('warning')
 
 
 class POSTQuizEnrollment(APIView):
+    description = """
+        <p>This API registers a user for a quiz by providing the necessary data.</p>
+    """
     success_message = "Enrolled Successfully."
     success_response = openapi.Schema(
         type=openapi.TYPE_OBJECT,
@@ -36,7 +39,10 @@ class POSTQuizEnrollment(APIView):
         }
     )
 
-    @swagger_auto_schema(request_body=QuizEnrolmentSerializer(), responses={200: success_response})
+    @swagger_auto_schema(
+        tags=["Quiz Enrollment And Play APIs"],
+        request_body=QuizEnrolmentSerializer(),
+        responses={200: success_response})
     def post(self, request, *args, **kwargs):
         serializer = QuizEnrolmentSerializer(data=request.data)
         if serializer.is_valid():
@@ -54,6 +60,13 @@ class POSTQuizEnrollment(APIView):
 
 
 class GETAllQuizResult(ListAPIView):
+    description = (
+        """
+        <p>This quiz API <strong>grants access</strong> to <strong>registered users</strong> and their associated quizzes, along with the <strong>results</strong> of their quiz <strong>participation</strong>.</p>
+<p><br>Additionally, users have the capability to <strong>apply filters</strong> to <em>refine</em> the retrieved records according to their specific <em>requirements</em>.</p>
+        """
+    )
+
     serializer_class = GETAllQuizEnrolmentSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = QuizEnrollmentFilter
@@ -67,7 +80,7 @@ class GETAllQuizResult(ListAPIView):
         return queryset.order_by('enrollmentDate')
 
     @swagger_auto_schema(
-        tags=['Quiz API'],
+        tags=['Quiz APIs'],
         # responses={
         #     200: openapi.Response('Successful response', get_response_schema),
         #     404: openapi.Response('No Record Found'),
