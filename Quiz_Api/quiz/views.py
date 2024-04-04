@@ -17,7 +17,13 @@ warning_logger = logging.getLogger('warning')
 
 class POSTQuiz(APIView):
     description = """
-        <p>This API <strong>facilitates</strong> the <em>creation</em> of new quizzes by <strong>accepting</strong> and <strong>processing</strong> relevant information provided by the user.</p>"""
+        <p>This API <strong>facilitates</strong> the <em>creation</em> of new quizzes by <strong>accepting</strong> and <strong>processing</strong> relevant information provided by the user.</p>
+        <p><strong>Important Points:</strong></p>
+        <ul>
+            <li><strong>End Date:</strong> The end date of the quiz should be <strong>greater than or equal to</strong> the start date.</li>
+            <li><strong>Result Date:</strong> The result date should be <strong>equal to or greater than</strong> the start date and end date of the quiz.</li>
+        </ul>
+        """
 
     message = "Record Added Successfully."
 

@@ -1,14 +1,16 @@
 from django.core.exceptions import FieldError
+from django.db import connection
 from drf_yasg import openapi
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializer import QuizEnrolmentSerializer, GETAllQuizEnrolmentSerializer
 from rest_framework.generics import ListAPIView
-from ..models import QuizEnrollment
+from ..models import QuizEnrollment, Quiz, QuizQuestions
 from drf_yasg.utils import swagger_auto_schema
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import QuizEnrollmentFilter
 from utils.pagination import Pagination
+from django.db.models import Prefetch, Count, Q
 import logging
 
 error_logger = logging.getLogger('error')
@@ -73,10 +75,26 @@ class GETAllQuizResult(ListAPIView):
     pagination_class = Pagination
 
     def get_queryset(self):
-        queryset = QuizEnrollment.objects.all()
+
+        quiz_queryset = Quiz.objects.filter(isActive=True).annotate(
+            totalQuestions=Count('quiz_questions', filter=Q(quiz_questions__isActive=True))
+        ).prefetch_related(
+            Prefetch('quiz_questions', queryset=QuizQuestions.objects.filter(isActive=True))
+        )
+
+        queryset = QuizEnrollment.objects.select_related('user_id').filter(
+            quiz_id__isActive=True).prefetch_related(
+            Prefetch('quiz_id', queryset=quiz_queryset)
+        )
+        # print("sql query==> ", queryset.query)
+
         order_by = self.request.query_params.get('order_by')
+        # print("order by==> ", order_by)
+
         if order_by:
+            print("order by working....")
             return queryset.order_by(order_by)
+        print("working....")
         return queryset.order_by('enrollmentDate')
 
     @swagger_auto_schema(
@@ -119,4 +137,5 @@ class GETAllQuizResult(ListAPIView):
                 "data": {
                     "message": "No Record Found"}
             }, status=200)
+
 

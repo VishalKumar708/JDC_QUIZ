@@ -20,6 +20,7 @@ admin.site.register(Quiz, QuizAdmin)
 
 class QuizQuestionsAdmin(admin.ModelAdmin):
     list_display = ["id", "quiz_id", "question", "type", "level", "isActive"]
+    list_filter = ['quiz_id', "type", "level", "isActive"]
 
 
 admin.site.register(QuizQuestions, QuizQuestionsAdmin)

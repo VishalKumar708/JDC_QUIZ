@@ -97,3 +97,21 @@ WARNING | 2024-04-03 10:20:28,060| path: C:\Users\vs123\OneDrive\Desktop\quiz\JD
 WARNING | 2024-04-03 10:28:28,626| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: post | line_no: 255 | While adding new option some error occured.
 WARNING | 2024-04-03 10:34:43,722| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 203 | While updating option some error occured.
 WARNING | 2024-04-03 10:36:35,505| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: put | line_no: 203 | While updating option some error occured.
+WARNING | 2024-04-03 23:31:52,913| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 55 | Error occured while enroll in a quiz
+WARNING | 2024-04-03 23:35:39,627| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 55 | Error occured while enroll in a quiz
+WARNING | 2024-04-04 11:16:27,605| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 110 | Invalid field name(None) pass.
+WARNING | 2024-04-04 11:17:56,057| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 111 | Invalid field name(None) pass.
+WARNING | 2024-04-04 11:18:24,477| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 112 | Invalid field name(None) pass.
+WARNING | 2024-04-04 11:19:18,616| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 113 | Invalid field name(None) pass.
+WARNING | 2024-04-04 11:21:06,078| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 114 | Invalid field name(None) pass.
+WARNING | 2024-04-04 11:21:32,386| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 114 | Invalid field name(None) pass.
+WARNING | 2024-04-04 11:21:57,268| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 115 | Invalid field name(None) pass.
+WARNING | 2024-04-04 11:51:53,561| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 122 | Invalid field name(ad) pass.
+WARNING | 2024-04-04 11:58:26,186| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 57 | Error occured while enroll in a quiz
+WARNING | 2024-04-04 14:58:49,819| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 394 | Quiz Id type error.
+WARNING | 2024-04-04 15:03:37,810| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 394 | Quiz Id type error.
+WARNING | 2024-04-04 15:08:35,074| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 394 | Quiz Id type error.
+WARNING | 2024-04-04 15:10:39,903| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 394 | Quiz Id type error.
+WARNING | 2024-04-04 15:33:23,302| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 397 | Quiz Id type error.
+WARNING | 2024-04-04 15:34:18,067| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 397 | Quiz Id type error.
+WARNING | 2024-04-04 15:52:01,356| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 57 | Error occured while enroll in a quiz

@@ -131,3 +131,24 @@ class CustomizeResponseMiddleware:
         }
         return JsonResponse(formatted_data, status=response.status_code)
 
+
+from django.db import connection
+
+
+class QueryCountMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request, *args, **kwargs):
+        response = self.get_response(request)
+        # print("connection.queries==> ", connection.queries)
+        # i = 1
+        # for query in connection.queries:
+        #
+        #     print(f"query{i}=> ", query)
+        #     i += 1
+
+        # print("request.query_count=> ", request.query_count)
+        # request.query_count = len(connection.queries)
+        print("total queries=> ", len(connection.queries))
+        return response

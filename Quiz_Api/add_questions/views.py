@@ -1,7 +1,7 @@
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.db.models import Q
+from django.db.models import Q, Case, When, Value, CharField
 from drf_yasg.utils import swagger_auto_schema
 from .schemas import *
 from ..models import QuizQuestions, QuizOptions, QuizPlay, QuizEnrollment
@@ -26,8 +26,11 @@ class POSTQuestions(APIView):
         <li><strong>Radio type:</strong> Users can select only one correct option.</li>
         <li><strong>Checkbox type:</strong> Users can select <strong>at least two or more correct options</strong>.</li>
     </ul>
-    <p>It is mandatory for users to provide a minimum of <strong>two options</strong> for each question.</p>
-
+    <p><strong>Important Points:</strong></p>
+    <ul>
+        <li><p>It is mandatory for users to provide a minimum of <strong>two options</strong> for each question.</p></li>
+        <li><p>You cannot add more questions within a quiz if the <strong>quiz's start date or end date is earlier than or the same as today's date</strong>.</p></li>
+    </ul>
     """
     message = "Record Added Successfully."
     success_response = openapi.Schema(
@@ -89,32 +92,28 @@ class GETAllQuestionsByQuizId(APIView):
             error_logger.error(f'str(e)')
             questions_isActive = None
         if options_isActive is not None and questions_isActive is not None:
-            return QuizQuestions.objects.select_related('quiz_id').prefetch_related(
-                Prefetch('options', queryset=QuizOptions.objects.filter(isActive=options_isActive))
-            ).filter(quiz_id=quizId, isActive=questions_isActive)
+            return (QuizQuestions.objects.select_related('quiz_id').filter(quiz_id=quizId, isActive=questions_isActive)
+            .prefetch_related(
+                Prefetch('options', queryset=QuizOptions.objects.filter(isActive=options_isActive).order_by('order'))
+            ))
         elif options_isActive is not None:
-            return QuizQuestions.objects.select_related('quiz_id').prefetch_related(
-                Prefetch('options', queryset=QuizOptions.objects.filter(isActive=options_isActive))
-            ).filter(quiz_id=quizId)
+            return QuizQuestions.objects.select_related('quiz_id').filter(quiz_id=quizId).prefetch_related(
+                Prefetch('options', queryset=QuizOptions.objects.filter(isActive=options_isActive).order_by('order'))
+            )
         elif questions_isActive is not None:
-            return QuizQuestions.objects.select_related('quiz_id').prefetch_related(
-                Prefetch('options', queryset=QuizOptions.objects.all())
-            ).filter(quiz_id=quizId, isActive=questions_isActive)
+            return QuizQuestions.objects.filter(quiz_id=quizId, isActive=questions_isActive).prefetch_related(
+                Prefetch('options', queryset=QuizOptions.objects.all().order_by('order'))
+            )
         else:
-            return QuizQuestions.objects.select_related('quiz_id').prefetch_related(
-                Prefetch('options', queryset=QuizOptions.objects.all())
-            ).filter(quiz_id=quizId)
+            return QuizQuestions.objects.filter(quiz_id=quizId).prefetch_related(
+                Prefetch('options', queryset=QuizOptions.objects.all().order_by('order'))
+            )
 
     @swagger_auto_schema(tags=['Question APIs'], manual_parameters=requested_data_for_question_schema, responses={200: get_question_response_schema})
     def get(self, request, quizId, *args, **kwargs):
         try:
             filter_queryset = self.filter_queryset(request=request, quizId=quizId)
-            # submitted_questions = QuizPlay.objects.filter(quizId=quizId, userId=userId).values_list('questionId')
-            #
-            # if len(submitted_questions) < 1:
-            #     filter_queryset = questions_queryset
-            # else:
-            #     filter_queryset = questions_queryset.exclude(id__in=questions_queryset)
+
             if len(filter_queryset) < 1:
                 info_logger.info("Not any question added yet inside this quiz.")
                 return Response(
@@ -124,6 +123,7 @@ class GETAllQuestionsByQuizId(APIView):
                     },
                     status=200
                 )
+
             serializer = GETAllQuizQuestionsSerializer(filter_queryset, many=True)
 
             info_logger.info("Return all questions with option Successfully.")
@@ -144,6 +144,10 @@ class PUTQuestionById(APIView):
         <p>This API facilitates the updating of questions based on the provided question ID. <br><br>
         Users can also toggle the status of a question between <strong>active</strong> and <strong>inactive</strong>
          by specifying a value in the <strong>isActive</strong> field, along with updating other fields.</p>
+        <p><strong>Important Points:</strong></p> 
+        <ul>
+            <li><p>You cannot update any question details of a quiz if the <strong>quiz's start date or end date is earlier than or the same as today's date</strong>.</p></li>
+        </ul>
     """
 
     @swagger_auto_schema(tags=['Question APIs'], request_body=UPDATEQuestionSerializer,
@@ -183,7 +187,12 @@ class PUTOption(APIView):
         <p>This API facilitates the updating of option text and other associated fields by specifying the option ID. <br><br>
         Users can also adjust the order of options within a question and toggle the <strong>active/inactive</strong>
          status of existing options within the question.</p>
+        <p><strong>Important Points:</strong></p> 
+        <ul>
+            <li><p>You cannot add more options within a question if the <strong>quiz's start date or end date is earlier than or the same as today's date</strong>.</p></li>
+        </ul>
     """
+
     @swagger_auto_schema(tags=['Question APIs'], request_body=UPDATEOptionSerializer,
                          responses={200: put_question_response_schema},
                          manual_parameters=requested_data_for_put_option_schema)
@@ -222,6 +231,10 @@ class PUTOption(APIView):
 class POSTOption(APIView):
     description = """
         <p>This API assists in adding new options within a question by specifying the required fields.</p>
+        <p><strong>Important Points:</strong></p> 
+        <ul>
+            <li><p>You cannot update option details of a question if the <strong>quiz's start date or end date is earlier than or the same as today's date</strong>.</p></li>
+        </ul>
     """
     message = 'Record Added Successfully.'
     success_response = openapi.Schema(
@@ -267,42 +280,35 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
          <strong>Unattempted</strong> questions will always come in random order.<br><br>
     """
 
-    def filter_queryset(self, request, quizId):
-        queryset = QuizQuestions.objects.select_related('quiz_id').prefetch_related(
-                Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
-            ).filter(quiz_id=quizId, isActive=True)
-
-        return queryset
-
-
-    # def filter_queryset(self, request, quizId, userId):
+    # def filter_queryset(self, request, quizId):
     #     queryset = QuizQuestions.objects.select_related('quiz_id').prefetch_related(
-    #         Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
-    #     ).annotate(
-    #         correct_answer=Subquery(
-    #             QuizOptions.objects.filter(
-    #                 correctOption=True,
-    #                 question_id=OuterRef('id')
-    #             ).values_list('id', flat=True)
-    #         )
-    #         ,
-    #         selected_options=Subquery(
-    #             QuizPlay.objects.filter(
-    #                 userId=userId,
-    #                 quizId=quizId,
-    #                 questionId=OuterRef('id')
-    #             ).values_list('answerId', flat=True)
-    #         )
-    #
-    #     ).filter(quiz_id=quizId, isActive=True)
+    #             Prefetch('options', queryset=QuizOptions.objects.filter(isActive=True).order_by('order'))
+    #         ).filter(quiz_id=quizId, isActive=True)
     #
     #     return queryset
-
+    def filter_queryset(self, request, quizId, userId):
+        queryset = QuizQuestions.objects.filter(
+            quiz_id=quizId,
+            isActive=True
+        ).prefetch_related(
+            Prefetch(
+                'options',
+                queryset=QuizOptions.objects.filter(isActive=True).order_by('order')
+            ),
+            # Prefetch(
+            #     'quiz_plays',
+            #     queryset=QuizPlay.objects.filter(userId=userId).values_list('answerId__id', flat=True),
+            #     to_attr='user_answers_id'
+            # )
+        )
+        return queryset
 
     @swagger_auto_schema(tags=['Question APIs'], description=description,responses={200: get_questions_response_schema})
     def get(self, request, quizId, userId, *args, **kwargs):
-        try:
+        # try:
+            print("method is calling..")
             quiz_result = QuizEnrollment.objects.filter(quiz_id=quizId, user_id=userId).first()
+            print('quiz_result=> ', quiz_result)
             # if user has overed this quiz already
             if quiz_result and quiz_result.status == 'complete':
                 return Response(
@@ -313,7 +319,7 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
                     status=400
                 )
 
-            questions_queryset = self.filter_queryset(request=request, quizId=quizId)
+            questions_queryset = self.filter_queryset(request=request, quizId=quizId, userId=userId)
             # print("questions_queryset==> ", questions_queryset)
             if not questions_queryset.exists():
                 info_logger.info("Not any question added yet inside this quiz.")
@@ -363,9 +369,9 @@ class GETAllQuestionsByUserIdAndQuizId(APIView):
                     'attempted_questions': []
                 }
             }, status=200)
-        except ValueError:
-            warning_logger.warning("Quiz Id type error.")
-            return Response(data={
-                'status': 'Failed',
-                'data': {"message": f"Excepted a number but got '{quizId}'"}
-            }, status=404)
+        # except ValueError:
+        #     warning_logger.warning("Quiz Id type error.")
+        #     return Response(data={
+        #         'status': 'Failed',
+        #         'data': {"message": f"Excepted a number but got '{quizId}'"}
+        #     }, status=404)

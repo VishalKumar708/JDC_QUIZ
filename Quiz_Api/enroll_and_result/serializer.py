@@ -1,3 +1,5 @@
+from django.db import connection
+
 from ..models import QuizEnrollment, Quiz, QuizPlay
 from User.models import User
 from rest_framework import serializers
@@ -70,23 +72,26 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
 
         if data:
             quiz_id = data.get('quizId')
-            phone_number = user_data.get('phoneNumber') if user_data is not None else None
+            try:
+                phone_number = user_data.get('phoneNumber') if user_data is not None else None
 
-            # check user exist or not
-            if phone_number and user_id is None:
-                filtered_records = User.objects.filter(phoneNumber=phone_number)
+                # check user exist or not
+                if phone_number and user_id is None:
+                    filtered_records = User.objects.filter(phoneNumber=phone_number)
 
-                if len(filtered_records) > 0:
-                    data['user_id'] = filtered_records[0].id
-                else:
-                    serializer = UserSerializer(data=user_data)
-                    if serializer.is_valid():
-                        user_object = serializer.save()
-                        data['user_id'] = user_object.id
+                    if len(filtered_records) > 0:
+                        data['user_id'] = filtered_records[0].id
                     else:
-                        errors['user'] = serializer.errors
-            #  check user is already enrolled or not
-            user_id = user_id if data['user_id'] is None else data['user_id']
+                        serializer = UserSerializer(data=user_data)
+                        if serializer.is_valid():
+                            user_object = serializer.save()
+                            data['user_id'] = user_object.id
+                        else:
+                            errors['user'] = serializer.errors
+                #  check user is already enrolled or not
+                user_id = user_id if data['user_id'] is None else data['user_id']
+            except Exception as e:
+                print('exceptions=> ', e)
 
             if user_id and quiz_id:
                 enrolled_count = QuizEnrollment.objects.filter(quiz_id=quiz_id, user_id=user_id).count()
@@ -124,28 +129,28 @@ class UserDetailsSerializer(serializers.ModelSerializer):
         model = User
         fields = ['name', 'phoneNumber']
 
+    # def to_representation(self, instance):
+    #     # Before serializing each instance, we can check the number of queries
+    #     print("Number of queries before serialization(user):", len(connection.queries))
+    #     # Proceed with serialization
+    #     return super().to_representation(instance)
+
 
 class QuizDetailsSerializer(serializers.ModelSerializer):
     startDate = serializers.DateField(format=date_format)
     endDate = serializers.DateField(format=date_format)
     resultDate = serializers.DateField(format=date_format)
-    totalQuestions = serializers.SerializerMethodField()
+    totalQuestions = serializers.IntegerField()
 
     class Meta:
         model = Quiz
         fields = ['id', 'title', 'startDate', 'endDate', 'resultDate', 'prize', 'duration', 'totalQuestions']
 
-    def get_totalQuestions(self, instance):
-        cache_key = f"quiz_{instance.pk}_total_questions"
-        # get value from cache
-        total_questions = cache.get(cache_key)
-        # print(f'cache value=>{cache_key}:{total_questions}')
-        if total_questions is None:
-            total_questions = instance.quiz_questions.filter(isActive=True).count()
-            # store value in cache
-            cache.set(cache_key, total_questions, timeout=30)  # Cache for 2 seconds
-            # print("orm total questions=> ", total_questions)
-        return total_questions
+    # def to_representation(self, instance):
+    #     # Before serializing each instance, we can check the number of queries
+    #     print("Number of queries before serialization(Quiz):", len(connection.queries))
+    #     # Proceed with serialization
+    #     return super().to_representation(instance)
 
 
 class GETAllQuizEnrolmentSerializer(serializers.ModelSerializer):
@@ -155,10 +160,13 @@ class GETAllQuizEnrolmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuizEnrollment
-        fields = ['id', 'playedDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer', 'user', 'quiz']
+        fields = ['id', 'playedDate', 'status', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer', 'user', 'quiz']
 
-    def get_name(self, instance):
-        return instance.user_id.name
+    # def get_name(self, instance):
+    #     return instance.user_id.name
 
-
-
+    # def to_representation(self, instance):
+    #     # Before serializing each instance, we can check the number of queries
+    #     print("Number of queries before serialization:", len(connection.queries))
+    #     # Proceed with serialization
+    #     return super().to_representation(instance)

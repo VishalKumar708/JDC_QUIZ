@@ -190,11 +190,11 @@ class CREATEOptionSerializer(serializers.ModelSerializer):
 
                 if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
                     raise serializers.ValidationError({
-                        'quiz_id': ["Quiz has ended now you can't add more questions."]
+                        'quiz_id': ["Quiz has ended now you can't add more options."]
                     })
                 elif quiz_startDate_greate_then_todayDate:
                     raise serializers.ValidationError({
-                        'quiz_id': ["Quiz has started now you can't add more questions."]
+                        'quiz_id': ["Quiz has started now you can't add more options."]
                     })
             except QuizQuestions.DoesNotExist:
                 # print('error in quiz instance serializer')

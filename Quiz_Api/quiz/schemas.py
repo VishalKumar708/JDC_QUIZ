@@ -12,7 +12,7 @@ post_quiz_schema = openapi.Schema(
         'resultDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'prize': openapi.Schema(type=openapi.TYPE_STRING, default='100 JCoins'),
         'duration': openapi.Schema(type=openapi.TYPE_STRING, default='10 minutes'),
-        'totalQuestions': openapi.Schema(type=openapi.TYPE_INTEGER, default=10),
+        # 'totalQuestions': openapi.Schema(type=openapi.TYPE_INTEGER, default=10),
         'organization_id': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID", default=None),
         'order': openapi.Schema(type=openapi.TYPE_INTEGER, default=1, description="Order of the Quiz"),
 
@@ -33,7 +33,7 @@ put_quiz_schema = openapi.Schema(
         'resultDate': openapi.Schema(type=openapi.TYPE_STRING, format=openapi.FORMAT_DATE, default='24 February, 2024'),
         'prize': openapi.Schema(type=openapi.TYPE_STRING, default='100 JCoins'),
         'duration': openapi.Schema(type=openapi.TYPE_STRING, default='10 minutes'),
-        'totalQuestions': openapi.Schema(type=openapi.TYPE_INTEGER, default=10),
+        # 'totalQuestions': openapi.Schema(type=openapi.TYPE_INTEGER, default=10),
         'organization_id': openapi.Schema(type=openapi.TYPE_INTEGER, description="Organization ID"),
         'order': openapi.Schema(type=openapi.TYPE_INTEGER, default=1, description="Order of the Quiz"),
         'isActive': openapi.Schema(type=openapi.TYPE_BOOLEAN, default=True),
