@@ -12,9 +12,9 @@ date_format = getattr(settings, 'DEFAULT_DATE_FORMAT', "%d/%m/%Y")
 
 class QuizEnrollmentFilter(django_filters.FilterSet):
 
-    quiz_endDate__gt = django_filters.DateFilter(
+    quiz_endDate__gte = django_filters.DateFilter(
         field_name='quiz_id__endDate',
-        lookup_expr='gt',
+        lookup_expr='gte',
         label="Show records where the end date of the associated quiz is after the specified date.",
         input_formats=[date_format])
 
@@ -44,8 +44,8 @@ class QuizEnrollmentFilter(django_filters.FilterSet):
         method='filter_status'
     )
 
-    attemptedQuiz_endDate__lte = django_filters.DateFilter(
-        method='filter_quiz_endDate__lte',
+    attemptedQuiz_endDate__lt = django_filters.DateFilter(
+        method='filter_quiz_endDate__lt',
         label="This filter will return results for all the quizzes you have completed or that have ended.",
         input_formats=[date_format])
 
@@ -55,9 +55,9 @@ class QuizEnrollmentFilter(django_filters.FilterSet):
             return queryset.order_by(value)
         return queryset
 
-    def filter_quiz_endDate__lte(self, queryset, name, value):
+    def filter_quiz_endDate__lt(self, queryset, name, value):
         if value:
-            return queryset.filter(Q(quiz_id__endDate__lte=value) | Q(status='complete'))
+            return queryset.filter(Q(quiz_id__endDate__lt=value) | Q(status='complete'))
         return queryset
 
     def filter_status(self, queryset, name, value):

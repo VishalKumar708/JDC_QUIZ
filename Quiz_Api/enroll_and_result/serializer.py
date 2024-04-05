@@ -170,3 +170,4 @@ class GETAllQuizEnrolmentSerializer(serializers.ModelSerializer):
     #     print("Number of queries before serialization:", len(connection.queries))
     #     # Proceed with serialization
     #     return super().to_representation(instance)
+

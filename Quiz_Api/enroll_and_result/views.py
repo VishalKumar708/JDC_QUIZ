@@ -58,7 +58,7 @@ class POSTQuizEnrollment(APIView):
         return Response({
             'status': 'Failed',
             'data': serializer.errors
-        })
+        }, status=400)
 
 
 class GETAllQuizResult(ListAPIView):

@@ -18,6 +18,8 @@ class Quiz(BaseModel):
     order = models.IntegerField()
     organization_id = models.ForeignKey('Quiz_Api.Organization', on_delete=models.SET_NULL,
                                      related_name="organization_quiz", null=True, default=None, blank=True)
+    # eachCorrectQuestionPoint = models.IntegerField(default=1)
+    # eachIncorrectQuestionPoint = models.IntegerField(default=0)
     isVerified = models.BooleanField(default=False)
 
 
