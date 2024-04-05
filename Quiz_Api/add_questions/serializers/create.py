@@ -243,3 +243,4 @@ class CREATEOptionSerializer(serializers.ModelSerializer):
             question_instance.isActive = False
         question_instance.save()  # Save the modified instance to update the 'type' field
         return instance
+

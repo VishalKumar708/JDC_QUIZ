@@ -573,3 +573,29 @@ INFO | 2024-04-04 15:06:22,503| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Q
 INFO | 2024-04-04 15:06:47,457| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 383 | Return all questions with option Successfully.
 INFO | 2024-04-04 15:11:27,225| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 383 | Return all questions with option Successfully.
 INFO | 2024-04-04 15:55:16,296| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 52 | User Enrolled Successfully in a Quiz.
+INFO | 2024-04-05 17:31:30,836| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:33:51,330| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:35:21,269| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:36:45,691| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:40:54,201| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:41:46,383| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:42:22,618| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:43:27,502| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:43:38,939| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:45:58,398| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:47:35,688| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:47:47,016| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:48:13,613| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:48:51,193| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:51:01,944| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:51:24,699| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:52:24,778| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:52:44,258| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 17:53:08,898| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 18:00:42,214| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 18:01:26,136| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 18:03:46,278| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 18:07:28,152| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 18:08:26,200| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 18:08:36,664| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-05 18:10:29,656| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.

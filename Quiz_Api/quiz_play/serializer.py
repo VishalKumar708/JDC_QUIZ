@@ -2,6 +2,7 @@ from ..models import QuizPlay, QuizEnrollment, QuizOptions
 from rest_framework import serializers
 from collections import Counter
 from django.utils import timezone
+from django.db import connection
 
 
 class CreateQuizPlaySerializer(serializers.ModelSerializer):
@@ -13,6 +14,7 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
         fields = ["userId", "quizId", "questionId", "optionId", "quizStatus"]
 
     def to_internal_value(self, data):
+        print("total queries in to_internal start ==> ", len(connection.queries))
         errors = {}
         validated_data = None
         optionId = data.get('optionId')
@@ -34,9 +36,11 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
                 pass
         if errors:
             raise serializers.ValidationError(errors)
+
         return validated_data
 
     def validate(self, attrs):
+        # print("total queries in validate start ==> ", len(connection.queries))
         # print("attrs==> ", attrs)
         user_instance = attrs.get('userId')
         quiz_instance = attrs.get("quizId")
@@ -67,9 +71,11 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
 
         if errors:
             raise serializers.ValidationError(errors)
+
         return attrs
 
     def create(self, validated_data):
+        # print("total queries in create start ==> ", len(connection.queries))
         options_instance = validated_data.get("optionId")
         user_instance = validated_data.get('userId')
         quiz_instance = validated_data.get('quizId')
@@ -85,17 +91,26 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
 
         # match user answer is correct or not
         enrollment_user_instance = QuizEnrollment.objects.filter(user_id=user_instance, quiz_id=quiz_instance).first()
+        # if pending answers count is 0 add total question count
+        if enrollment_user_instance.pendingAnswer <= 0:
+
+            enrollment_user_instance.pendingAnswer = quiz_instance.quiz_questions.filter(isActive=True).count()
+            print("total questions==> ", enrollment_user_instance.pendingAnswer)
+
         if Counter(correct_options) == Counter(options_instance):
             enrollment_user_instance.correctAnswer = enrollment_user_instance.correctAnswer+1
             # print("total correct answer==> ", enrollment_user_instance.correctAnswer)
         else:
             enrollment_user_instance.incorrectAnswer = enrollment_user_instance.incorrectAnswer+1
             # print("total incorrect answers ==> ", enrollment_user_instance.incorrectAnswer)
+
         enrollment_user_instance.playedDate = timezone.now()
         print("enrollment_user=>", enrollment_user_instance.playedDate)
         enrollment_user_instance.status = quiz_status
+        enrollment_user_instance.pendingAnswer = enrollment_user_instance.pendingAnswer -1
         enrollment_user_instance.save()
 
+        # print("total queries in create end ==> ", len(connection.queries))
         return created_options_instances
 
 

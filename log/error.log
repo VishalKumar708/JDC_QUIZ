@@ -652,3 +652,7 @@ ERROR | 2024-04-04 15:15:09,597| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-04-04 15:35:39,424| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Prefetch querysets cannot use raw(), values(), and values_list().
 ERROR | 2024-04-04 15:37:51,146| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Prefetch querysets cannot use raw(), values(), and values_list().
 ERROR | 2024-04-04 15:49:38,084| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'user_id'
+ERROR | 2024-04-05 15:23:37,556| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-05 17:23:36,926| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `score` is not valid for model `QuizEnrollment`.
+ERROR | 2024-04-05 17:25:59,870| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-05 17:29:04,977| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'Quiz' object has no attribute 'questions'

@@ -110,7 +110,7 @@ class PUTQuiz(APIView):
     def put(self, request, id, *args, **kwargs):
         try:
             instance = Quiz.objects.get(id=id)
-            serializer = UpdateQuizSerializer(instance, data=request.data, partial=True)
+            serializer = UpdateQuizSerializer(instance, data=request.data, partial=True, context={'quiz_instance': instance})
             if serializer.is_valid():
                 serializer.save()
                 info_logger.info("Quiz Update Successfully.")

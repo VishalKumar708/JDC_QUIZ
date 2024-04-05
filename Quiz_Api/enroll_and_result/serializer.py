@@ -60,7 +60,7 @@ class QuizEnrolmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = QuizEnrollment
         fields = ['user', 'user_id', 'quizId']
-        # 'completingDate', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer'
+        # 'completingDate', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer'
 
     def to_internal_value(self, data):
         errors = {}
@@ -160,7 +160,7 @@ class GETAllQuizEnrolmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuizEnrollment
-        fields = ['id', 'playedDate', 'status', 'score', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer', 'user', 'quiz']
+        fields = ['id', 'playedDate', 'status', 'timeTaken', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer', 'user', 'quiz']
 
     # def get_name(self, instance):
     #     return instance.user_id.name

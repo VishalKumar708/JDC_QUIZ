@@ -18,8 +18,6 @@ class Quiz(BaseModel):
     order = models.IntegerField()
     organization_id = models.ForeignKey('Quiz_Api.Organization', on_delete=models.SET_NULL,
                                      related_name="organization_quiz", null=True, default=None, blank=True)
-    # eachCorrectQuestionPoint = models.IntegerField(default=1)
-    # eachIncorrectQuestionPoint = models.IntegerField(default=0)
     isVerified = models.BooleanField(default=False)
 
 
@@ -61,7 +59,7 @@ class QuizEnrollment(BaseModel):
     enrollmentDate = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES)
     playedDate = models.DateTimeField(null=True, blank=True)
-    score = models.IntegerField(default=0)
+    # score = models.IntegerField(default=0)
     timeTaken = models.IntegerField(default=0)
     correctAnswer = models.IntegerField(default=0)
     incorrectAnswer = models.IntegerField(default=0)
