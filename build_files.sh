@@ -1,13 +1,11 @@
-# Update package manager and install Python 3.9
-sudo apt-get update
-sudo apt-get install python3.9 python3.9-distutils
+#!/bin/bash
 
-# Install pip for Python 3.9
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3.9 get-pip.py
+# Locate Python Path
+python_path=$(which python3.9)
 
-# Install project dependencies
-pip install -r requirements.txt
+# Install project dependencies from requirements.txt
+$python_path -m pip install -r requirements.txt
 
-# Collect static files
-python3.9 manage.py collectstatic --noinput
+# Collect static files (for Django projects)
+$python_path manage.py collectstatic
+
