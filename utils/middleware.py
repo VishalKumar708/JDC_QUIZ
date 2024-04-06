@@ -151,8 +151,6 @@ class QueryCountMiddleware:
         end_time = time.time()
         total_time = end_time - start_time
         print("Total time taken:", total_time, "seconds")
-
-
         print("URL:", url)
         # print("connection.queries==> ", connection.queries)
         # i = 1

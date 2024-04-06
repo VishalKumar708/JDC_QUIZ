@@ -63,6 +63,7 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
     endDate = serializers.DateField(input_formats=(datetime_format,))
     resultDate = serializers.DateField(input_formats=(datetime_format,))
 
+
     class Meta:
         fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration",
                     "organization_id", "order", "isVerified", "isActive"]
@@ -74,7 +75,20 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
         start_date = data.get('startDate')
         end_date = data.get('endDate')
         result_date = data.get('resultDate')
+        is_verified = data.get('isVerified')
+        quiz_instance = self.context.get('quiz_instance')
 
+        # print("is_Verified=> ", is_verified)
+        try:
+            value_type = type(is_verified)
+            if (value_type is bool and is_verified) or (value_type is str and is_verified.lower() == "true"):
+                total_questions = quiz_instance.quiz_questions.filter(isActive=True).count()
+                # print("total questions==> ", total_questions)
+                if total_questions < 1:
+                    raise serializers.ValidationError({'isVerified': f"This Quiz has not any active question. You can't approve this."})
+        except TypeError:
+            pass
+        # print("condition runnin...")
         # check startDate is greater than or equal to endDate
         try:
             if not compare_dates(end_date, start_date):
@@ -106,6 +120,8 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(errors)
 
         return validated_data
+
+
 
 
 class GETAllQuizSerializer(serializers.ModelSerializer):

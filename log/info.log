@@ -608,3 +608,13 @@ INFO | 2024-04-06 12:59:12,301| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Q
 INFO | 2024-04-06 13:00:58,852| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
 INFO | 2024-04-06 13:01:53,331| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 131 | Record send Successfully.
 INFO | 2024-04-06 13:11:41,698| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 129 | Return all questions with option Successfully.
+INFO | 2024-04-06 15:46:52,116| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: post | line_no: 60 | Quiz Added Successfully.
+INFO | 2024-04-06 15:47:36,874| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 116 | Quiz Update Successfully.
+INFO | 2024-04-06 15:49:49,497| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 116 | Quiz Update Successfully.
+INFO | 2024-04-06 15:56:40,707| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 116 | Quiz Update Successfully.
+INFO | 2024-04-06 15:58:14,944| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 116 | Quiz Update Successfully.
+INFO | 2024-04-06 15:59:12,496| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 116 | Quiz Update Successfully.
+INFO | 2024-04-06 16:00:00,327| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 116 | Quiz Update Successfully.
+INFO | 2024-04-06 16:00:22,004| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 116 | Quiz Update Successfully.
+INFO | 2024-04-06 16:37:37,394| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 52 | User Enrolled Successfully in a Quiz.
+INFO | 2024-04-06 16:43:51,363| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 52 | User Enrolled Successfully in a Quiz.

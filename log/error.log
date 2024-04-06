@@ -659,3 +659,9 @@ ERROR | 2024-04-05 17:29:04,977| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-04-06 12:12:45,607| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
 ERROR | 2024-04-06 13:11:41,666| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
 ERROR | 2024-04-06 13:11:41,666| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-06 15:49:06,054| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-06 15:51:30,784| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 102 | Cannot resolve keyword 'is_verified' into field. Choices are: createdBy, createdBy_id, createdDate, groupId, id, isActive, level, options, question, quiz_id, quiz_id_id, quiz_plays, type, updatedBy, updatedBy_id, updatedDate
+ERROR | 2024-04-06 16:14:24,749| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 102 | (1364, "Field 'score' doesn't have a default value")
+ERROR | 2024-04-06 16:19:10,004| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 46 | (1364, "Field 'score' doesn't have a default value")
+ERROR | 2024-04-06 16:23:06,785| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 102 | (1364, "Field 'score' doesn't have a default value")
+ERROR | 2024-04-06 16:23:58,859| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 102 | (1364, "Field 'score' doesn't have a default value")

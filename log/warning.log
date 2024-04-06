@@ -115,3 +115,12 @@ WARNING | 2024-04-04 15:10:39,903| path: C:\Users\vs123\OneDrive\Desktop\quiz\JD
 WARNING | 2024-04-04 15:33:23,302| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 397 | Quiz Id type error.
 WARNING | 2024-04-04 15:34:18,067| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 397 | Quiz Id type error.
 WARNING | 2024-04-04 15:52:01,356| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 57 | Error occured while enroll in a quiz
+WARNING | 2024-04-06 15:52:12,019| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 121 | Quiz Updation Failed.
+WARNING | 2024-04-06 15:56:04,373| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 121 | Quiz Updation Failed.
+WARNING | 2024-04-06 16:10:28,768| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 121 | Quiz Updation Failed.
+WARNING | 2024-04-06 16:10:35,563| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 121 | Quiz Updation Failed.
+WARNING | 2024-04-06 16:14:06,936| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 57 | Error occured while enroll in a quiz
+WARNING | 2024-04-06 16:31:02,809| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 57 | Error occured while enroll in a quiz
+WARNING | 2024-04-06 16:31:31,596| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 57 | Error occured while enroll in a quiz
+WARNING | 2024-04-06 16:43:42,874| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: post | line_no: 57 | Error occured while enroll in a quiz
+WARNING | 2024-04-06 16:45:59,327| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: put | line_no: 121 | Quiz Updation Failed.

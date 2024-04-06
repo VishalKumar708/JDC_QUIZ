@@ -59,7 +59,6 @@ class QuizEnrollment(BaseModel):
     enrollmentDate = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES)
     playedDate = models.DateTimeField(null=True, blank=True)
-    # score = models.IntegerField(default=0)
     timeTaken = models.IntegerField(default=0)
     correctAnswer = models.IntegerField(default=0)
     incorrectAnswer = models.IntegerField(default=0)
