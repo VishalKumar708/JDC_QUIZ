@@ -85,7 +85,7 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
                 total_questions = quiz_instance.quiz_questions.filter(isActive=True).count()
                 # print("total questions==> ", total_questions)
                 if total_questions < 1:
-                    raise serializers.ValidationError({'isVerified': f"This Quiz has not any active question. You can't approve this."})
+                    raise serializers.ValidationError({'isVerified': [f"This Quiz has not any active question so you can't approve this."]})
         except TypeError:
             pass
         # print("condition runnin...")
