@@ -1,5 +1,5 @@
-echo 'Deployment starting....'
-which python
-sudo apt-get install python3.9
+# Install project dependencies from requirements.txt
 pip install -r requirements.txt
-python3.9 manage.py collectstatic
+
+# Collect static files
+python manage.py collectstatic
