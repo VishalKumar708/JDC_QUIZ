@@ -599,3 +599,12 @@ INFO | 2024-04-05 18:07:28,152| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Q
 INFO | 2024-04-05 18:08:26,200| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
 INFO | 2024-04-05 18:08:36,664| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
 INFO | 2024-04-05 18:10:29,656| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz_play\views.py | func: post | line_no: 51 | User played quiz successfully.
+INFO | 2024-04-06 12:17:20,844| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
+INFO | 2024-04-06 12:18:05,228| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
+INFO | 2024-04-06 12:19:47,523| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
+INFO | 2024-04-06 12:24:21,365| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
+INFO | 2024-04-06 12:56:40,433| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
+INFO | 2024-04-06 12:59:12,301| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
+INFO | 2024-04-06 13:00:58,852| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\quiz\views.py | func: get | line_no: 191 | Record send Successfully.
+INFO | 2024-04-06 13:01:53,331| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\enroll_and_result\views.py | func: get | line_no: 131 | Record send Successfully.
+INFO | 2024-04-06 13:11:41,698| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: get | line_no: 129 | Return all questions with option Successfully.

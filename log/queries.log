@@ -1,0 +1,5 @@
+2024-04-06 12:59:12,304, queries: 7,url:/quizApi/GETAllQuiz/,total_time:0.03000020980834961 sec
+2024-04-06 13:00:58,854, queries: 6,url:/quizApi/GETAllQuiz/,total_time:0.02446746826171875 sec
+2024-04-06 13:01:53,351, queries: 9,url:/quizApi/GETAllQuizResult/,total_time:0.06003308296203613 sec
+2024-04-06 13:11:41,721, queries: 33,url:/quizApi/GETAllQuestionsByQuizId/1/,total_time:0.07736468315124512 sec
+2024-04-06 13:12:30,446, queries: 63,url:/quizApi/GETAllQuestionsByUserIdAndQuizId/1/1/,total_time:0.10831546783447266 sec

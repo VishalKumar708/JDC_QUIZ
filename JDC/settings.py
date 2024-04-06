@@ -181,6 +181,10 @@ LOGGING = {
         "plane": {
             "format": "%(levelname)s: %(asctime)s | %(module)s.py| func: %(funcName)s| line number: %(lineno)s| %(message)s",
         },
+        "sql_formatter": {
+            "format": "%(asctime)s, %(message)s",
+            # "datefmt": "%-d %B %Y %I:%M %p"  # Format the date as '6 April 2024 12:49 PM'
+        },
     },
     "filters": {
         "require_debug_true": {
@@ -230,6 +234,17 @@ LOGGING = {
             "formatter": "verbose",
             "encoding": 'utf-8'
         },
+
+        'sql_queries': {
+            "level": "INFO",
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOG_DIR, "queries.log"),
+            # 'maxBytes': 30 * 1024 * 1024,
+            # 'backupCount': 10,
+            "formatter": "sql_formatter",
+            "encoding": 'utf-8'
+        },
+
     },
     "loggers": {
         "django": {
@@ -251,6 +266,11 @@ LOGGING = {
             "handlers": ["warning"],
             "level": "WARNING",
             "propagate": False,
+        },
+        "query": {
+            "handlers": ["sql_queries"],
+            "level": "INFO",
+            "propagate": False
         }
 
 

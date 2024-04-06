@@ -656,3 +656,6 @@ ERROR | 2024-04-05 15:23:37,556| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-04-05 17:23:36,926| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | Field name `score` is not valid for model `QuizEnrollment`.
 ERROR | 2024-04-05 17:25:59,870| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
 ERROR | 2024-04-05 17:29:04,977| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 101 | 'Quiz' object has no attribute 'questions'
+ERROR | 2024-04-06 12:12:45,607| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 29 | Invalid URL.
+ERROR | 2024-04-06 13:11:41,666| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-06 13:11:41,666| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)

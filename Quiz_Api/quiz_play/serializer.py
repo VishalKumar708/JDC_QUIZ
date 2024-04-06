@@ -15,6 +15,7 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
 
     def to_internal_value(self, data):
         print("total queries in to_internal start ==> ", len(connection.queries))
+
         errors = {}
         validated_data = None
         optionId = data.get('optionId')
@@ -93,7 +94,6 @@ class CreateQuizPlaySerializer(serializers.ModelSerializer):
         enrollment_user_instance = QuizEnrollment.objects.filter(user_id=user_instance, quiz_id=quiz_instance).first()
         # if pending answers count is 0 add total question count
         if enrollment_user_instance.pendingAnswer <= 0:
-
             enrollment_user_instance.pendingAnswer = quiz_instance.quiz_questions.filter(isActive=True).count()
             print("total questions==> ", enrollment_user_instance.pendingAnswer)
 

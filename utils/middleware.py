@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from django.urls import resolve
 from rest_framework import status
 import logging
+import time
 
 
 error_logger = logging.getLogger('error')
@@ -104,32 +105,32 @@ class InternalServerErrorMiddleware:
         return self.get_response(request)
 
 
-class CustomizeResponseMiddleware:
-    def __init__(self, get_response):
-        self.get_response = get_response
-
-    def __call__(self, request):
-        response = self.get_response(request)
-        # if hasattr(response, 'status_code'):
-        #     return self.process_response(response)
-        return response
-
-    def get_status(self, status_code):
-        if status_code == 200:
-            return 'Success'
-        elif status_code == 500:
-            return 'Internal Server Error'
-        else:
-            return 'Failed'
-
-    def process_response(self, response):
-        print('process response method called')
-        formatted_data = {
-            'statusCode': response.status_code,
-            'status': self.get_status(response.status_code),
-            'data': response.data if hasattr(response, 'data') else None
-        }
-        return JsonResponse(formatted_data, status=response.status_code)
+# class CustomizeResponseMiddleware:
+#     def __init__(self, get_response):
+#         self.get_response = get_response
+#
+#     def __call__(self, request):
+#         response = self.get_response(request)
+#         # if hasattr(response, 'status_code'):
+#         #     return self.process_response(response)
+#         return response
+#
+#     def get_status(self, status_code):
+#         if status_code == 200:
+#             return 'Success'
+#         elif status_code == 500:
+#             return 'Internal Server Error'
+#         else:
+#             return 'Failed'
+#
+#     def process_response(self, response):
+#         print('process response method called')
+#         formatted_data = {
+#             'statusCode': response.status_code,
+#             'status': self.get_status(response.status_code),
+#             'data': response.data if hasattr(response, 'data') else None
+#         }
+#         return JsonResponse(formatted_data, status=response.status_code)
 
 
 from django.db import connection
@@ -140,7 +141,19 @@ class QueryCountMiddleware:
         self.get_response = get_response
 
     def __call__(self, request, *args, **kwargs):
+        # Record the start time
+        start_time = time.time()
+        # get url
+        url = request.path
         response = self.get_response(request)
+
+        # Calculate total time
+        end_time = time.time()
+        total_time = end_time - start_time
+        print("Total time taken:", total_time, "seconds")
+
+
+        print("URL:", url)
         # print("connection.queries==> ", connection.queries)
         # i = 1
         # for query in connection.queries:
@@ -151,4 +164,9 @@ class QueryCountMiddleware:
         # print("request.query_count=> ", request.query_count)
         # request.query_count = len(connection.queries)
         print("total queries=> ", len(connection.queries))
+        self.get_log(message=f"queries: {len(connection.queries)},url:{url},total_time:{total_time} sec")
         return response
+
+    def get_log(self, message):
+        query_loger = logging.getLogger("query")
+        query_loger.info(message)
