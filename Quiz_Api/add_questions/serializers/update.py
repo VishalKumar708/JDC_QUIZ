@@ -4,7 +4,7 @@ from rest_framework import serializers
 from ...models import QuizQuestions, QuizOptions, Quiz
 
 from django.db.models import Q
-from utils.validators import compare_dates
+from utils.validators import is_given_date_greater_than_or_equal_to_today
 from django.conf import settings
 
 datetime_format = getattr(settings, 'DEFAULT_DATE_FORMAT', "%d/%m/%Y")
@@ -32,10 +32,10 @@ class UPDATEQuestionSerializer(serializers.ModelSerializer):
 
         try:
             quiz_instance = quiz_id
-            quiz_startDate_greate_then_todayDate = compare_dates(
-                end_date=quiz_instance.startDate.strftime(datetime_format))
-            quiz_endDate_greater_then_todayDate = compare_dates(
-                end_date=quiz_instance.endDate.strftime(datetime_format))
+            quiz_startDate_greate_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                quiz_instance.startDate.strftime(datetime_format))
+            quiz_endDate_greater_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                quiz_instance.endDate.strftime(datetime_format))
 
             if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
                 raise serializers.ValidationError({
@@ -94,18 +94,18 @@ class UPDATEOptionSerializer(serializers.ModelSerializer):
             try:
                 quiz_instance = question_id.quiz_id
                 print("quiz_instance")
-                quiz_startDate_greate_then_todayDate = compare_dates(
-                    end_date=quiz_instance.startDate.strftime(datetime_format))
-                quiz_endDate_greater_then_todayDate = compare_dates(
-                    end_date=quiz_instance.endDate.strftime(datetime_format))
+                quiz_startDate_greate_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                    quiz_instance.startDate.strftime(datetime_format))
+                quiz_endDate_greater_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                    quiz_instance.endDate.strftime(datetime_format))
 
                 if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
                     raise serializers.ValidationError({
-                        'quiz_id': ["Quiz has ended now you can't add more questions."]
+                        'quiz_id': ["Quiz has ended now you can't update options."]
                     })
                 elif quiz_startDate_greate_then_todayDate:
                     raise serializers.ValidationError({
-                        'quiz_id': ["Quiz has started now you can't add more questions."]
+                        'quiz_id': ["Quiz has started now you can't update options."]
                     })
             except QuizQuestions.DoesNotExist:
                 # print('error in quiz instance serializer')

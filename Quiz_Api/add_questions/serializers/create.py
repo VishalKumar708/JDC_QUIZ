@@ -3,7 +3,7 @@ from rest_framework import serializers
 from ...models import Quiz, QuizQuestions, QuizOptions
 from django.db import transaction
 from collections import Counter
-from utils.validators import compare_dates
+from utils.validators import is_given_date_greater_than_or_equal_to_today
 from django.conf import settings
 
 datetime_format = getattr(settings, 'DEFAULT_DATE_FORMAT', "%d/%m/%Y")
@@ -40,10 +40,10 @@ class CreateQuestionSerializer(serializers.Serializer):
             # check quiz.startDate > today date or not
             try:
                 quiz_instance = Quiz.objects.get(id=quiz_id)
-                quiz_startDate_greate_then_todayDate = compare_dates(
-                    end_date=quiz_instance.startDate.strftime(datetime_format))
-                quiz_endDate_greater_then_todayDate = compare_dates(
-                    end_date=quiz_instance.endDate.strftime(datetime_format))
+                quiz_startDate_greate_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                    quiz_instance.startDate.strftime(datetime_format))
+                quiz_endDate_greater_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                    quiz_instance.endDate.strftime(datetime_format))
 
                 print("quiz.startDate==> ", quiz_startDate_greate_then_todayDate)
                 print("quiz.endDate==> ", quiz_endDate_greater_then_todayDate)
@@ -183,10 +183,12 @@ class CREATEOptionSerializer(serializers.ModelSerializer):
             try:
                 quiz_instance = QuizQuestions.objects.get(id=question_id).quiz_id
                 print("quiz_instance")
-                quiz_startDate_greate_then_todayDate = compare_dates(
-                    end_date=quiz_instance.startDate.strftime(datetime_format))
-                quiz_endDate_greater_then_todayDate = compare_dates(
-                    end_date=quiz_instance.endDate.strftime(datetime_format))
+                quiz_startDate_greate_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                    quiz_instance.startDate.strftime(datetime_format))
+                quiz_endDate_greater_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
+                    quiz_instance.endDate.strftime(datetime_format))
+                # print("startDate is greater then => ", quiz_startDate_greate_then_todayDate)
+                # print("endDate is greater then => ", quiz_endDate_greater_then_todayDate)
 
                 if quiz_startDate_greate_then_todayDate and quiz_endDate_greater_then_todayDate:
                     raise serializers.ValidationError({
