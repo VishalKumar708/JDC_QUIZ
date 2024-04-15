@@ -23,6 +23,10 @@ class CreateQuizSerializer(serializers.ModelSerializer):
         end_date = data.get('endDate')
         result_date = data.get('resultDate')
 
+        # print("start_date=> ", start_date)
+        # print("end_date=> ", end_date)
+        # print("result_date=> ", result_date)
+
         # check startDate is greater than or equal to endDate
         try:
             if not is_startDate_greater_than_or_equal_to_endDate(end_date, start_date):
@@ -32,12 +36,12 @@ class CreateQuizSerializer(serializers.ModelSerializer):
 
         # check resultDate is greater than or equal to startDate and endDate
         try:
-            # print("result date >= start_date=> ", compare_dates(result_date, start_date))
-            # print("result date>= end_date=> ", is_startDate_greater_than_or_equal_to_endDate(result_date, end_date))
-            if not is_startDate_greater_than_or_equal_to_endDate(result_date, start_date) and not is_startDate_greater_than_or_equal_to_endDate(result_date, end_date):
+            # print("startDate is greater then or equalDate=> ", is_startDate_greater_than_or_equal_to_endDate(result_date, start_date))
+            # print("resultDate is greater than or equal endDate=> ", is_startDate_greater_than_or_equal_to_endDate(result_date, end_date))
+            if not is_startDate_greater_than_or_equal_to_endDate(result_date, end_date):
                 errors['resultDate'] = [f"'resultDate' should be greater then or equal to 'startDate' and 'endDate' "]
         except ValueError:
-            # print("value error occured in serializer")
+            print("value error occured in serializer")
             pass
 
         # default validation
@@ -59,10 +63,9 @@ class CreateQuizSerializer(serializers.ModelSerializer):
 
 
 class UpdateQuizSerializer(serializers.ModelSerializer):
-    startDate = serializers.DateField(input_formats=(datetime_format,))
-    endDate = serializers.DateField(input_formats=(datetime_format,))
-    resultDate = serializers.DateField(input_formats=(datetime_format,))
-
+    startDate = serializers.DateField(input_formats=(datetime_format,), required=True)
+    endDate = serializers.DateField(input_formats=(datetime_format,), required=True)
+    resultDate = serializers.DateField(input_formats=(datetime_format,), required=True)
 
     class Meta:
         fields = ["title", "startDate", "endDate", "resultDate", "prize", "duration",
@@ -98,8 +101,8 @@ class UpdateQuizSerializer(serializers.ModelSerializer):
 
         # check resultDate is greater than or equal to startDate and endDate
         try:
-            if start_date and end_date and result_date:
-                if not is_startDate_greater_than_or_equal_to_endDate(result_date, start_date) and not is_startDate_greater_than_or_equal_to_endDate(result_date, end_date):
+            if end_date and result_date:
+                if not is_startDate_greater_than_or_equal_to_endDate(result_date, end_date):
                     errors['resultDate'] = [f"'resultDate' should be greater then or equal to 'startDate' and 'endDate'"]
         except ValueError:
             pass

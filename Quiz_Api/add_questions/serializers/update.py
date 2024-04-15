@@ -23,12 +23,23 @@ class UPDATEQuestionSerializer(serializers.ModelSerializer):
         quiz_id = self.context.get('quiz_id')
         question_id = self.context.get('question_id')
         question_text = data.get('text')
+        is_active = data.get('isActive')
+        question_instance = self.context.get('question_instance')
 
         errors = {}
         # print("quiz_id=> ", quiz_id)
         # print("question_id=> ", question_id)
         # print("question_text=> ", question_text)
         #
+        # check if user active any 'question' then that question should contain one 'active correct option'
+        type_of_is_active = type(is_active)
+        if (type_of_is_active is bool and is_active) or (type_of_is_active is str and is_active.lower().strip()=='true'):
+            total_active_question_count = question_instance.options.filter(isActive=True, correctOption=True).count()
+            # print("total correct options in a question==> ", total_active_question_count)
+            if total_active_question_count == 0:
+                raise serializers.ValidationError({
+                    'isActive': [f'To active this question please select at-least one correct active option.']
+                })
 
         try:
             quiz_instance = quiz_id
@@ -88,12 +99,14 @@ class UPDATEOptionSerializer(serializers.ModelSerializer):
 
     def to_internal_value(self, data):
         option_text = data.get('option')
+        is_active = data.get('isActive')
         question_id = self.context.get('question_id')
         errors = {}
+
         if question_id:
             try:
                 quiz_instance = question_id.quiz_id
-                print("quiz_instance")
+                # print("quiz_instance")
                 quiz_startDate_greate_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
                     quiz_instance.startDate.strftime(datetime_format))
                 quiz_endDate_greater_then_todayDate = not is_given_date_greater_than_or_equal_to_today(
@@ -114,6 +127,18 @@ class UPDATEOptionSerializer(serializers.ModelSerializer):
                 # print('error in quiz instance serializer')
                 pass
 
+        type_of_is_active = type(is_active)
+        # if total active option is less than 2
+        if (type_of_is_active is bool and not is_active) or (
+                type_of_is_active is str and is_active.lower().strip() == 'false'):
+            total_options = question_id.options.filter(isActive=True).count() - 1
+            # print("total_option=> ", total_options)
+            # print("total options less then 2", total_options < 2)
+            if total_options < 2:
+                raise serializers.ValidationError({
+                    "isActive": [
+                        f"You can't inactive this option because each question should have at-least two active options."]
+                })
         if option_text:
             filtered_data = QuizOptions.objects.filter(~Q(id=self.context.get('answer_id')), Q(option__iexact=option_text.strip(), question_id=question_id)).count()
             # print("filtered_data => ", filtered_data)
@@ -146,8 +171,9 @@ class UPDATEOptionSerializer(serializers.ModelSerializer):
         # Get the associated QuizQuestions instance
         question_instance = instance.question_id
         # check no. of options are correct
-        filtered_data = QuizOptions.objects.filter(question_id=instance.question_id.id,
+        filtered_data = QuizOptions.objects.filter(question_id=instance.question_id.id, isActive=True,
                                                    correctOption=True).count()
+        print("filtered_data=> ", filtered_data)
         if filtered_data >= 2:
             question_instance.type = 'checkbox'
             question_instance.isActive = True

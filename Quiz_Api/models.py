@@ -20,6 +20,9 @@ class Quiz(BaseModel):
                                      related_name="organization_quiz", null=True, default=None, blank=True)
     isVerified = models.BooleanField(default=False)
 
+    # class Meta:
+    #     indexes = [models.Index(fields=['startDate', 'endDate', 'resultDate'])]
+
 
 class QuizQuestions(BaseModel):
     TYPE_CHOICES = [
@@ -38,6 +41,11 @@ class QuizQuestions(BaseModel):
     level = models.CharField(max_length=100, choices=LEVEL_CHOICE)
     # isVerified = models.BooleanField(default=True)
 
+    # class Meta:
+    #     indexes = [
+    #         models.Index(fields=['quiz_id', 'isActive'])
+    #     ]
+
 
 class QuizOptions(BaseModel):
     question_id = models.ForeignKey('Quiz_Api.QuizQuestions', on_delete=models.CASCADE, related_name='options')
@@ -45,6 +53,11 @@ class QuizOptions(BaseModel):
     correctOption = models.BooleanField(default=False)
     order = models.IntegerField(null=True, blank=True)
     # isVerified = models.BooleanField(default=True)
+
+    # class Meta:
+    #     indexes = [
+    #         models.Index(fields=['question_id', 'correctOption', 'isActive'])
+    #     ]
 
 
 class QuizEnrollment(BaseModel):
@@ -63,7 +76,12 @@ class QuizEnrollment(BaseModel):
     correctAnswer = models.IntegerField(default=0)
     incorrectAnswer = models.IntegerField(default=0)
     pendingAnswer = models.IntegerField(default=0)
-# Create your models here.
+
+    # class Meta:
+    #     indexes = [
+    #         models.Index(fields=['quiz_id', 'user_id', 'status', 'quiz_id__endDate']),  # Index for quiz_id and user_id
+    #         # models.Index(fields=[ 'status']),  # Index for endDate and status
+    #     ]
 
 
 class QuizPlay(BaseModel):

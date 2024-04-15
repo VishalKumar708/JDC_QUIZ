@@ -671,3 +671,31 @@ ERROR | 2024-04-08 12:32:09,051| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\
 ERROR | 2024-04-08 12:33:59,514| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
 ERROR | 2024-04-08 12:43:41,362| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 102 | is_given_date_greater_than_or_equal_to_today() got an unexpected keyword argument 'end_date'
 ERROR | 2024-04-08 12:48:04,331| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: process_exception | line_no: 102 | compare_dates() missing 1 required positional argument: 'start_date'
+ERROR | 2024-04-10 10:58:25,556| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-10 10:58:40,553| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-10 16:19:24,443| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-11 10:04:18,466| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-11 10:08:34,378| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-11 13:35:46,284| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 13:35:46,286| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 13:37:04,714| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 13:37:04,714| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 13:37:13,134| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 13:37:13,135| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 13:37:20,513| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 13:37:20,513| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 13:37:29,581| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 13:37:29,582| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 14:13:31,518| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 14:13:31,518| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 14:13:41,307| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 14:13:41,307| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 14:13:51,212| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 14:13:51,212| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-11 14:14:02,109| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 86 | str(e)
+ERROR | 2024-04-11 14:14:02,110| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\Quiz_Api\add_questions\views.py | func: filter_queryset | line_no: 92 | str(e)
+ERROR | 2024-04-12 10:24:34,897| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-12 10:24:43,154| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-12 10:24:51,323| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-15 10:16:02,226| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.
+ERROR | 2024-04-15 10:16:07,446| path: C:\Users\vs123\OneDrive\Desktop\quiz\JDC\utils\middleware.py | func: __call__ | line_no: 30 | Invalid URL.

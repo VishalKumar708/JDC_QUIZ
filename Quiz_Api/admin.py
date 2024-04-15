@@ -16,7 +16,6 @@ class QuizAdmin(admin.ModelAdmin):
     list_filter = ['startDate', 'endDate', 'resultDate', 'isActive', 'isVerified']
     search_fields = ['title']
 
-# admin.site.register(Quiz, QuizAdmin)
 
 @admin.register(QuizQuestions)
 class QuizQuestionsAdmin(admin.ModelAdmin):
@@ -24,14 +23,14 @@ class QuizQuestionsAdmin(admin.ModelAdmin):
     list_filter = ['quiz_id', "type", "level", "isActive"]
 
 
-# admin.site.register(QuizQuestions, QuizQuestionsAdmin)
+
 
 @admin.register(QuizOptions)
 class QuizAnswersAdmin(admin.ModelAdmin):
     list_display = ["id", "question_id", "option", "correctOption", "isActive"]
     list_filter = ['question_id', "isActive", "correctOption"]
 
-# admin.site.register(QuizOptions, QuizAnswersAdmin)
+
 
 @admin.register(QuizEnrollment)
 class QuizEnrollmentAdmin(admin.ModelAdmin):
@@ -39,15 +38,19 @@ class QuizEnrollmentAdmin(admin.ModelAdmin):
                      'correctAnswer', 'incorrectAnswer', 'pendingAnswer']
     list_filter = ['user_id', 'quiz_id', 'correctAnswer', 'incorrectAnswer', 'pendingAnswer']
 
-# admin.site.register(QuizEnrollment, QuizEnrollmentAdmin)
-# Register your models here.
+
 
 
 @admin.register(QuizPlay)
 class QuizPlayAdmin(admin.ModelAdmin):
-    list_display = ["id", "userId", "quizId", "questionId", "answerId"]
+    list_display = ["id", "userId", "quizId", "questionId", "answerId", "get_correct_option"]
     list_filter = ['userId', 'quizId', 'questionId']
 
-# admin.site.register(QuizPlay, QuizPlayAdmin)
+    def get_correct_option(self, obj):
+        return obj.answerId.correctOption
+
+    get_correct_option.short_description = "isCorrect"
+
+
 
 

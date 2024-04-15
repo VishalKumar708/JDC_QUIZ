@@ -155,7 +155,7 @@ class PUTQuestionById(APIView):
     def put(self, request, questionId, *args, **kwargs):
         try:
             instance = QuizQuestions.objects.get(id=questionId)
-            serializer = UPDATEQuestionSerializer(instance=instance, data=request.data, partial=True, context={"quiz_id": instance.quiz_id, "question_id":questionId})
+            serializer = UPDATEQuestionSerializer(instance=instance, data=request.data, partial=True, context={"quiz_id": instance.quiz_id, "question_id":questionId, "question_instance":instance})
             if serializer.is_valid():
                 obj = serializer.save()
                 info_logger.info("Question update successfully.")
